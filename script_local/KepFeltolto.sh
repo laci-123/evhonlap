@@ -4,11 +4,18 @@
 
 HOST='ftp.lutheran.hu'
 USER='budakeszi'
-PASSWD='sW73943kD'
-ROOT_DIR='/home/laci/Documents/Html/Ev_honlap/'
-VERSION=v14
+passwd=''
+ROOT_DIR='/home/laci/Documents/evhonlap/'
 
-cd "$ROOT_DIR/$VERSION/img/galeria/$1"
+#Get password
+echo 'Password: '
+read password 
+if [ "$password" = '' ]
+then 
+    exit 1
+fi
+
+cd "$ROOT_DIR/img/galeria/$1"
 mkdir -p Thubnails
 
 echo "Fixing orientation of images..."
