@@ -1,0 +1,74 @@
+body{
+	background-color: black;
+}
+.slideshow{
+	position: fixed;
+	top: 10px;
+	width: 100%;
+	height: 90%;
+}
+.slideshow div {
+	display: none;
+}
+.slideshow div:target {
+	display: block;
+}
+.slideshow div .link_back{
+	position: fixed;
+	top: 50%;
+	left: 10px;
+	text-decoration: none;
+	color: white;
+	background-color: blue;
+	padding: 8px;
+	border-radius: 8px;
+}
+.slideshow div .link_back:hover{
+	text-decoration: none;
+	color: red;
+	padding: 13px;
+	border-radius: 8px;
+}
+.slideshow div img{
+	//position: fixed;
+	//top: 10%;
+	//left: 25%;
+	width: auto;
+	height: 100%;
+	margin-left: 50%;
+	transform: translate(-50%, 0);
+	image-orientation: from-image;
+}
+.slideshow div .link_frwd{
+	position: fixed;
+	top: 50%;
+	right: 10px;
+	text-decoration: none;
+	color: white;
+	background-color: blue;
+	padding: 8px;
+	border-radius: 8px;
+}
+.slideshow div .link_frwd:hover{
+	text-decoration: none;
+	color: red;
+	padding: 13px;
+	border-radius: 8px;
+}
+#up{
+	position: fixed;
+	bottom: 5px;
+	left: 50%;
+	transform: translate(-50%, 0);
+	text-decoration: none;
+	color: white;
+	background-color: blue;
+	padding: 8px;
+	border-radius: 8px;
+}
+#up:hover{
+	text-decoration: none;
+	color: red;
+	padding: 13px;
+	border-radius: 8px;
+}

@@ -1,0 +1,172 @@
+#fomenu
+{
+	z-index: 200;
+	position: relative;
+}
+#fomenu ul ul 
+{
+	/*a második szinttol lefelé az elemek alapállapotban nem jelennek meg*/
+	display: none;
+}
+#fomenu ul li:hover > ul 
+{
+	/*ha az elso szint egyik eleme fölött van az egér, az alatta levo szint megjelenik*/
+	display: block;
+}
+#fomenu ul 
+{
+	/*elso szint*/
+	font-size: 12pt;
+	background: rgb(0, 0, 200); 
+	padding: 0 30pt;
+	border-radius: 10px;  
+	list-style: none;
+	position: relative;
+	display: inline-table;
+}			
+#fomenu ul li
+{
+	/*az elso szinten az elemek vízszintesen egymás mellett vannak*/
+	float: left;
+}
+#fomenu ul li:hover
+{
+	/*az elso szint elemei, ha az egér fölöttük van*/
+	background: rgb(200, 0, 0);
+}
+#fomenu ul li a
+{
+	/*az elso szinten a linkek*/
+	display: block;
+	padding: 8px 15px;
+	color: rgb(200, 255, 200);
+	text-decoration: none;
+}
+#fomenu ul li:hover a
+{
+	/*az elso szinten a linkek, ha az egér fölöttük van*/
+	color: rgb(255, 255, 255);
+}
+#fomenu ul ul 
+{
+	/*a második szint*/
+	background: rgb(0, 0, 200); 
+	border-radius: 0px; 
+	padding: 0;
+	position: absolute; 
+	top: 100%;
+}
+#fomenu ul ul li 
+{
+	/*a második szinten az elemek függolegesen egymás alatt vannak*/
+	float: none; 
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
+	position: relative;
+}
+#fomenu ul ul li a 
+{
+	/*a linkek a második szinten*/
+	padding: 10px 40px;
+	color: rgb(255, 0, 0);
+}	
+#fomenu ul ul li a:hover 
+{	
+	/*a linkek a második szinten, ha az egér fölöttük van*/
+	background: rgb(200, 0, 0);
+}
+#fomenu ul ul ul 
+{	
+	/*a harmadik szint*/
+	position: absolute; 
+	left: 100%; 
+	top:0;
+}
+
+
+#galeria_menu
+{
+	margin-top: -16px;
+	width: 100%;
+	z-index: 100;
+}
+#galeria_menu ul ul 
+{
+	/*a második szinttol lefelé az elemek alapállapotban nem jelennek meg*/
+	display: none;
+}
+#galeria_menu ul li:hover > ul 
+{
+	/*ha az elso szint egyik eleme fölött van az egér, az alatta levo szint megjelenik*/
+	display: block;
+}
+#galeria_menu ul 
+{
+	/*elso szint*/
+	background: white; 
+	padding: 0 0;
+	border: 4px solid black;
+	border-radius: 10px;
+	list-style: none;
+	position: relative;
+	display: inline-table;
+}			
+#galeria_menu ul li
+{
+	/*az elso szinten az elemek vízszintesen egymás mellett vannak*/
+	float: left;
+}
+#galeria_menu ul li:hover
+{
+	/*az elso szint elemei, ha az egér fölöttük van*/
+	background: rgb(200, 0, 0);
+}
+#galeria_menu ul li a
+{
+	/*az elso szinten a linkek*/
+	display: block;
+	padding: 8px 20px;
+	color: rgb(200, 255, 200);
+	background-color: blue;
+	text-decoration: none;
+}
+#galeria_menu ul li:hover a
+{
+	/*az elso szinten a linkek, ha az egér fölöttük van*/
+	color: rgb(255, 255, 255);
+}
+#galeria_menu ul ul 
+{
+	/*a második szint*/
+	background: rgb(0, 0, 200); 
+	border-radius: 0px; 
+	border: none;
+	padding: 0;
+	position: absolute; 
+	top: 90%;
+}
+#galeria_menu ul ul li 
+{
+	/*a második szinten az elemek függolegesen egymás alatt vannak*/
+	float: none; 
+	border-top: 1px solid black;
+	position: relative;
+}
+#galeria_menu ul ul li a 
+{
+	/*a linkek a második szinten*/
+	padding: 10px 40px;
+	color: rgb(255, 0, 0);
+}	
+#galeria_menu ul ul li a:hover 
+{	
+	/*a linkek a második szinten, ha az egér fölöttük van*/
+	background: rgb(200, 0, 0);
+}
+#galeria_menu ul ul ul 
+{	
+	/*a harmadik szint*/
+	position: absolute; 
+	left: 100%; 
+	top:0;
+}

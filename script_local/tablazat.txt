@@ -1,0 +1,10 @@
+04.08 ;§;9.30   ;istentisztelet
+04.10;§; 10.00 ;Babamama kör
+04.10;§; 14.30 ;Idősek bibliaórája
+04.11;§; 18.30 ;Középnemzedék köre
+04.15;§; 9.30  ;Családi istentisztelet
+04.15;§; 18.00 ;Esti istentisztelet
+04.22;§; 9,30  ;Istentisztelet, úrvacsora, felnőtt hittan
+04.24;§; 10.00 ;Babamama kör
+04.25;§; 18.30 ;Középnemzedék köre
+04.29;§; 9.30  ;Istentisztelet

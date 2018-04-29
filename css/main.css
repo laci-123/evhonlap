@@ -1,0 +1,141 @@
+#kozepso
+{
+	width: 1200px;
+	margin-left: auto;
+	margin-right: auto;
+}
+#fo
+{
+	float: left;
+	width: 65%;
+	display: block;
+	margin-left: 3%;
+	background-color: rgba(0, 0, 200, 0.5);
+	text-align: center;
+}
+#jobb
+{
+	float: right;
+	background-color: rgba(255, 50, 0, 0.5);
+	border-radius: 20px;
+	width: 13%;
+	margin-top: 100px;
+	padding: 10px;
+}
+#bal
+{
+	float: left;
+	background-color: rgba(255, 50, 0, 0.5);
+	border-radius: 20px;
+	width: 13%;
+	margin-top: 100px;
+	padding: 10px;
+}
+#fomenu
+{
+	margin-bottom: -35px;
+}
+#body
+{
+	min-height: 100%;
+	position: relative;
+}
+#elvalaszto {
+	background:url(/img/allando/elvalaszto.png) no-repeat top center;
+	height:42px;
+	border:none !important;
+}
+#fo_oldal{
+	
+}
+#udvozles{
+	margin-bottom: 300px;
+	text-align: justify;
+}
+#templom_imadsag{
+	text-align: center;
+}
+a:visited{
+	color:blue;
+}
+
+/*Galéria*/
+#elozo
+{
+	float: left;
+}
+#elozo:hover
+{
+	background-color: rgb(0, 0, 220);
+}
+#elozo a
+{
+	text-decoration: none;
+	color: white;
+	background-color: blue;
+	padding: 10px;
+	border-radius: 10px;
+}
+#elozo a:hover
+{
+	text-decoration: none;
+	color: red;
+	padding: 15px;
+	border-radius: 10px;
+}
+#kovetkezo
+{
+	float: right;
+}
+#kovetkezo a
+{
+	text-decoration: none;
+	color: white;
+	background-color: blue;
+	padding: 10px;
+	border-radius: 10px;
+}
+#kovetkezo a:hover
+{
+	text-decoration: none;
+	color: red;
+	padding: 15px;
+	border-radius: 10px;
+}
+
+body
+{
+	background-image: url("/img/allando/hatter.jpg");
+	background-size: cover;
+}
+h1
+{
+	font-size: 2.3em;
+	margin-bottom: 0px;
+	text-align: center;
+}
+.content
+{
+	background-color: white;
+	text-align: left;
+	padding: 20px;
+	min-height: 100vh;
+	margin: 0 auto;
+	overflow: auto;
+}
+.content table, td
+{
+	border: 1px solid black;
+	border-collapse: collapse;
+	padding: 10px;
+}
+footer
+{
+	width: 100%;
+	height: 20px;
+	background-color: rgb(255, 200, 200);
+}
+a:hover
+{
+	color: blue;
+}
