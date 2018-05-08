@@ -1,10 +1,12 @@
-04.08 ;§;9.30   ;istentisztelet
-04.10;§; 10.00 ;Babamama kör
-04.10;§; 14.30 ;Idősek bibliaórája
-04.11;§; 18.30 ;Középnemzedék köre
-04.15;§; 9.30  ;Családi istentisztelet
-04.15;§; 18.00 ;Esti istentisztelet
-04.22;§; 9,30  ;Istentisztelet, úrvacsora, felnőtt hittan
-04.24;§; 10.00 ;Babamama kör
-04.25;§; 18.30 ;Középnemzedék köre
-04.29;§; 9.30  ;Istentisztelet
+05.06 ;§; 9.30  ;Istentisztelet
+05.08 ;§; 10.00 ;Baba-mama kör
+05.08 ;§; 14.30 ;Idősek bibliaórája
+05.09 ;§; 18.30 ;Középnemzedék köre
+05.10 ;§; 18.00 ;Mennybemenetel - Istentisztelet
+05.13 ;§; 9.30  ;Családi istentisztelet
+05.13 ;§; 18.00 ;Esti istentisztelet
+05.17 ;§; 19.00 ;Protestáns Kör
+05.20 ;§; 9.30  ;Pünkösd – Istentisztelet, úrvacsora
+05.21 ;§; 9.30  ;Pünkösdhétfő- Istentisztelet
+05.27 ;§; 9.30  ;Istentisztelet
+05.30 ;§; 18.30 ;Középnemzedék bibliaórája

@@ -7,7 +7,6 @@
                 <link rel="stylesheet" type="text/css" href="/css/menu.css">
                 <meta name="description" content="A Budakeszi Evangélikus Egyházközség honlapja">
                 <meta name="author" content="Gohér László">
-                <!--version: 14.1-->
         </head>
         <body>
                 <div id="kozepso">
@@ -118,11 +117,13 @@ Utoljára frissítve: 2018.04.11
                                                 /*A napi ige leszedése az országos evangélikus honlapról*/
                                                 $ige = "nem sikerült";
                                                 $tartalom = file_get_contents("http://www.evangelikus.hu/");
+                                                //var_dump($tartalom);
                                                 preg_match("/Napi ige: <\/a>(.*?)&nbsp;/s", $tartalom, $ige);
                                                 $ige = preg_replace("/Napi ige: <\/a>/", "", $ige);
                                                 $ige = preg_replace("/<\/p>/", "", $ige);
                                                 $ige = preg_replace("/õ/", "ő", $ige);  /*megfelelő ékezetes karakterek beállítása*/
                                                 $ige = preg_replace("/û/", "ű", $ige);
+                                                //var_dump($ige);
                                                 echo $ige[0];
                                                 echo "\n";
                                         ?>
