@@ -53,7 +53,7 @@ parser.add_argument("-a",
                     default=False, 
                     help="allows to upload any file, not just the default ones")
 parser.add_argument("destination", 
-                    metavar="dest", 
+                    metavar="destination", 
                     default="/",
                     nargs="?",
                     help="the target directory on the server if -a is set (default is '/')")
