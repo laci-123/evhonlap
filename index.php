@@ -105,7 +105,7 @@
                                         }
                                 ?>
                                 <footer>
-Utoljára frissítve: 2018.04.11
+Utoljára frissítve: 2018.07.11
                                 </footer>
                         </div>
                         <div id="jobb">
@@ -115,17 +115,41 @@ Utoljára frissítve: 2018.04.11
                                         </h2>
                                         <?php
                                                 /*A napi ige leszedése az országos evangélikus honlapról*/
-                                                $ige = "nem sikerült";
-                                                $tartalom = file_get_contents("http://www.evangelikus.hu/");
-                                                //var_dump($tartalom);
-                                                preg_match("/Napi ige: <\/a>(.*?)&nbsp;/s", $tartalom, $ige);
-                                                $ige = preg_replace("/Napi ige: <\/a>/", "", $ige);
-                                                $ige = preg_replace("/<\/p>/", "", $ige);
-                                                $ige = preg_replace("/õ/", "ő", $ige);  /*megfelelő ékezetes karakterek beállítása*/
-                                                $ige = preg_replace("/û/", "ű", $ige);
-                                                //var_dump($ige);
-                                                echo $ige[0];
-                                                echo "\n";
+                                                /*A készülő új (még kísérleti szakaszban levő) főverzióból átmásolva*/
+                                               
+												function get_url($url){
+													$curl = curl_init();
+													curl_setopt($curl, CURLOPT_URL, $url);
+													curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+													
+													$result = curl_exec($curl);
+													if($result === false){
+														throw new Exception(curl_error($curl), curl_errno($curl));
+													}
+													
+													curl_close($curl);
+													
+													return $result;
+												}
+												
+												function get_DailyWord(){
+													try{
+														$ige = "";
+														$tartalom = get_url("https://www.evangelikus.hu/");
+														preg_match("/Napi ige: <\/a>(.*?)&nbsp;/s", $tartalom, $ige);
+														$ige = preg_replace("/Napi ige: <\/a>/", "", $ige);
+														$ige = preg_replace("/<\/p>/", "", $ige);
+														$ige = preg_replace("/õ/", "ő", $ige);  
+														$ige = preg_replace("/û/", "ű", $ige);
+														
+														return $ige[0];
+													}
+													catch(Exception $e){
+														return "<i>[Pillanatnyilag nem érhető el.]</i>";
+													}
+												}
+												
+												echo get_DailyWord()."\n";
                                         ?>
                                 </aside>
                                 <nav>
