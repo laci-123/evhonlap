@@ -105,7 +105,7 @@
                                         }
                                 ?>
                                 <footer>
-Utoljára frissítve: 2018.07.11
+Utoljára frissítve: 2018.07.13. 
                                 </footer>
                         </div>
                         <div id="jobb">
