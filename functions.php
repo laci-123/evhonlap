@@ -1,4 +1,7 @@
 <?php
+	
+	require "constants.php";
+
 	/*
 	 * Returns the content of the URL given in $url. 
 	 * 
@@ -29,7 +32,7 @@
 	function get_DailyWord(){
 		try{
 			$ige = "";
-			$tartalom = get_url("https://www.evangelikus.hu/");
+			$tartalom = get_url(URL_EVANGELIKUSHU);
 			preg_match("/Napi ige: <\/a>(.*?)&nbsp;/s", $tartalom, $ige);
 			$ige = preg_replace("/Napi ige: <\/a>/", "", $ige);
 			$ige = preg_replace("/<\/p>/", "", $ige);
@@ -39,7 +42,7 @@
 			return $ige[0];
 		}
 		catch(Exception $e){
-			return "[Pillanatnyilag nem érhető el.]";
+			return ERROR_DAILYWORD_NOT_ACCESSIBLE;
 		}
 	}
 	
@@ -57,7 +60,7 @@
 				return $_GET[$key];
 			}
 			else{
-				throw new OutOfBoundsException("No strings GET parameter belongs to the key '".$key."'");
+				throw new OutOfBoundsException("No string GET parameter belongs to the key '".$key."'");
 			}
 		}
 		
@@ -147,6 +150,25 @@
 			if($counter === 0){
 				throw new InvalidArgumentException("The template file '".$this->file_name."' has no placeholder named '".$placeholder."' ");
 			}
+		}
+		
+		/*
+		 * Replaces the given placeholder in the template html file with the contents of the file given by $filename 
+		 * 
+		 * $placeholder: [string] without the '{{' and '}}'
+		 * $filename: [string] the full or relative path of the file
+		 * returns: [void]
+		 * throws: FileCannotBeOpenedException*/
+		function insert_from_file($placeholder, $filename){
+			if(!file_exists($filename)){
+				throw new InvalidArgumentException("The file '".$filename."' does not exist. ");
+			}
+			$replacement = file_get_contents($filename);
+			if($replacement === false){
+				throw new FileCannotBeOpenedException("The file '".$filename."' cannot be opened. ");
+			}
+			
+			$this->insert($placeholder, $replacement);
 		}
 		
 		/*
