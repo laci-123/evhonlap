@@ -1,42 +1,48 @@
 <?php
 function aktualis()
 {
-echo '<article class="content">
-	<h2>
-		Aktuális alkalmak
-	</h2>';
-	$cimek = array();
-	$tartalom = file_get_contents("content/aktualis.html");
-	preg_match_all("/<!\-\-§(.*?)§\-\->/s", $tartalom, $cimek);
-	if(count($cimek[1]) == 0)
-	{
-		echo "<p>
-					Pillanatnyilag nincs információnk a rendszeres alkalmakon kívüli eseményekről. 
-			  </p>";
-	}
-	else if(count($cimek[1]) > 1)
-	{
-		echo '<p align="center">';
-		for($i = count($cimek[1]); $i > 0; $i--)
-		{
-			echo "<a class='belso_link' href='#".$i."' style='margin: 5; white-space: nowrap;'>".$cimek[1][count($cimek[1])-$i]."</a>\n";
-		}
-		echo '</p>
-		<hr id="elvalaszto">';
-	}
-	echo file_get_contents("content/aktualis.html");
-	echo '<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-	<script>
-		function scrollToAnchor(aid){
-			var aTag = $("a[name=\'"+ aid +"\']");
-			$("html,body").animate({scrollTop: aTag.offset().top},"slow");
-		}
+	$titles = array();
+	$content = "";
+	$output = "";
+	
 
-		$(".belso_link").click(function() {
-			var str = $(this).attr("href");
-			scrollToAnchor(str.substring(1));
-		});
-	</script>
-</article>';
+	$output .= SEGMENT_CONTENTHEADER;
+	$output .= SEGMENT_UPCOMINGEVENTS_TITLE;
+	
+	try{
+		$content = file_get_contents_safe(FILE_UPCOMINGEVENTS_CONTENT);
+	}
+	catch(Exception $ex){
+		$output .= ERROR_NOT_ACCESSIBLE;
+		$output .= SEGMENT_CONTENTFOOTER;
+		return $output;
+	}
+	
+	preg_match_all("/<!\-\-§(.*?)§\-\->/s", $content, $titles);
+	
+	if(count($titles[1]) == 0)
+	{
+		$output .= MESSAGE_NO_UPCOMING_EVENTS;
+		$output .= SEGMENT_CONTENTFOOTER;
+		return $output;
+	}
+	else if(count($titles[1]) > 1){
+		$output .= SEGMENT_LINKS_BLOCK;
+		for($i = count($titles[1]); $i > 0; $i--)
+		{
+			$output .= "<a class='belso_link' href='#".$i."' style='margin: 5; white-space: nowrap;'>".$titles[1][count($titles[1])-$i]."</a>\n";
+		}
+		$output .= SEGMENT_LINKS_BLOCK_END;
+		$output .= SEGMENT_SEPARATOR;
+	}
+		
+	$output .= $content;
+	
+	$output .= SCRIPT_JQUERY;
+	$output .= SCRIPT_SCROLL_TO_ANCHOR;
+	
+	$output .= SEGMENT_CONTENTFOOTER;
+	
+	return $output;
 }
 ?>

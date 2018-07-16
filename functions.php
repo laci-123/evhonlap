@@ -179,4 +179,41 @@
 			echo $this->page;
 		}
 	}
+	
+	/*
+ * Returns a segment of a string between a given start and end point
+ * (copied from: http://stackoverflow.com/questions/5696412/get-substring-between-two-strings-php)
+ * 
+ * $string: [string]
+ * $start: [string] the start of the segment, inclusive
+ * $end: [string] the end of the segment, inclusive
+ * returns: [string]*/
+function get_string_between($string, $start, $end){
+    $string = ' ' . $string;
+    $ini = strpos($string, $start);
+    if ($ini == 0) return '';
+    $ini += strlen($start);
+    $len = strpos($string, $end, $ini) - $ini;
+    return substr($string, $ini, $len);
+}
+
+/*
+ * Gets contents of a file safely
+ * 
+ * $filename: [string] the absolute or relative path of the file
+ * returns: [string]
+ * throws: 
+ * 		InvalidArgumentException
+ * 		FileCannotBeOpenedException*/
+function file_get_contents_safe($filename){
+	if(!file_exists($filename)){
+		throw new InvalidArgumentException("The file '".$filename."' does not exist. ");
+	}
+	$content = file_get_contents($filename);
+	if($content === false){
+		throw new FileCannotBeOpenedException("The file '".$filename."' cannot be opened. ");
+	}
+	
+	return $content;
+}
 ?>
