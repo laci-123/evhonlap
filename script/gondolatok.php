@@ -1,60 +1,64 @@
 <?php
-function get_string_between($string, $start, $end){
-	//kimásolva: http://stackoverflow.com/questions/5696412/get-substring-between-two-strings-php
-    $string = ' ' . $string;
-    $ini = strpos($string, $start);
-    if ($ini == 0) return '';
-    $ini += strlen($start);
-    $len = strpos($string, $end, $ini) - $ini;
-    return substr($string, $ini, $len);
-}
-
 function gondolatok()
-{
-echo '<article class="content">
-	<h2>
-		Gondolatok
-	</h2>';
-	$cimek = array();
-	$tartalom = file_get_contents("content/gondolatok.html");
-	preg_match_all("/<!\-\-§(.*?)§\-\->/s", $tartalom, $cimek);
-	if(count($cimek[1]) == 0)
-	{
-		echo "<p>
-					Ez a szakasz jelenleg üres. 
-			  </p>";
+{	
+	$titles = array();
+	$content = "";
+	$entry = 0;
+	$actual_content = "";
+	$output = "";
+	
+	$output .= SEGMENT_CONTENTHEADER;
+	$output .= SEGMENT_THOUGHTS_TITLE;
+	
+	try{
+		$content = file_get_contents_safe(FILE_THOUGHTS_CONTENT);
 	}
-	else if(count($cimek[1]) > 1)
-	{
-		echo '<p align="center">';
-		for($i = count($cimek[1]); $i > 0; $i--)
-		{
-			echo "<a class='belso_link' href='?hely=gondolatok&cim=".$i."'>".$cimek[1][count($cimek[1])-$i]."</a>\n <br>";
-		}
-		echo '</p>
-		<hr id="elvalaszto">';
+	catch(Exception $ex){
+		$output .= ERROR_NOT_ACCESSIBLE;
+		$output .= SEGMENT_CONTENTFOOTER;
+		return $output;
 	}
 	
-	$cim = 1;
-	if(isset($_GET['cim']))
+	preg_match_all("/<!\-\-§(.*?)§\-\->/s", $content, $titles);
+	
+	if(count($titles[1]) == 0)
 	{
-		$cim = count($cimek[1]) - $_GET['cim'] + 1;
+		$output .= MESSAGE_EMPTY_SECTION;
+		$output .= SEGMENT_CONTENTFOOTER;
+		return $output;
 	}
 	
-	$t = "";
-	if($cim != count($cimek[1]))
+	$output .= SEGMENT_LINKS_BLOCK;
+	for($i = count($titles[1]); $i > 0; $i--)
 	{
-		$t = get_string_between($tartalom, $cimek[1][$cim-1], $cimek[1][$cim]);
+		$output .= "<a class='belso_link' href='?hely=gondolatok&cim=".$i."'>".$titles[1][count($titles[1])-$i]."</a>\n <br>";
+	}
+	$output .= SEGMENT_LINKS_BLOCK_END;
+	$output .= SEGMENT_SEPARATOR;
+	
+	try{
+		$entry = count($titles[1]) - GETparameters::get_int(GET_VALUE_THOUGHTS_TITLE) + 1;
+	}
+	catch(OutOfBoundsException $ex){
+		$entry = 1;
+	}
+	
+	
+	if($entry != count($titles[1]))
+	{
+		$actual_content = get_string_between($content, $titles[1][$entry-1], $titles[1][$entry]);
 	}
 	else
 	{
-		$t = get_string_between($tartalom, $cimek[1][$cim-1], "</article>");
+		$actual_content = get_string_between($content, $titles[1][$entry-1], "</article>");
 	}
-	$t = str_replace("<!--§", "", $t);
-	$t = str_replace("§-->", "", $t);
-	$t = preg_replace("/<.r>/", "", $t);
-	echo $t;
+	$actual_content = str_replace("<!--§", "", $actual_content);
+	$actual_content = str_replace("§-->", "", $actual_content);
+	$actual_content = preg_replace("/<.r>/", "", $actual_content);
+	$output .= $actual_content;
 	
-	echo "</article>\n";
+	$output .= SEGMENT_CONTENTFOOTER;
+	
+	return $output;
 }
 ?>

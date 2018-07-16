@@ -6,6 +6,7 @@
 		$files = scandir($dir);											//ennek a könyvtárnak a tartalma 
 		$albums = array();												//a folderek címei (albumok)
 		$folders = array();												//a folderek fizikai nevei
+		$output = "";
 	
 		for($i = 2; $i < count($files); $i++)							//2-től, mert a scandir($dir) valamiért két üres elemet is visszaad 
 		{
@@ -25,18 +26,20 @@
 		ksort($albums);													//az albunok és folderek sorbarendezése 
 		ksort($folders);
 		
-		echo "<article class='content'>\n
+		$output .=  "<article class='content'>\n
 			<h2>Galéria</h2>\n
 			<h3>Összes album</h3>\n";
-		echo "<div style='margin-left: 50px;'>\n";
+		$output .=  "<div style='margin-left: 50px;'>\n";
 		for($i = $countAlbums; $i >= 0; $i--)		
 		{
 			$kepek = scandir("img/galeria/".$folders[$i]);	
 			$kepekSzama = count($kepek) - 4;
-			echo "<a href='?hely=galeria&album=".$i."'>", $albums[$i], "</a> ($kepekSzama kép)\n<br>\n";
+			$output .=  "<a href='?hely=galeria&album=".$i."'>".$albums[$i]."</a> ($kepekSzama kép)\n<br>\n";
 		}
-		echo "</div>\n";
+		$output .=  "</div>\n";
 		
-		echo "</article>";
+		$output .=  "</article>";
+		
+		return $output;
 	}
 ?>
