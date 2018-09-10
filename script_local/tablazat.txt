@@ -1,9 +1,6 @@
-07.1  ;§; 9.30 ;Istentisztelet
-07.8  ;§; 9.30 ;Istentisztelet,
-07.15 ;§; 9.30 ;Istentisztelet, úrvacsora
-07.22 ;§; 9.30 ;Istentisztelet
-07.29 ;§; 9.30 ;Istentisztelet
-08.5  ;§; 9.30 ;Istentisztelet
-08.12 ;§; 9.30 ;Istentisztelet
-08.19 ;§; 9.30 ;Istentisztelet, úrvacsora
-08.26 ;§; 9.30 ;Istentisztelet
+09.02 ;§;9:30 ;  Istentisztelet
+09.09 ;§;9:30 ;  Tanévnyitó családi istentisztelet
+09.09 ;§;18.00;  Esti istentisztelet
+09.16;§;9:30 ;  Istentisztelet, úrvacsora
+09.23;§;9:30 ;  Istentisztelet
+09.30;§;9:30 ;  Istentisztelet

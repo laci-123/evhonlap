@@ -75,7 +75,7 @@ with open(LOCAL_ROOT + args.origin + "/data.ini", 'wb') as ini_file:
 
 print("uploading original images...")
 cd_create(REMOTE_ROOT + dest)
-for up_file in Path(LOCAL_ROOT + args.origin).glob("*.jpg"):
+for up_file in Path(LOCAL_ROOT + args.origin).glob("*.JPG"):
     with up_file.open("rb") as f:
         session.storbinary("STOR " + up_file.name, f)
     create_thumbnail(up_file)
