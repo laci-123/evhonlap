@@ -1,8 +1,8 @@
 <?php
 
 //Uncomment for debugging
-/* ini_set('display_errors',1); 
-   error_reporting(E_ALL);*/
+ ini_set('display_errors',1); 
+   error_reporting(E_ALL);
 
 	require "functions.php";
 	
@@ -60,6 +60,12 @@
 				$content = galeria_osszes();
 			}
 			break;
+        case "slideshow":
+            if(include "script/slideshow.php"){
+                $content = slideshow();
+            }
+            echo $content;
+            break;
 		default:
 			$content_file = FILE_MAINPAGE;
 			break;
@@ -78,5 +84,5 @@
 	}
 	catch(Exception $ex){
 		echo ERROR_OTHER_ERROR.$ex->getMessage();
-	}
+        }
 ?>
