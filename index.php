@@ -18,6 +18,12 @@
 		$location = GET_VALUE_MAINPAGE;
 	}
 	
+	if($location == GET_VALUE_SLIDESHOW){
+		if(include FILE_SLIDESHOW){
+            slideshow();
+            return;
+        }
+	}
 	switch($location){
 		case GET_VALUE_MAINPAGE:
 			$content_file = FILE_MAINPAGE;
@@ -60,12 +66,6 @@
 				$content = galeria_osszes();
 			}
 			break;
-        case "slideshow":
-            if(include "script/slideshow.php"){
-                $content = slideshow();
-            }
-            echo $content;
-            break;
 		default:
 			$content_file = FILE_MAINPAGE;
 			break;
@@ -84,5 +84,5 @@
 	}
 	catch(Exception $ex){
 		echo ERROR_OTHER_ERROR.$ex->getMessage();
-        }
+    }
 ?>

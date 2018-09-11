@@ -116,7 +116,7 @@
 				{																			//a képek kiírása
 					if(is_file("img/galeria/".$folders[$folder]."/".$kepek[$i]))
 					{
-						$output .=  "<a href='/script/slideshow.php/?folder=".$folders[$folder]."&album=".$currentAlbum."#".$kepek[$i]."'>
+						$output .=  "<a href='?hely=slideshow&folder=".$folders[$folder]."&album=".$currentAlbum."&kep=".$i."'>
 								<img src='img/galeria/".$folders[$folder]."/Thubnails/".preg_replace("/\..*/", "", $kepek[$i]).".png"."' width='45%''>
 							  </a>\n";
 						if($i % 2 == 1)

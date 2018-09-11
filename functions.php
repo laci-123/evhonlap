@@ -216,4 +216,25 @@ function file_get_contents_safe($filename){
 	
 	return $content;
 }
+
+
+/*
+ * Safely gets a list of files in the given directory
+ * 
+ * $dirname: [string] the absolute or relative path of the directory
+ * returns: [array of string]
+ * throws:
+ * 		InvalidArgumentException
+ * 		FileCannotBeOpenedException*/
+function scandir_safe($dirname){
+	if(!file_exists($dirname)){
+		throw new InvalidArgumentException("The directory '".$dirname."' does not exist. ");
+	}
+	$files = scandir($dirname);
+	if($files === false){
+		throw new FileCannotBeOpenedException("'".$dirname."' cannot be opened or is not a directory. ");
+	}
+	
+	return $files;
+}
 ?>
