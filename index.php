@@ -10,7 +10,6 @@
 	$content_file = "";
 	$content = "";
 	
-	
 	try{
 		$location = GETparameters::get_string(GET_KEY_LOCATION);
 	}

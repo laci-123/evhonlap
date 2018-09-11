@@ -55,6 +55,13 @@
 #templom_imadsag{
 	text-align: center;
 }
+#uj{
+	color: red;
+	font-size: large;
+}
+#uj>a{
+	color: blue;
+}
 a:visited{
 	color:blue;
 }
