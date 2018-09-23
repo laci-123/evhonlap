@@ -1,27 +1,10 @@
-<!--Térkép-->
-<script src="https://maps.googleapis.com/maps/api/js"></script>
-    <script>
-      function initialize() {
-        var mapCanvas = document.getElementById('map-canvas');
-        var mapOptions = {
-          center: new google.maps.LatLng(47.511709, 18.930309),
-          zoom: 17,
-          mapTypeId: google.maps.MapTypeId.ROADMAP
-        }
-        var map = new google.maps.Map(mapCanvas, mapOptions)
-		var marker1 = new google.maps.Marker();
-		marker1.setPosition(new google.maps.LatLng(47.511709, 18.930309));
-		marker1.setTitle("Gyülekezeti terem");
-		marker1.setMap(map);
-		}
-      google.maps.event.addDomListener(window, 'load', initialize);
-    </script>
 <article class="content">
 	<h2>
 		Elérhetőségek
 	</h2>
 	<p>
-		<b>Gyülekezeti terem:</b> Budakeszi, Fő út 155. <br>
+		<b>Gyülekezeti terem:</b>
+	<a href="https://www.google.hu/maps/place/Budakeszi,+F%C5%91+u.+155,+2092/@47.5120126,18.9282873,17z/data=!3m1!4b1!4m5!3m4!1s0x4741df6fab01e3bb:0x10123d7c20c29bfd!8m2!3d47.512009!4d18.930476?hl=hu" target="_blank" rel="noopener noreferrer"> Budakeszi, Fő út 155.</a> <br>
 		<br>
 		<b>Lelkész:</b> Lacknerné Puskás Sára <br>
 		<br>
@@ -37,6 +20,4 @@
 		<br>
 		<b>Számlaszám:</b> 11784009-20604682 <br>
 	</p>
-	<div id="map-canvas" style="width: 400; height: 300;"></div>
-	<a href="http://maps.google.com/maps?z=16&t=m&q=loc:47.512187+18.930433">Térkép</a>
 </article>
