@@ -38,11 +38,11 @@
 				$content = 	aktualis();
 			}
 			break;
-		case GET_VALUE_NEWS:
-			$content_file = FILE_NEWS;
-			break;
 		case GET_VALUE_ARCHIVE: 
 			$content_file = FILE_ARCHIVE;
+			break;
+		case GET_VALUE_CHARITY:
+			$content_file = FILE_CHARITY;
 			break;
 		case GET_VALUE_PEOPLE:
 			$content_file = FILE_PEOPLE;

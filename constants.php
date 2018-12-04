@@ -5,8 +5,8 @@
 	const GET_VALUE_CONTACT = "elerhetosegek";
 	const GET_VALUE_EVENTS = "alkalmak";
 	const GET_VALUE_UPCOMINGEVENTS = "aktualis";
-	const GET_VALUE_NEWS = "friss";
 	const GET_VALUE_ARCHIVE = "archiv";
+	const GET_VALUE_CHARITY = "templomepites";
 	const GET_VALUE_PEOPLE = "tisztsegviselok";
 	const GET_VALUE_THOUGHTS = "gondolatok";
 	const GET_VALUE_HISTORY = "tortenet";
@@ -27,6 +27,7 @@
     const FILE_UPCOMINGEVENTS_CONTENT = "content/aktualis.html";
     const FILE_NEWS = "content/friss.html";
     const FILE_ARCHIVE = "content/archiv.html";
+    const FILE_CHARITY = "content/templomepites.html"; 
     const FILE_PEOPLE = "content/tisztsegviselok.html";
     const FILE_THOUGHTS = "script/gondolatok.php";
     const FILE_THOUGHTS_CONTENT = "content/gondolatok.html";
