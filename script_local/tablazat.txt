@@ -1,6 +1,13 @@
-09.02 ;§;9:30 ;  Istentisztelet
-09.09 ;§;9:30 ;  Tanévnyitó családi istentisztelet
-09.09 ;§;18.00;  Esti istentisztelet
-09.16;§;9:30 ;  Istentisztelet, úrvacsora
-09.23;§;9:30 ;  Istentisztelet
-09.30;§;9:30 ;  Istentisztelet
+01.04.;    péntek    ;18.30 ;Ifi
+01.06.;    vasárnap  ;9.30  ;Vízkereszt - Istentisztelet
+01.08.;    kedd      ;10.00 ;Baba-mama kör
+01.13.;    vasárnap  ;9.30  ;Családi istentisztelet
+01.13.;    vasárnap  ;18.00 ;Esti istentisztelet
+01.16.;    szerda    ;18.30 ;Középnemzedék köre
+01.17.;    csütörtök ;19.00 ;Protestáns Kör
+01.18.;    péntek    ;18.30 ;Ifi
+01.20.;    vasárnap  ;9.30  ;Istentisztelet, úrvacsora
+01.22.;    kedd      ;10.00 ;Baba-mama kör
+01.21-25.; hétfő-péntek; 18.30 Ökumenikus imahét váltott helyszínekkel
+01.27. ;vasárnap     ;9.30  ;Istentisztelet, felnőtt hittan
+01.30. ;szerda       ;18.30 ;Középnemzedék köre
