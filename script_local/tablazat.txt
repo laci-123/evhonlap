@@ -1,13 +1,5 @@
-01.04.;    péntek    ;18.30 ;Ifi
-01.06.;    vasárnap  ;9.30  ;Vízkereszt - Istentisztelet
-01.08.;    kedd      ;10.00 ;Baba-mama kör
-01.13.;    vasárnap  ;9.30  ;Családi istentisztelet
-01.13.;    vasárnap  ;18.00 ;Esti istentisztelet
-01.16.;    szerda    ;18.30 ;Középnemzedék köre
-01.17.;    csütörtök ;19.00 ;Protestáns Kör
-01.18.;    péntek    ;18.30 ;Ifi
-01.20.;    vasárnap  ;9.30  ;Istentisztelet, úrvacsora
-01.22.;    kedd      ;10.00 ;Baba-mama kör
-01.21-25.; hétfő-péntek; 18.30 Ökumenikus imahét váltott helyszínekkel
-01.27. ;vasárnap     ;9.30  ;Istentisztelet, felnőtt hittan
-01.30. ;szerda       ;18.30 ;Középnemzedék köre
+Január 21; hétfő; Katolikus templom; Lukács Tamás
+Január 22; kedd; Metodista templom; Lacknerné Puskás Sára 
+Január 23; szerda; Evangélikus gyülekezeti terem; Borosné Varga Edina 
+Január 24; csütörtök; Baptista imaház; Szhánszky Gábor
+Január 25; péntek; Református templom; Filó Kristóf
