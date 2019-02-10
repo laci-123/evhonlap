@@ -1,5 +1,15 @@
-Január 21; hétfő; Katolikus templom; Lukács Tamás
-Január 22; kedd; Metodista templom; Lacknerné Puskás Sára 
-Január 23; szerda; Evangélikus gyülekezeti terem; Borosné Varga Edina 
-Január 24; csütörtök; Baptista imaház; Szhánszky Gábor
-Január 25; péntek; Református templom; Filó Kristóf
+02.01. ;péntek 	  ; 18.30 ;Ifi
+02.03. ;vasárnap  ; 09.30 ;Istentisztelet
+02.05. ;kedd 	  ; 10.00 ;Baba-mama kör
+02.05. ;kedd 	  ; 14.30 ;Idősek bibliaórája
+02.08. ;péntek 	  ; 18.30 ;Ifi
+02.10. ;vasárnap  ; 09.30 ;Családi istentisztelet
+02.10. ;vasárnap  ; 18.00 ;Esti istentisztelet
+02.13. ;szerda 	  ; 18.30 ;Középnemzedék köre
+02.15. ;péntek 	  ; 18.30 ;Ifi
+02.17. ;vasárnap  ; 09.30 ;Istentisztelet, úrvacsora
+02.19. ;kedd 	  ; 10.00 ;Baba-mama kör
+02.21. ;csütörtök ; 19.00 ;Protestáns Kör
+02.22. ;péntek 	  ; 18.30 ;Ifi
+02.24. ;vasárnap  ; 09.30 ;Istentisztelet
+02.27. ;szerda 	  ; 18.30 ;Középnemzedék köre
