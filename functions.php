@@ -25,7 +25,7 @@
 	}
 	
 	/*
-	 * Returns the Daily Word from evangelikus.hu. 
+	 * Returns the Daily Word from https://evangelikus.hu. 
 	 * 
 	 * returns: [string]
 	 * */
@@ -143,7 +143,8 @@
 		 * 
 		 * $placeholder: [string] without the '{{' and '}}'
 		 * $replacement: [string]
-		 * returns: [void]*/
+		 * returns: [void]
+		 * throws: InvalidArgumentException*/
 		function insert($placeholder, $replacement){
 			$counter = 0;
 			$this->page = str_replace("{{".$placeholder."}}", $replacement, $this->page, $counter);

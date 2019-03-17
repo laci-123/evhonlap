@@ -20,25 +20,33 @@
 	
 	const FILE_FRAME = "main_frame.html";
 	const FILE_SLIDESHOW_FRAME = "slideshow_frame.html";
-	const FILE_MAINPAGE = "content/fo_oldal.html";
-	const FILE_CONTACT = "content/elerhetosegek.html";
-	const FILE_EVENTS = "content/allando.html";
-    const FILE_UPCOMINGEVENTS = "script/aktualis.php";
-    const FILE_UPCOMINGEVENTS_CONTENT = "content/aktualis.html";
-    const FILE_NEWS = "content/friss.html";
-    const FILE_ARCHIVE = "content/archiv.html";
-    const FILE_CHARITY = "content/templomepites.html"; 
-    const FILE_PEOPLE = "content/tisztsegviselok.html";
-    const FILE_THOUGHTS = "script/gondolatok.php";
-    const FILE_THOUGHTS_CONTENT = "content/gondolatok.html";
-    const FILE_HISTORY = "content/tortenet.html";
-    const FILE_GALERY = "script/galeria.php";
-    const FILE_GALERYALL = "script/galeria_osszes.php";
-    const FILE_SLIDESHOW = "script/slideshow.php";
+	const FILE_MAINPAGE = "script/fo_oldal.php";
+	const FILE_MAINPAGE_CONTENT = "content/fo_oldal.html";
+	const FILE_CONTACTS = "script/elerhetosegek.php";
+	const FILE_CONTACTS_CONTENT = "content/elerhetosegek.html";
+	const FILE_EVENTS = "script/allando.php";
+	const FILE_EVENTS_CONTENT = "content/allando.html";
+        const FILE_UPCOMINGEVENTS = "script/aktualis.php";
+        const FILE_UPCOMINGEVENTS_CONTENT = "content/aktualis.html";
+        const FILE_ARCHIVE = "script/archiv.php";
+	const FILE_ARCHIVE_CONTENT = "content/archiv.html";
+	const FILE_CHARITY = "script/templomepites.php";
+        const FILE_CHARITY_CONTENT = "content/templomepites.html"; 
+	const FILE_PEOPLE = "script/tisztsegviselok.php";
+        const FILE_PEOPLE_CONTENT = "content/tisztsegviselok.html";
+        const FILE_THOUGHTS = "script/gondolatok.php";
+        const FILE_THOUGHTS_CONTENT = "content/gondolatok.html";
+	const FILE_HISTORY = "script/tortenet.php";
+        const FILE_HISTORY_CONTENT = "content/tortenet.html";
+        const FILE_GALERY = "script/galeria.php";
+        const FILE_GALERYALL = "script/galeria_osszes.php";
+        const FILE_SLIDESHOW = "script/slideshow.php";
+	const FILE_LASTMODIFIED = "last_modified.txt";
     
 	const PLACEHOLDER_CONTENT = "content";
 	const PLACEHOLDER_DAILYWORD = "DailyWord";
 	const PLACEHOLDER_BACK_LINK = "back_link";
+	const PLACEHOLDER_LASTMODIFIED = "LastModified";
 	
 	const SEGMENT_CONTENTHEADER = "<article class='content'>";
 	const SEGMENT_CONTENTFOOTER = "</article>";
@@ -52,15 +60,18 @@
 	const SEGMENT_SLIDESHOW_LINK = "<a class='link' href='?hely=slideshow&folder=";
 	const SEGMENT_SLIDESHOW_LINK_PREV = "'>&lt;&lt;Előző&lt;&lt;</a>";
 	const SEGMENT_SLIDESHOW_LINK_NEXT = "'>&gt;&gt;Következő&gt;&gt;</a>";
+
+	const REGEX_ENTRY = "/<!\-\-§(.*?)§\-\->/s";
 	
 	const URL_EVANGELIKUSHU = "https://www.evangelikus.hu/";
 	
 	const SCRIPT_SCROLL_TO_ANCHOR = "<script src='script/scrollToAnchor.js'></script>";
 	const SCRIPT_JQUERY = "<script src='https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>";
 	
-	const ERROR_NOT_ACCESSIBLE = "<p>Ez a tartalom jelenleg nem érhető el. </p>";
+	const ERROR_NOT_ACCESSIBLE = "<article class='content'>\n<p>Ez a tartalom egy váratlan hiba miatt jelenleg nem érhető el. </p>\n</article>";
 	const ERROR_DAILYWORD_NOT_ACCESSIBLE = "<i>[Pillanatnyilag nem érhető el.]</i>";
 	const ERROR_WRONG_URL = "<b>Hibás URL-cím</b>\n<br><br>\n<a href='http://budakeszi.lutheran.hu'>Főoldal</a>";
+	const ERROR_INTERNAL_ERROR = "<b>Váratlan hiba történt. </b> \n<br><br><br>\nRészletek: <br>\n";
 	const ERROR_OTHER_ERROR = "<b>Error: </b>";
 	
 	const MESSAGE_EMPTY_SECTION = "<p>Ez a szakasz jelenleg üres. </p>";

@@ -18,7 +18,7 @@ function aktualis()
 		return $output;
 	}
 	
-	preg_match_all("/<!\-\-§(.*?)§\-\->/s", $content, $titles);
+	preg_match_all(REGEX_ENTRY, $content, $titles);
 	
 	if(count($titles[1]) == 0)
 	{
@@ -30,7 +30,7 @@ function aktualis()
 		$output .= SEGMENT_LINKS_BLOCK;
 		for($i = count($titles[1]); $i > 0; $i--)
 		{
-			$output .= "<a class='belso_link' href='#".$i."' style='margin: 5; white-space: nowrap;'>".$titles[1][count($titles[1])-$i]."</a>\n";
+			$output .= "<a class='belso_link' href='#".$i."'>".$titles[1][count($titles[1])-$i]."</a>\n";
 		}
 		$output .= SEGMENT_LINKS_BLOCK_END;
 		$output .= SEGMENT_SEPARATOR;
