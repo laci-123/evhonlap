@@ -1,15 +1,17 @@
-02.01. ;péntek 	  ; 18.30 ;Ifi
-02.03. ;vasárnap  ; 09.30 ;Istentisztelet
-02.05. ;kedd 	  ; 10.00 ;Baba-mama kör
-02.05. ;kedd 	  ; 14.30 ;Idősek bibliaórája
-02.08. ;péntek 	  ; 18.30 ;Ifi
-02.10. ;vasárnap  ; 09.30 ;Családi istentisztelet
-02.10. ;vasárnap  ; 18.00 ;Esti istentisztelet
-02.13. ;szerda 	  ; 18.30 ;Középnemzedék köre
-02.15. ;péntek 	  ; 18.30 ;Ifi
-02.17. ;vasárnap  ; 09.30 ;Istentisztelet, úrvacsora
-02.19. ;kedd 	  ; 10.00 ;Baba-mama kör
-02.21. ;csütörtök ; 19.00 ;Protestáns Kör
-02.22. ;péntek 	  ; 18.30 ;Ifi
-02.24. ;vasárnap  ; 09.30 ;Istentisztelet
-02.27. ;szerda 	  ; 18.30 ;Középnemzedék köre
+03.01. ;péntek		 ;18.30		;Ökumenikus Világimanap–Szent László Ház
+03.03. ;vasárnap	 ;9.30		;Istentisztelet
+03.05. ;kedd		 ;10.00		;Baba-mama kör
+03.08. ;péntek		 ;18.30		;Ifi
+03.09. ;szombat		 ;10.00		;Egyházmegyei hittanverseny - Budavár
+03.010.;vasárnap	 ;9.30		;Családi istentisztelet
+03.010.;vasárnap	 ;18.00		;Istentisztelet
+03.12. ;kedd		 ;14.30		;Idősek bibliaórája
+03.13. ;szerda		 ;18.30		;Középnemzedék köre
+03.17. ;vasárnap	 ;9.30		;Istentisztelet, úrvacsora
+03.19. ;kedd		 ;10.00		;Baba-mama kör
+03.21. ;csütörtök	 ; 19.00	; Protestáns Kör
+03.22. ;péntek		 ;18.30		;Ifi
+03.24. ;vasárnap	 ;9.30		;Istentisztelet, közgyűlés
+03.27. ;szerda		 ;18.30		;Böjti est
+03.29. ;péntek		 ;18.30		;Egyházmegyei ifi
+03.31. ;vasárnap	 ;9.30		;Istentisztelet
