@@ -42,14 +42,17 @@
         const FILE_GALERYALL = "script/galeria_osszes.php";
         const FILE_SLIDESHOW = "script/slideshow.php";
 	const FILE_LASTMODIFIED = "last_modified.txt";
+	const FILE_ALBUMDATA = "/data.txt";
+	
+	const FOLDER_GALERY = "img/galeria/";
     
 	const PLACEHOLDER_CONTENT = "content";
 	const PLACEHOLDER_DAILYWORD = "DailyWord";
 	const PLACEHOLDER_BACK_LINK = "back_link";
 	const PLACEHOLDER_LASTMODIFIED = "LastModified";
 	
-	const SEGMENT_CONTENTHEADER = "<article class='content'>";
-	const SEGMENT_CONTENTFOOTER = "</article>";
+	const SEGMENT_CONTENTHEADER = "<article class='content'>\n";
+	const SEGMENT_CONTENTFOOTER = "</article>\n";
 	const SEGMENT_SEPARATOR = "<hr id='elvalaszto'>";
 	const SEGMENT_THOUGHTS_TITLE = "<h2>Gondolatok</h2>";
 	const SEGMENT_LINKS_BLOCK = "<p align='center'>";
@@ -60,6 +63,11 @@
 	const SEGMENT_SLIDESHOW_LINK = "<a class='link' href='?hely=slideshow&folder=";
 	const SEGMENT_SLIDESHOW_LINK_PREV = "'>&lt;&lt;Előző&lt;&lt;</a>";
 	const SEGMENT_SLIDESHOW_LINK_NEXT = "'>&gt;&gt;Következő&gt;&gt;</a>";
+	const SEGMENT_GALERY_TITLE = "<h2>Galéria</h2>\n";
+	const SEGMENT_GALERY_MENU = "<nav id='galeria_menu'>\n";
+	const SEGMENT_GALERY_MENU_END = "</nav>\n";
+
+	const NUM_GALERY_MAXALBUMS = 5;
 
 	const REGEX_ENTRY = "/<!\-\-§(.*?)§\-\->/s";
 	

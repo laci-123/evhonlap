@@ -97,7 +97,7 @@
 					$content = tortenet();
 				}
 				else{
-					throw new InvalidArgumentException("The file '".FILE_HISTORY."'dos not exist.");
+					throw new InvalidArgumentException("The file '".FILE_HISTORY."'does not exist.");
 				}
 				break;
 			case GET_VALUE_GALERY: 
@@ -105,7 +105,7 @@
 					$content = galeria();
 				}
 				else{
-					throw new InvalidArgumentException("The file '".FILE_GALERY."'dos not exist.");
+					throw new InvalidArgumentException("The file '".FILE_GALERY."'does not exist.");
 				}
 				break;
 			case GET_VALUE_GALERYALL:
@@ -113,7 +113,15 @@
 					$content = galeria_osszes();
 				}
 				else{
-					throw new InvalidArgumentException("The file '".FILE_GALERYALL."'dos not exist.");
+					throw new InvalidArgumentException("The file '".FILE_GALERYALL."'does not exist.");
+				}
+				break;
+			case "galeria2":	//Experimental
+				if(include "script/galeria2.php"){
+					$content = galeria2();
+				}
+				else{
+					throw new InvalidArgumentException("The file 'script/galeria2.php' does not exist.");
 				}
 				break;
 			default:

@@ -238,4 +238,22 @@ function scandir_safe($dirname){
 	
 	return $files;
 }
+
+/*
+ * Safely gets a list of files in the given directory, without "." (same directory) and ".." (parent directory). 
+ * $dirname: [string] the absolute or relative path of the directory
+ * returns [array of string]
+ * throws:
+ *	IvalidArgumentException
+ *	FileCannotBeOpenedException */
+function scandir_safe_compact($dirname){
+	$files = scandir_safe($dirname);
+	if(($key = array_search(".", $files)) !== false){
+		unset($files[$key]);
+	}
+	if(($key = array_search("..", $files)) !== false){
+		unset($files[$key]);
+	}
+	return $files;
+}
 ?>
