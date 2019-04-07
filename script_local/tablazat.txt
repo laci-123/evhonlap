@@ -1,17 +1,18 @@
-03.01. ;péntek		 ;18.30		;Ökumenikus Világimanap–Szent László Ház
-03.03. ;vasárnap	 ;9.30		;Istentisztelet
-03.05. ;kedd		 ;10.00		;Baba-mama kör
-03.08. ;péntek		 ;18.30		;Ifi
-03.09. ;szombat		 ;10.00		;Egyházmegyei hittanverseny - Budavár
-03.010.;vasárnap	 ;9.30		;Családi istentisztelet
-03.010.;vasárnap	 ;18.00		;Istentisztelet
-03.12. ;kedd		 ;14.30		;Idősek bibliaórája
-03.13. ;szerda		 ;18.30		;Középnemzedék köre
-03.17. ;vasárnap	 ;9.30		;Istentisztelet, úrvacsora
-03.19. ;kedd		 ;10.00		;Baba-mama kör
-03.21. ;csütörtök	 ; 19.00	; Protestáns Kör
-03.22. ;péntek		 ;18.30		;Ifi
-03.24. ;vasárnap	 ;9.30		;Istentisztelet, közgyűlés
-03.27. ;szerda		 ;18.30		;Böjti est
-03.29. ;péntek		 ;18.30		;Egyházmegyei ifi
-03.31. ;vasárnap	 ;9.30		;Istentisztelet
+04.02. ;Kedd 		;10.00 ;Baba-mama kör
+04.05  ;Péntek 		;18.30 ;Ifi
+04.07. ;Vasárnap 	;9.30  ;Istentisztelet - szószékcsere
+04.08. ;Hétfő 		;14.30 ;Idősek bibliaórája
+04.10. ;Szerda 		;18.30 ;Középnemzedék köre
+04.12. ;Péntek 		;18.00 ;Böjti zenés áhítat - passió a metodista templomban
+04.14. ;Vasárnap 	;9.30  ;Családi istentisztelet
+04.14. ;Vasárnap 	;18.00 ;Esti istentisztelet
+04.16. ;Kedd 		;10.00 ;Baba-mama kör
+04.18. ;Nagycsütörtök 	;18.00 ;Istentisztelet, úrvacsora
+04.19. ;Nagypéntek 	;18.00 ;Passiói istentisztelet
+04.21. ;Húsvét vasárnap ;5.00  ; Hajnali istentisztelet, úrvacsora
+04.21. ;Húsvét vasárnap ;9.30  ; Istentisztelet, úrvacsora
+04.22. ;Húsvét hétfő 	;9.30  ; Istentisztelet
+04.24. ;Szerda 		;18.30 ;	Középnemzedék köre
+04.28. ;Vasárnap 	;9.30  ; Istentisztelet
+04.26-28. ;péntek-vasárnap;  ; Balatonszárszó
+04.30. ;Kedd 		;10.00 ;	Baba-mama kör
