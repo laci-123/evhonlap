@@ -25,6 +25,8 @@
 			foreach($dirs as $directory){
 				$datafile = file_get_contents_safe(FOLDER_GALERY.$directory.FILE_ALBUMDATA);
 				$data = explode("\n", $datafile);
+				//data[0]: number 
+				//data[1]: title
 				$albums[$data[0]] = new Album($directory, $data[1], $data[0]);
 			}
 			krsort($albums);
@@ -59,11 +61,21 @@
 				}
 			}
 
-		$output .= "<li><a style='background-color: white; color: black; padding: 8px 50px;' href='#'>".$albums[$current_album]->title."</a></li>\n";
-
+		$output .= "<li><a style='' href='#'>".$albums[$current_album]->title."</a></li>\n";
 		$output .= "</ul>\n";
-		
 		$output .= SEGMENT_GALERY_MENU_END;
+
+		//Printing out the images
+			$images = scandir_safe_compact(FOLDER_GALERY.$albums[$current_album]->filename);
+			for($i = 0; $i < count($images); $i++){
+				$ext = pathinfo($images[$i])['extension'];
+				$file = pathinfo($images[$i])['filename'];
+				if($ext == 'jpg' || $ext == 'JPG' || $ext == 'jpeg' || $ext == 'JPEG' || $ext == 'png' || $ext == 'PNG'){
+					$output .= "<a href='?hely=slideshow&folder=".$albums[$current_album]->filename."&album=".$current_album."&kep=".$i."'>";
+					$output .= "<img src='".FOLDER_GALERY.$albums[$current_album]->filename."/Thumbnails/".$file.".png' width='45%'></a>\n";
+				}
+			}
+
 		$output .= SEGMENT_CONTENTFOOTER;
 		return $output;
 	}
