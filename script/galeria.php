@@ -1,150 +1,83 @@
-﻿<?php 
-	/*Vigyázat! ha az /img/galeria könyvtárban van egy olyan folder, amiben nincs data.ini file, az is meg fog jelenni az 
-	  albumok között, egy üres elemként*/
+<?php 
+	class Album{
+		public $filename;
+		public $title;
+		public $number;
+
+		function __construct($filename, $title, $number){
+			$this->filename = $filename;
+			$this->title = $title;
+			$this->number = $number;
+		}
+	}
+
+	function galeria(){
+		$output = SEGMENT_CONTENTHEADER;
+		$output .= SEGMENT_GALERY_TITLE;
+		$output .= SEGMENT_GALERY_MENU; 
+
+		$output .= "<ul>\n"; 
+		$output .= "<li><a href='#'>Albumok &darr;</a>\n";
+		$output .= "<ul>\n";
 	
-	function galeria()
-	{
-		
-		$dir = "img/galeria";											//a könyvtár, ahol a képek vannak
-		$files = scandir($dir);											//ennek a könyvtárnak a tartalma 
-		$albums = array();												//a folderek címei (albumok)
-		$folders = array();												//a folderek fizikai nevei
-		$currentAlbum = "";												//az éppen használt albumok száma
-		$output = "";
-		define("MAX_ALBUMS", 8);										//az albumok legördülő menüben az elemek maximális száma 
-		
-		if(isset($_GET['album']))
-		{
-			$currentAlbum = $_GET['album'];
-		}
-		$countAlbums = 0; 												//az albumok száma
-		$kepperoldal = 5;												//képek száma oldalanként
-		if(isset($_GET['szam']))										//a v11 verziótól csak kézzel lehet beállítani az URL címben, a debugolás megkönnyítésére maradt itt
-		{
-			$kepperoldal = $_GET['szam'];
-		}
-		$lap = 0;														//hanyadik lap, ha nem jelenik meg az összes kép egyszerre
-		if(isset($_GET['lap']))
-		{
-			$lap = $_GET['lap'];
-		}
-		
-		for($i = 2; $i < count($files); $i++)							//2-től, mert a scandir($dir) valamiért két üres elemet is visszaad 
-		{
-			$file = fopen("img/galeria/".$files[$i]."/data.ini", "r");	//az összes folderben a data.ini file tartalma 
-			
-			$index = fgets($file);										//az album sorszáma
-			$index = preg_replace('/\r?\n$/', '', $index); 				//a sortörésjelek leszedése
-			$index = intval($index);		
-			
-			$insert = fgets($file);										//az album címe
-			$insert = mb_convert_encoding($insert, 'UTF-8', 'ASCII');
-			$albums[$index] = $insert;		
-			$folders[$index] = $files[$i];
-			fclose($file);
-		}
-		
-		$countAlbums = count($albums)-1;
-		ksort($albums);													//az albunok és folderek sorbarendezése 
-		ksort($folders);
-		
-		$output .=  "<div class='content'>
-		<h2>
-			Galéria
-		</h2>
-		<nav id='galeria_menu'>
-			<ul>
-				<li><a href='#'>Albumok &darr;</a>
-					<ul>";
-						//var_dump($albums);
-						if($countAlbums >= MAX_ALBUMS)					//az albunokra mutató linkek kiírása 
-						{
-							for($i = $countAlbums; $i > ($countAlbums - MAX_ALBUMS); $i--)			
-							{
-								$output .=  "<li><a href='?hely=galeria&album=".$i."'>".$albums[$i]."</a></li>\n";
-							}
-							$output .=  "<li><a href='?hely=galeria_osszes'>Összes album</a></li>\n";
-						}
-						else											
-						{
-							for($i = $countAlbums; $i >= 0; $i--)		
-							{
-								$output .=  "<li><a href='?hely=galeria&album=".$i."'>".$albums[$i]."</a></li>\n";
-							}
-						}
-				$output .= "</ul>
-				</li>
-				<li><a style='background-color: white; color: black; padding: 8px 50px;' href='#'>";
-						if($currentAlbum != "")							//az aktuális album kiírása 
-						{
-							$output .=  $albums[$currentAlbum]."</a></li>";
-						}
-						else
-						{
-							$output .=  $albums[$countAlbums]."</a></li>";
-						}
-			$output .=  "</ul>
-		</nav>					
-		<div>";
-			$folder = $countAlbums;										//az aktuális folder száma
-			if($currentAlbum != "")
-			{
-				$folder = $currentAlbum;
+		//Fetching directories, their numbers and their titles, then sorting them
+			$dirs = scandir_safe_compact(FOLDER_GALERY);
+			$albums = array();
+			foreach($dirs as $directory){
+				$datafile = file_get_contents_safe(FOLDER_GALERY.$directory.FILE_ALBUMDATA);
+				$data = explode("\n", $datafile);
+				//data[0]: number 
+				//data[1]: title
+				$albums[$data[0]] = new Album($directory, $data[1], $data[0]);
 			}
-			$kepek = scandir("img/galeria/".$folders[$folder]);			//az aktuális folderben levő képek
-			$meddig = 5;												//a kiírandó képek száma
-			
-			if($currentAlbum != "" )
-			{
-				if($kepperoldal != "a")								//"a" = összes
-				{
-					$meddig = $kepperoldal;
+			krsort($albums);
+
+		//Printing out links of albums
+			$i = 0;
+			foreach($albums as $album){
+				$output .= "<li><a href='?hely=galeria&album=$album->number'>$album->title</a></li>\n";
+				if($i > NUM_GALERY_MAXALBUMS){
+					break;
 				}
-				else
-				{
-					$meddig = count($kepek) - 2;						//nem kell a data.ini és a ..
+				$i++;
+			}
+			$output .= "<li><a href='?hely=galeria_osszes'>Összes album</a></li>\n";	
+		
+		$output .= "</ul>\n";
+		$output .= "</li>\n";
+
+		//Fetching number of current album
+			try{
+				$current_album = GETparameters::get_int("album");
+				if($current_album <= 0 || count($albums) < $current_album){
+					throw new OutOfBoundsException("Incorrect album ID: $current_album");
 				}
 			}
-			
-			if($lap < 0)
-			{
-				$lap = 0;
-			}
-			for($i = ($meddig+1)*$lap; $i <= ($meddig+1)*($lap+1); $i++)
-			{
-				if($kepek[$i] != "." and $kepek[$i] != ".." and $kepek[$i] != "data.ini")	//nem kell a data.ini és a ..
-				{																			//a képek kiírása
-					if(is_file("img/galeria/".$folders[$folder]."/".$kepek[$i]))
-					{
-						$output .=  "<a href='?hely=slideshow&folder=".$folders[$folder]."&album=".$currentAlbum."&kep=".$i."'>
-								<img src='img/galeria/".$folders[$folder]."/Thubnails/".preg_replace("/\..*/", "", $kepek[$i]).".png"."' width='45%''>
-							  </a>\n";
-						if($i % 2 == 1)
-						{
-							$output .=  "<br>\n";
-						}
-					}
+			catch(OutOfBoundsException $ex){
+				if(count($albums) > 0){
+					$current_album = count($albums) - 1;
+				}
+				else{
+					throw new Exception("Couldn't find any pictures. ");
 				}
 			}
-		$output .=  "</div>
-			<br>
-			<br>
-			<div>
-				<div id='elozo'>";
-				if($lap > 0 and $kepperoldal != "a")								//csak akkor kell "Előző" gomb, ha nem ez az első lap és nicncs egyszerre az összes megjelenítve
-				{
-					$output .=  "<a href='?hely=galeria&album=$currentAlbum&lap=".($lap - 1)."'>előző</a>";
+
+		$output .= "<li><a style='background-color: white; color: black; padding: 8px 50px;' href='#'>".$albums[$current_album]->title."</a></li>\n";
+		$output .= "</ul>\n";
+		$output .= SEGMENT_GALERY_MENU_END;
+
+		//Printing out the images
+			$images = scandir_safe_compact(FOLDER_GALERY.$albums[$current_album]->filename);
+			for($i = 0; $i < count($images); $i++){
+				$ext = pathinfo($images[$i])['extension'];
+				$file = pathinfo($images[$i])['filename'];
+				if($ext == 'jpg' || $ext == 'JPG' || $ext == 'jpeg' || $ext == 'JPEG' || $ext == 'png' || $ext == 'PNG'){
+					$output .= "<a href='?hely=slideshow&folder=".$albums[$current_album]->filename."&album=".$current_album."&kep=".$i."'>";
+					$output .= "<img src='".FOLDER_GALERY.$albums[$current_album]->filename."/Thumbnails/".$file.".png' width='45%'></a>\n";
 				}
-				$output .=  "</div>
-				<div id='kovetkezo'>";
-				if(($meddig+1)*($lap+2) <= count($kepek) and $kepperoldal != "a")	//csak akkor kell "Következő" gomb, ha még van több kép és nincs egyszerre az összes megjelenítve
-				{
-					$output .= "<a href='?hely=galeria&album=$currentAlbum&lap=".($lap + 1)."'>következő</a>";
-				}
-				$output .=  "</div>
-			</div>
-		</div>";
-		
+			}
+
+		$output .= SEGMENT_CONTENTFOOTER;
 		return $output;
 	}
 ?>

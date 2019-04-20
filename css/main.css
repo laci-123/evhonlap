@@ -68,9 +68,9 @@ a:visited{
 
 #galeria_album_cim
 {
-	background-color: white; 
-	color: black;
-	padding: 8px 50px;
+	background-color: white; !important
+	color: black; !important
+	padding: 8px 50px; !important
 }
 
 body

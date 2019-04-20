@@ -30,7 +30,7 @@
 			<h2>Galéria</h2>\n
 			<h3>Összes album</h3>\n";
 		$output .=  "<div style='margin-left: 50px;'>\n";
-		for($i = $countAlbums; $i >= 0; $i--)		
+		for($i = $countAlbums; $i >= 1; $i--)		
 		{
 			$kepek = scandir("img/galeria/".$folders[$i]);	
 			$kepekSzama = count($kepek) - 4;
