@@ -25,7 +25,7 @@
 	}
 	
 	/*
-	 * Returns the Daily Word from evangelikus.hu. 
+	 * Returns the Daily Word from https://evangelikus.hu. 
 	 * 
 	 * returns: [string]
 	 * */
@@ -143,7 +143,8 @@
 		 * 
 		 * $placeholder: [string] without the '{{' and '}}'
 		 * $replacement: [string]
-		 * returns: [void]*/
+		 * returns: [void]
+		 * throws: InvalidArgumentException*/
 		function insert($placeholder, $replacement){
 			$counter = 0;
 			$this->page = str_replace("{{".$placeholder."}}", $replacement, $this->page, $counter);
@@ -235,6 +236,24 @@ function scandir_safe($dirname){
 		throw new FileCannotBeOpenedException("'".$dirname."' cannot be opened or is not a directory. ");
 	}
 	
+	return $files;
+}
+
+/*
+ * Safely gets a list of files in the given directory, without "." (same directory) and ".." (parent directory). 
+ * $dirname: [string] the absolute or relative path of the directory
+ * returns [array of string]
+ * throws:
+ *	IvalidArgumentException
+ *	FileCannotBeOpenedException */
+function scandir_safe_compact($dirname){
+	$files = scandir_safe($dirname);
+	if(($key = array_search(".", $files)) !== false){
+		unset($files[$key]);
+	}
+	if(($key = array_search("..", $files)) !== false){
+		unset($files[$key]);
+	}
 	return $files;
 }
 ?>
