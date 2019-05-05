@@ -55,7 +55,7 @@
 			}
 			catch(OutOfBoundsException $ex){
 				if(count($albums) > 0){
-					$current_album = count($albums) - 1;
+					$current_album = count($albums);
 				}
 				else{
 					throw new Exception("Couldn't find any pictures. ");

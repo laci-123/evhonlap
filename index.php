@@ -116,14 +116,6 @@
 					throw new InvalidArgumentException("The file '".FILE_GALERYALL."'does not exist.");
 				}
 				break;
-			case "galeria2":	//Experimental
-				if(include "script/galeria2.php"){
-					$content = galeria2();
-				}
-				else{
-					throw new InvalidArgumentException("The file 'script/galeria2.php' does not exist.");
-				}
-				break;
 			default:
 				if(include FILE_MAINPAGE){
 					$content = fo_oldal();
