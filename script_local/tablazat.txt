@@ -1,18 +1,18 @@
-04.02. ;Kedd 		;10.00 ;Baba-mama kör
-04.05  ;Péntek 		;18.30 ;Ifi
-04.07. ;Vasárnap 	;9.30  ;Istentisztelet - szószékcsere
-04.08. ;Hétfő 		;14.30 ;Idősek bibliaórája
-04.10. ;Szerda 		;18.30 ;Középnemzedék köre
-04.12. ;Péntek 		;18.00 ;Böjti zenés áhítat - passió a metodista templomban
-04.14. ;Vasárnap 	;9.30  ;Családi istentisztelet
-04.14. ;Vasárnap 	;18.00 ;Esti istentisztelet
-04.16. ;Kedd 		;10.00 ;Baba-mama kör
-04.18. ;Nagycsütörtök 	;18.00 ;Istentisztelet, úrvacsora
-04.19. ;Nagypéntek 	;18.00 ;Passiói istentisztelet
-04.21. ;Húsvét vasárnap ;5.00  ; Hajnali istentisztelet, úrvacsora
-04.21. ;Húsvét vasárnap ;9.30  ; Istentisztelet, úrvacsora
-04.22. ;Húsvét hétfő 	;9.30  ; Istentisztelet
-04.24. ;Szerda 		;18.30 ;	Középnemzedék köre
-04.28. ;Vasárnap 	;9.30  ; Istentisztelet
-04.26-28. ;péntek-vasárnap;  ; Balatonszárszó
-04.30. ;Kedd 		;10.00 ;	Baba-mama kör
+06.9. ; vasárnap ;9.30   ;Pünkösd - Istentisztelet, úrvacsora
+06.10.; hétfő    ;9.30   ;Pünkösd hétfő - Istentisztelet
+06.11.; kedd     ;10.00  ;Baba-mama kör
+06.12.; szerda   ;18.30  ;Középnemzedék köre
+06.15.; szombat  ;11.15  ;Kirándulás Vácrátótra
+06.16.; vasárnap ;9.30   ;Tanévzáró családi istentisztelet
+06.16.; vasárnap ;18.00  ;Esti istentisztelet, felnőtt hittan
+06.20.; csütörtök; 19.00 ;Protestáns Kör - Kálvin terem
+06.23.; vasárnap ;9.30 ;Istentisztelet, úrvacsora
+06.30.; vasárnap ;9.30 ;Istentisztelet a Baptista gyülekezettel közösen
+07.7. ; vasárnap ;9.30 ;Istentisztelet
+07.14.; vasárnap ;9.30 ;Istentisztelet, úrvacsora
+07.21.; vasárnap ;9.30 ;Istentisztelet
+07.28.; vasárnap ;9.30 ;Istentisztelet
+08.4. ; vasárnap ;9.30 ;Istentisztelet
+08.11.; vasárnap ;9.30 ;Istentisztelet, úrvacsora
+08.18.; vasárnap ;9.30 ;Istentisztelet
+08.25.; vasárnap ;9.30 ;Istentisztelet
