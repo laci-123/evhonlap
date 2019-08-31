@@ -33,7 +33,7 @@
 		try{
 			$ige = "";
 			$tartalom = get_url(URL_EVANGELIKUSHU);
-			preg_match("/Napi ige: <\/a>(.*?)&nbsp;/s", $tartalom, $ige);
+			preg_match(REGEX_DAILY_WORD, $tartalom, $ige);
 			$ige = preg_replace("/Napi ige: <\/a>/", "", $ige);
 			$ige = preg_replace("/<\/p>/", "", $ige);
 			$ige = preg_replace("/õ/", "ő", $ige);  
@@ -121,7 +121,7 @@
 		/*
 		 * Constructor
 		 * 
-		 * $template_file: [string] the full or relative path of the teplate html file
+		 * $template_file: [string] the absolute or relative path of the teplate html file
 		 * throws: 
 		 * 		InvalidArgumentException
 		 * 		FileCannotBeOpenedException
@@ -182,78 +182,87 @@
 	}
 	
 	/*
- * Returns a segment of a string between a given start and end point
- * (copied from: http://stackoverflow.com/questions/5696412/get-substring-between-two-strings-php)
- * 
- * $string: [string]
- * $start: [string] the start of the segment, inclusive
- * $end: [string] the end of the segment, inclusive
- * returns: [string]*/
-function get_string_between($string, $start, $end){
-    $string = ' ' . $string;
-    $ini = strpos($string, $start);
-    if ($ini == 0) return '';
-    $ini += strlen($start);
-    $len = strpos($string, $end, $ini) - $ini;
-    return substr($string, $ini, $len);
-}
+	 * Returns a segment of a string between a given start and end point
+	 * (copied from: http://stackoverflow.com/questions/5696412/get-substring-between-two-strings-php)
+	 * 
+	 * $string: [string]
+	 * $start: [string] the start of the segment, inclusive
+	 * $end: [string] the end of the segment, inclusive
+	 * returns: [string]*/
+	function get_string_between($string, $start, $end){
+	    $string = ' ' . $string;
+	    $ini = strpos($string, $start);
+	    if ($ini == 0) return '';
+	    $ini += strlen($start);
+	    $len = strpos($string, $end, $ini) - $ini;
+	    return substr($string, $ini, $len);
+	}
 
-/*
- * Gets contents of a file safely
- * 
- * $filename: [string] the absolute or relative path of the file
- * returns: [string]
- * throws: 
- * 		InvalidArgumentException
- * 		FileCannotBeOpenedException*/
-function file_get_contents_safe($filename){
-	if(!file_exists($filename)){
-		throw new InvalidArgumentException("The file '".$filename."' does not exist. ");
+	/*
+	 * Gets contents of a file safely
+	 * 
+	 * $filename: [string] the absolute or relative path of the file
+	 * returns: [string]
+	 * throws: 
+	 * 		InvalidArgumentException
+	 * 		FileCannotBeOpenedException*/
+	function file_get_contents_safe($filename){
+		if(!file_exists($filename)){
+			throw new InvalidArgumentException("The file '".$filename."' does not exist. ");
+		}
+		$content = file_get_contents($filename);
+		if($content === false){
+			throw new FileCannotBeOpenedException("The file '".$filename."' cannot be opened. ");
+		}
+		
+		return $content;
 	}
-	$content = file_get_contents($filename);
-	if($content === false){
-		throw new FileCannotBeOpenedException("The file '".$filename."' cannot be opened. ");
-	}
-	
-	return $content;
-}
 
 
-/*
- * Safely gets a list of files in the given directory
- * 
- * $dirname: [string] the absolute or relative path of the directory
- * returns: [array of string]
- * throws:
- * 		InvalidArgumentException
- * 		FileCannotBeOpenedException*/
-function scandir_safe($dirname){
-	if(!file_exists($dirname)){
-		throw new InvalidArgumentException("The directory '".$dirname."' does not exist. ");
+	/*
+	 * Safely gets a list of files in the given directory
+	 * 
+	 * $dirname: [string] the absolute or relative path of the directory
+	 * returns: [array of string]
+	 * throws:
+	 * 		InvalidArgumentException
+	 * 		FileCannotBeOpenedException*/
+	function scandir_safe($dirname){
+		if(!file_exists($dirname)){
+			throw new InvalidArgumentException("The directory '".$dirname."' does not exist. ");
+		}
+		$files = scandir($dirname);
+		if($files === false){
+			throw new FileCannotBeOpenedException("'".$dirname."' cannot be opened or is not a directory. ");
+		}
+		
+		return $files;
 	}
-	$files = scandir($dirname);
-	if($files === false){
-		throw new FileCannotBeOpenedException("'".$dirname."' cannot be opened or is not a directory. ");
-	}
-	
-	return $files;
-}
 
-/*
- * Safely gets a list of files in the given directory, without "." (same directory) and ".." (parent directory). 
- * $dirname: [string] the absolute or relative path of the directory
- * returns [array of string]
- * throws:
- *	IvalidArgumentException
- *	FileCannotBeOpenedException */
-function scandir_safe_compact($dirname){
-	$files = scandir_safe($dirname);
-	if(($key = array_search(".", $files)) !== false){
-		unset($files[$key]);
+	/*
+	 * Safely gets a list of files in the given directory, without "." (same directory) and ".." (parent directory). 
+	 * $dirname: [string] the absolute or relative path of the directory
+	 * returns [array of string]
+	 * throws:
+	 *	IvalidArgumentException
+	 *	FileCannotBeOpenedException */
+	function scandir_safe_compact($dirname){
+		$files = scandir_safe($dirname);
+		if(($key = array_search(".", $files)) !== false){
+			unset($files[$key]);
+		}
+		if(($key = array_search("..", $files)) !== false){
+			unset($files[$key]);
+		}
+		return array_values($files);
 	}
-	if(($key = array_search("..", $files)) !== false){
-		unset($files[$key]);
+
+	/*
+	* Throws an InvalidArgumentExeption with the message "The file <file_name> does not exist. "
+	* $filename: [string] the name to be included in the error message 
+	* returns: [void]
+	*/
+	function IAException_noSuchFile($filename){
+		throw new InvalidArgumentException("The file '".$file_name."' does not exist. ");
 	}
-	return $files;
-}
 ?>

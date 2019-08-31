@@ -48,7 +48,7 @@
 
 		//Fetching number of current album
 			try{
-				$current_album = GETparameters::get_int("album");
+				$current_album = GETparameters::get_int(GET_KEY_ALBUM);
 				if($current_album <= 0 || count($albums) < $current_album){
 					throw new OutOfBoundsException("Incorrect album ID: $current_album");
 				}
@@ -69,8 +69,13 @@
 		//Printing out the images
 			$images = scandir_safe_compact(FOLDER_GALERY.$albums[$current_album]->filename);
 			for($i = 0; $i < count($images); $i++){
-				$ext = pathinfo($images[$i])['extension'];
-				$file = pathinfo($images[$i])['filename'];
+				$info = pathinfo($images[$i]);
+				$file = $info['filename'];
+				$ext = "";
+				if(isset($info['extension'])){
+					$ext = $info['extension'];
+				}
+
 				if($ext == 'jpg' || $ext == 'JPG' || $ext == 'jpeg' || $ext == 'JPEG' || $ext == 'png' || $ext == 'PNG'){
 					$output .= "<a href='?hely=slideshow&folder=".$albums[$current_album]->filename."&album=".$current_album."&kep=".$i."'>";
 					$output .= "<img src='".FOLDER_GALERY.$albums[$current_album]->filename."/Thumbnails/".$file.".png' width='45%'></a>\n";

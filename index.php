@@ -1,13 +1,12 @@
 <?php
 
 //Uncomment for debugging
- 	//ini_set('display_errors',1); 
-   	//error_reporting(E_ALL);
+ 	ini_set('display_errors',1); 
+   	error_reporting(E_ALL);
 
 	require "functions.php";
 	
 	$location = "";
-	$content_file = "";
 	$content = "";
 	
 	try{
@@ -24,7 +23,7 @@
 				return;
 			 }
 			 else{
-			 	throw new InvalidArgumentException("The file '".FILE_SLIDESHOW."' does not exist.");
+			 	IAException_noSuchFile(FILE_SLIDESHOW);
 			}
 		}
 		switch($location){
@@ -33,7 +32,7 @@
 					$content = fo_oldal();
 				}
 				else{
-					throw new InvalidArgumentException("The file '".FILE_MAINPAGE."' does not exist.");
+					IAException_noSuchFile(FILE_MAINPAGE);
 				}
 				break;
 			case GET_VALUE_CONTACT: 
@@ -41,7 +40,7 @@
 					$content = elerhetosegek();
 				}
 				else{
-					throw new InvalidArgumentException("The file '".FILE_CONTACTS."' does not exist.");
+					IAException_noSuchFile(FILE_CONTACTS);
 				}
 				break;
 			case GET_VALUE_EVENTS: 
@@ -49,7 +48,7 @@
 					$content = allando();
 				}
 				else{
-					throw new InvalidArgumentException("The file '".FILE_EVENTS."' does not exist.");
+					IAException_noSuchFile(FILE_EVENTS);
 				}
 				break;	
 			case GET_VALUE_UPCOMINGEVENTS:
@@ -57,7 +56,7 @@
 					$content = aktualis();
 				}
 				else{
-					throw new InvalidArgumentException("The file '".FILE_UPCOMINGEVENTS."' does not exist.");
+					IAException_noSuchFile(FILE_UPCOMINGEVENTS);
 				}
 				break;
 			case GET_VALUE_ARCHIVE: 
@@ -65,7 +64,7 @@
 					$content = archiv();
 				}
 				else{
-					throw new InvalidArgumentException("The file '".FILE_ARCHIVE."' does not exist.");
+					IAException_noSuchFile(FILE_ARCHIVE);
 				}
 				break;
 			case GET_VALUE_CHARITY:
@@ -73,7 +72,7 @@
 					$content = templomepites();
 				}
 				else{
-					throw new InvalidArgumentException("The file '".FILE_CHARITY."' does not exist.");
+					IAException_noSuchFile(FILE_CHARITY);
 				}
 				break;
 			case GET_VALUE_PEOPLE:
@@ -81,7 +80,7 @@
 					$content = tisztsegviselok();
 				}
 				else{
-					throw new InvalidArgumentException("The file '".FILE_PEOPLE."' does not exist.");
+					IAException_noSuchFile(FILE_PEOPLE);
 				}
 				break;
 			case GET_VALUE_THOUGHTS:
@@ -89,7 +88,7 @@
 					$content = gondolatok();
 				}
 				else{
-					throw new InvalidArgumentException("The file '".FILE_THOUGHTS."' does not exist.");
+					IAException_noSuchFile(FILE_THOUGHTS);
 				}
 				break;
 			case GET_VALUE_HISTORY: 
@@ -97,7 +96,7 @@
 					$content = tortenet();
 				}
 				else{
-					throw new InvalidArgumentException("The file '".FILE_HISTORY."'does not exist.");
+					IAException_noSuchFile(FILE_HISTORY);
 				}
 				break;
 			case GET_VALUE_GALERY: 
@@ -105,7 +104,7 @@
 					$content = galeria();
 				}
 				else{
-					throw new InvalidArgumentException("The file '".FILE_GALERY."'does not exist.");
+					IAException_noSuchFile(FILE_GALERY);
 				}
 				break;
 			case GET_VALUE_GALERYALL:
@@ -113,7 +112,7 @@
 					$content = galeria_osszes();
 				}
 				else{
-					throw new InvalidArgumentException("The file '".FILE_GALERYALL."'does not exist.");
+					IAException_noSuchFile(FILE_GALERYALL);
 				}
 				break;
 			default:
@@ -121,7 +120,7 @@
 					$content = fo_oldal();
 				}
 				else{
-					throw new InvalidArgumentException("The file '".FILE_MAINPAGE."' does not exist.");
+					IAException_noSuchFile(FILE_MAINPAGE);
 				}
 				break;
 		}

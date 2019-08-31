@@ -3,51 +3,56 @@ function slideshow(){
 	$content = "";
 	
 	try{
-		$folder = GETparameters::get_string(GET_VALUE_FOLDER);
+		$folder = GETparameters::get_string(GET_KEY_FOLDER);
 	}
 	catch(OutOfBoundsException $ex){
 		die(ERROR_WRONG_URL);
 	}
+
 	try{
-		$item = GETparameters::get_int(GET_VALUE_ITEM);
+		$item = GETparameters::get_int(GET_KEY_ITEM);
 	}
 	catch(OutOfBoundsException $ex){
-		$item = 2;
+		$item = 0;
 	}
+
 	try{
-		$album_number = GETparameters::get_string(GET_VALUE_ALBUM);
+		$album_number = GETparameters::get_string(GET_KEY_ALBUM);
 	}
 	catch(OutOfBoundsException $ex){
 		$album = 1;
 	}
+
 	try{
-		$files = scandir_safe("img/galeria/$folder");
+		$files = scandir_safe_compact(FOLDER_GALERY.$folder);
 	}
 	catch(Exception $ex){
 		die(ERROR_OTHER_ERROR.$ex->getMessage());
-    }
+        }
 	
-	$back_link = SEGMENT_SLIDESHOW_BACKLINK.$album_number.SEGMENT_SLIDESHOW_BACKLINK_END;
+	$max_index = count($files) - 3;
 	
-	if($item < 2 or $item > count($files) - 3){
-		$item = 2;
+	if($item < 0 or $item > $max_index){
+		$item = 0;
 	}
-	if($item == 2){
-		$prev_item = count($files) - 3;
+	if($item == 0){
+		$prev_item = $max_index;
 	}
 	else{
 		$prev_item = $item - 1;
 	}
-	if($item == count($files) - 3){
-		$next_item = 2;
+	if($item == $max_index){
+		$next_item = 0;
 	}
 	else{
 		$next_item = $item + 1;
 	}
+
+	$back_link = SEGMENT_SLIDESHOW_BACKLINK.$album_number.SEGMENT_SLIDESHOW_BACKLINK_END;
 	
-	$content .= SEGMENT_SLIDESHOW_LINK.$folder."&kep=".$prev_item."&album=".$album_number.SEGMENT_SLIDESHOW_LINK_PREV;
+	$content .= SEGMENT_SLIDESHOW_LINK.$folder."&album=".$album_number."&kep=".$prev_item.SEGMENT_SLIDESHOW_LINK_PREV;
 	$content .= "<img src='img/galeria/".$folder."/".$files[$item]."'>\n";
-	$content .= SEGMENT_SLIDESHOW_LINK.$folder."&kep=".$next_item."&album=".$album_number.SEGMENT_SLIDESHOW_LINK_NEXT;
+	$content .= SEGMENT_SLIDESHOW_LINK.$folder."&album=".$album_number."&kep=".$next_item.SEGMENT_SLIDESHOW_LINK_NEXT;
 	
 	try{
 		$main = new Page(FILE_SLIDESHOW_FRAME);

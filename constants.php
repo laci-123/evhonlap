@@ -1,5 +1,8 @@
 <?php
 	const GET_KEY_LOCATION = "hely";
+	const GET_KEY_FOLDER = "folder";
+	const GET_KEY_ITEM = "kep";
+	const GET_KEY_ALBUM = "album";
 	
 	const GET_VALUE_MAINPAGE = "fooldal";
 	const GET_VALUE_CONTACT = "elerhetosegek";
@@ -14,8 +17,6 @@
 	const GET_VALUE_GALERYALL = "galeria_osszes";
 	const GET_VALUE_THOUGHTS_TITLE = "cim";
 	const GET_VALUE_SLIDESHOW = "slideshow";
-	const GET_VALUE_FOLDER = "folder";
-	const GET_VALUE_ITEM = "kep";
 	const GET_VALUE_ALBUM = "album";
 	
 	const FILE_FRAME = "main_frame.html";
@@ -70,6 +71,7 @@
 	const NUM_GALERY_MAXALBUMS = 5;
 
 	const REGEX_ENTRY = "/<!\-\-§(.*?)§\-\->/s";
+	const REGEX_DAILY_WORD = "/Napi ige: <\/a>(.*?)&nbsp;/s";
 	
 	const URL_EVANGELIKUSHU = "https://www.evangelikus.hu/";
 	
