@@ -1,16 +1,17 @@
-11. 03.; Vasárnap 	;09.30 ;Istentisztelet
-11. 05.; Kedd 		;14.30 ;Idősek bibliaórája
-11. 08.; Péntek 	;10.10 ;Baba-mama kör
-11. 08.; Péntek 	;     ; Egyházmegyei ifjúsági találkozó Óbudán
-11. 10.; Vasárnap 	;09.30 ;Családi istentisztelet
-11. 10.; Vasárnap 	;18.00 ;Istentisztelet
-11. 13.; Szerda 	;19.00 ;Középnemzedék köre
-11. 15.; Péntek 	;18.45 ;Ifi
-11. 17.; Vasárnap 	;09.30 ;Istentisztelet, úrvacsora
-11. 21.; Csütörtök 	;19.00 ;Protestáns Kör
-11. 22.; Péntek 	;10.10 ;Baba-mama kör
-11. 22.; Péntek 	;18.45 ;Ifi
-11. 23.; Szombat 	;16.00 ;Családi délután
-11. 24.; Vasárnap 	;09.30 ;Istentisztelet, felnőtt hittan
-11. 27.; Szerda 	;19.00 ;Középnemzedék köre
-11. 29.; Péntek 	;18.45 ;Ifi
+12.01.; 09.30.; Vasárnap Istentisztelet, úrvacsora - szupplikáció
+12.03.; 18.00 ; Kedd Zenés adventi áhítat - Budahegyvidék
+12.06.; 18.30 ; Péntek Adventi est – szentföldi beszámoló
+12.08.; 09.30.; Vasárnap Családi stentisztelet
+12.08.; 18.00 ;Vasárnap Esti istentisztelet
+12.10.; 14.30 ;Kedd Idősek bibliaórája
+12.11.; 18.30 ;Szerda Középnemzedék bibliaórája
+12.13.; 19.00 ;Péntek Ifi
+12.15.; 09.30.; Vasárnap Istentisztelet, úrvacsora
+12.20.; 19.00 ;Péntek Ifi
+12.22.; 09.30.; Vasárnap Istentisztelet
+12.24.; 16.00 ;Szenteste Istentisztelet
+12.25.; 09.30.; Karácsony Istentisztelet úrvacsora
+12.26.; 09.30.; Karácsony Istentisztelet
+12.29.; 09.30.; Vasárnap Istentisztelet, felnőtt hittan
+12.31.; 18.00 ;Óév Istentisztelet
+01.01.; 18.00 ;Újév Istentisztelet, úrvacsora
