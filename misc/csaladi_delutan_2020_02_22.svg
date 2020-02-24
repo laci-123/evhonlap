@@ -16,7 +16,10 @@
    version="1.1"
    id="svg8"
    inkscape:version="0.92.3 (2405546, 2018-03-11)"
-   sodipodi:docname="csaladi_delutan_2020_02_22.svg">
+   sodipodi:docname="csaladi_delutan_2020_02_22.svg"
+   inkscape:export-filename="/home/laci/Documents/evhonlap/tmp/csaladi_delutan_2020_02_22.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96">
   <defs
      id="defs2">
     <filter
@@ -59,17 +62,57 @@
          values="0.21 0.72 0.072 0 0 0.21 0.72 0.072 0 0 0.21 0.72 0.072 0 0 0 0 0 1 0 "
          id="feColorMatrix3921" />
     </filter>
+    <filter
+       style="color-interpolation-filters:sRGB;"
+       inkscape:label="Greyscale"
+       id="filter4038">
+      <feColorMatrix
+         values="0.21 0.72 0.072 0 0 0.21 0.72 0.072 0 0 0.21 0.72 0.072 0 0 0 0 0 1 0 "
+         id="feColorMatrix4036" />
+    </filter>
+    <filter
+       style="color-interpolation-filters:sRGB;"
+       inkscape:label="Greyscale"
+       id="filter4042">
+      <feColorMatrix
+         values="0.21 0.72 0.072 0 0 0.21 0.72 0.072 0 0 0.21 0.72 0.072 0 0 0 0 0 1 0 "
+         id="feColorMatrix4040" />
+    </filter>
+    <filter
+       style="color-interpolation-filters:sRGB;"
+       inkscape:label="Greyscale"
+       id="filter4046">
+      <feColorMatrix
+         values="0.21 0.72 0.072 0 0 0.21 0.72 0.072 0 0 0.21 0.72 0.072 0 0 0 0 0 1 0 "
+         id="feColorMatrix4044" />
+    </filter>
+    <filter
+       style="color-interpolation-filters:sRGB;"
+       inkscape:label="Greyscale"
+       id="filter4050">
+      <feColorMatrix
+         values="0.21 0.72 0.072 0 0 0.21 0.72 0.072 0 0 0.21 0.72 0.072 0 0 0 0 0 1 0 "
+         id="feColorMatrix4048" />
+    </filter>
+    <filter
+       style="color-interpolation-filters:sRGB;"
+       inkscape:label="Greyscale"
+       id="filter4054">
+      <feColorMatrix
+         values="0.21 0.72 0.072 0 0 0.21 0.72 0.072 0 0 0.21 0.72 0.072 0 0 0 0 0 1 0 "
+         id="feColorMatrix4052" />
+    </filter>
   </defs>
   <sodipodi:namedview
      id="base"
      pagecolor="#ffffff"
      bordercolor="#666666"
      borderopacity="1.0"
-     inkscape:pageopacity="0.0"
+     inkscape:pageopacity="0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.98994949"
-     inkscape:cx="554.27613"
-     inkscape:cy="324.96378"
+     inkscape:cx="553.26598"
+     inkscape:cy="405.77598"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -79,7 +122,8 @@
      inkscape:window-height="1015"
      inkscape:window-x="0"
      inkscape:window-y="28"
-     inkscape:window-maximized="1" />
+     inkscape:window-maximized="1"
+     inkscape:pagecheckerboard="true" />
   <metadata
      id="metadata5">
     <rdf:RDF>
@@ -93,25 +137,39 @@
     </rdf:RDF>
   </metadata>
   <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="background"
+     style="display:inline">
+    <rect
+       style="fill:#ffffff;stroke-width:0.26458332"
+       id="rect4092"
+       width="298.27277"
+       height="211.14293"
+       x="-0.53453904"
+       y="-0.34111339" />
+  </g>
+  <g
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(0,-87)">
+     transform="translate(0,-87)"
+     style="display:inline">
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:5.64444444px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332;filter:url(#filter3907)"
+       style="font-style:normal;font-weight:normal;font-size:5.64444447px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332;filter:url(#filter4038)"
        x="84.724442"
        y="117.12761"
        id="text3730"><tspan
          sodipodi:role="line"
          id="tspan3728"
          x="84.724442"
-         y="126.49138"
-         style="stroke-width:0.26458332;font-size:5.64444444px;" /></text>
+         y="122.12162"
+         style="font-size:5.64444447px;stroke-width:0.26458332" /></text>
     <g
        id="g3813"
        transform="translate(-3.0031509)"
-       style="filter:url(#filter3911)">
+       style="filter:url(#filter4042)">
       <image
          width="80.975922"
          height="80.975922"
@@ -6002,12 +6060,12 @@ suXFqO87RbZmzgEaQE4+pbfy7YUuJ8vJLPeAp+MnK04+8E7FYs8AAAAASUVORK5CYII=
            style="stroke-width:0.20403329"
            y="162.6283"
            x="113.23248"
-           sodipodi:role="line">(Budakeszi Fő út 155.)</tspan></text>
+           sodipodi:role="line">(Budakeszi, Fő út 155.)</tspan></text>
     </g>
     <g
        transform="translate(-3.0031513,105.07385)"
        id="g3843"
-       style="filter:url(#filter3915)">
+       style="filter:url(#filter4046)">
       <image
          y="98.975121"
          x="7.0860157"
@@ -11898,12 +11956,12 @@ suXFqO87RbZmzgEaQE4+pbfy7YUuJ8vJLPeAp+MnK04+8E7FYs8AAAAASUVORK5CYII=
            x="113.23248"
            y="162.6283"
            style="stroke-width:0.20403329"
-           id="tspan3839">(Budakeszi Fő út 155.)</tspan></text>
+           id="tspan3839">(Budakeszi, Fő út 155.)</tspan></text>
     </g>
     <g
        id="g3873"
        transform="translate(145.76412,5.090332e-6)"
-       style="filter:url(#filter3919)">
+       style="filter:url(#filter4050)">
       <image
          width="80.975922"
          height="80.975922"
@@ -17794,12 +17852,12 @@ suXFqO87RbZmzgEaQE4+pbfy7YUuJ8vJLPeAp+MnK04+8E7FYs8AAAAASUVORK5CYII=
            style="stroke-width:0.20403329"
            y="162.6283"
            x="113.23248"
-           sodipodi:role="line">(Budakeszi Fő út 155.)</tspan></text>
+           sodipodi:role="line">(Budakeszi, Fő út 155.)</tspan></text>
     </g>
     <g
        transform="translate(145.76412,105.07385)"
        id="g3903"
-       style="filter:url(#filter3923)">
+       style="filter:url(#filter4054)">
       <image
          y="98.975121"
          x="7.0860157"
@@ -23690,7 +23748,7 @@ suXFqO87RbZmzgEaQE4+pbfy7YUuJ8vJLPeAp+MnK04+8E7FYs8AAAAASUVORK5CYII=
            x="113.23248"
            y="162.6283"
            style="stroke-width:0.20403329"
-           id="tspan3899">(Budakeszi Fő út 155.)</tspan></text>
+           id="tspan3899">(Budakeszi, Fő út 155.)</tspan></text>
     </g>
   </g>
 </svg>
