@@ -1,16 +1,16 @@
-02.02.;Vasárnap	;09.30 ;Istentisztelet
-02.07.;Péntek	;19.00 ;Ifi
-02.09.;Vasárnap	;09.30 ;Családi istentisztelet
-02.09.;Vasárnap	;18.00 ;Esti istentisztelet
-02.11.;Kedd	;14.30 ;Idősek bibliaórája
-02.12.;Szerda	;19.00 ;Középnemzedék köre
-02.14.;Péntek	;10.10 ;Baba-mama
-02.14.;Péntek	;19.00 ;Ifi
-02.16.;Vasárnap	;09.30 ;Istentisztelet, úrvacsora
-02.20.;Csütörtök;19.00 ;Protestáns Kör
-02.21.;Péntek	;19.00 ;Ifi
-02.22.;Szombat	;16.00 ;Családi délután
-02.23.;Vasárnap	;09.30 ;Istentisztelet, felnőtt hittan
-02.26.;Szerda	;19.00 ;Középnemzedék köre
-02.28.;Péntek	;10.10 ;Baba-mama
-02.28.;Péntek	;19.00 ;Ifi
+03.01. ;vasárnap        ;09:30 ;Istentisztelet, úrvacsora
+03.06. ;péntek          ;18:00 ;Ökumenikus Világimanap (Kálvin Terem)
+03.08. ;vasárnap        ;09:30 ;Családi istentisztelet
+03.08. ;vasárnap        ;18:00 ;Esti istentisztelet, felnőtt hittan
+03.10. ;kedd            ;14:30 ;Idősek bibliaórája
+03.11. ;szerda          ;19:00 ;Középnemzedék Köre
+03.13. ;péntek          ;10:10 ;Baba-mama Kör
+03.13. ;péntek          ;19:00 ;Ifi
+03.15. ;vasárnap        ;09:30 ;Istentisztelet, úrvacsora
+03.19. ;csütörtök       ;19:00 ;Protestáns Kör
+03.20. ;péntek          ;19:00 ;Ifi
+03.22. ;vasárnap        ;09:30 ;Istentisztelet, közgyűlés
+03.24. ;kedd            ;18:30 ;Böjti est
+03.27. ;péntek          ;10:10 ;Baba-mama Kör
+03.27-28 ;péntek-sz.    ;  :   ;Konfirmandus hétvége (Nagybörzsöny)
+03.29. ;vasárnap        ;09:30 ;Istentisztelet, szószékcsere
