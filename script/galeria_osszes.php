@@ -10,14 +10,13 @@
 	
 		for($i = 2; $i < count($files); $i++)							//2-től, mert a scandir($dir) valamiért két üres elemet is visszaad 
 		{
-			$file = fopen("img/galeria/".$files[$i]."/data.ini", "r");	//az összes folderben a data.ini file tartalma 
+			$file = fopen("img/galeria/".$files[$i]."/data.txt", "r");	//az összes folderben a data.ini file tartalma 
 			
 			$index = fgets($file);										//az album sorszáma
 			$index = preg_replace('/\r?\n$/', '', $index); 				//a sortörésjelek leszedése
 			$index = intval($index);		
 			
 			$insert = fgets($file);										//az album címe
-			$insert = mb_convert_encoding($insert, 'UTF-8', 'ASCII');	
 			$albums[$index] = $insert;		
 			$folders[$index] = $files[$i];
 			fclose($file);
