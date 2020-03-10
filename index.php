@@ -5,7 +5,7 @@
    	//error_reporting(E_ALL);
 
 	require "functions.php";
-	
+
 	$location = "";
 	$content = "";
 	
@@ -130,9 +130,17 @@
 	}
 				
 	$dailyWord = get_DailyWord();
+
+        if(preg_match("/localhost/", $_SERVER["HTTP_HOST"])){
+                $title = "LOCAL";
+        }
+        else{
+                $title = "Budakeszi Evangélikus Egyházközség";
+        }
 	
 	try{
 		$main_page = new Page(FILE_FRAME);
+                $main_page->insert("Title", $title);
 		$main_page->insert(PLACEHOLDER_CONTENT, $content);
 		$main_page->insert(PLACEHOLDER_DAILYWORD, $dailyWord);
 		$main_page->insert_from_file(PLACEHOLDER_LASTMODIFIED, FILE_LASTMODIFIED);
