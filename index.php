@@ -128,7 +128,9 @@
 	catch(InvalidArgumentException $ex){
 		$content = ERROR_NOT_ACCESSIBLE;
 	}
-
+	catch(FileCannotBeOpenedException $ex){
+		$content = ERROR_NOT_ACCESSIBLE;
+	}
 
         if(include "script/uj.php"){
                 $news = uj();
