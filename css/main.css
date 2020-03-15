@@ -16,20 +16,10 @@
 #jobb
 {
 	float: right;
-	background-color: rgba(255, 50, 0, 0.5);
-	border-radius: 20px;
-	width: 13%;
-	margin-top: 100px;
-	padding: 10px;
 }
 #bal
 {
 	float: left;
-	background-color: rgba(255, 50, 0, 0.5);
-	border-radius: 20px;
-	width: 13%;
-	margin-top: 100px;
-	padding: 10px;
 }
 #fomenu
 {
@@ -44,9 +34,6 @@
 	background:url(/img/allando/elvalaszto.png) no-repeat top center;
 	height:42px;
 	border:none !important;
-}
-#fo_oldal{
-	
 }
 #udvozles{
 	margin-bottom: 300px;
@@ -64,6 +51,11 @@
 }
 a:visited{
 	color:blue;
+}
+#uj_dolgok{
+        background-color: white;
+        border-radius: 10px;
+        padding: 10px;
 }
 
 #galeria_album_cim
@@ -83,6 +75,14 @@ h1
 	font-size: 2.3em;
 	margin-bottom: 0px;
 	text-align: center;
+}
+.oldalso
+{
+	background-color: rgba(255, 50, 0, 0.5);
+	border-radius: 20px;
+	width: 13%;
+	margin-top: 100px;
+	padding: 10px;
 }
 .content
 {
