@@ -128,8 +128,18 @@
 	catch(InvalidArgumentException $ex){
 		$content = ERROR_NOT_ACCESSIBLE;
 	}
-				
+
+
+        if(include "script/uj.php"){
+                $news = uj();
+        }
+        else{
+                $news = ERROR_NOT_ACCESSIBLE;
+        }
+
+
 	$dailyWord = get_DailyWord();
+
 
         if(preg_match("/localhost/", $_SERVER["HTTP_HOST"])){
                 $title = "LOCAL";
@@ -137,12 +147,14 @@
         else{
                 $title = "Budakeszi Evangélikus Egyházközség";
         }
-	
+
+
 	try{
 		$main_page = new Page(FILE_FRAME);
                 $main_page->insert("Title", $title);
 		$main_page->insert(PLACEHOLDER_CONTENT, $content);
 		$main_page->insert(PLACEHOLDER_DAILYWORD, $dailyWord);
+                $main_page->insert("News", $news);
 		$main_page->insert_from_file(PLACEHOLDER_LASTMODIFIED, FILE_LASTMODIFIED);
 		$main_page->show();
 	}
