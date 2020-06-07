@@ -11,7 +11,10 @@
                 $end .= "</div>";
                
                 try{
-                        $content = file_get_contents_safe("content/uj.html");
+                        $content = trim(file_get_contents_safe("content/uj.html"));
+			if($content == ""){
+				    return "";
+			}
                 }
                 catch(InvalidArgumentException $ex){
                         return "";
