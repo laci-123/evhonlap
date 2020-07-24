@@ -117,6 +117,7 @@ a:hover
     position: relative;
     padding-bottom: 56.25%; /* 16:9 */
     height: 0;
+    margin-bottom: 20px;
 }
 .video-container iframe {
     position: absolute;
