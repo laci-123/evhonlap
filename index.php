@@ -1,13 +1,15 @@
 <?php
 
 //Uncomment for debugging
-ini_set('display_errors',1); 
-error_reporting(E_ALL);
+//ini_set('display_errors',1); 
+//error_reporting(E_ALL);
 
 require "functions.php";
 
 $location = "";
 $content = "";
+
+
 
 try{
     $location = GETparameters::get_string(GET_KEY_LOCATION);
