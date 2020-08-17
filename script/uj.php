@@ -8,7 +8,7 @@
                                         <h3>Új!</h3>
                               ";
 
-                $end .= "</div>";
+                $end = "</div>";
                
                 try{
                         $content = trim(file_get_contents_safe("content/uj.html"));
