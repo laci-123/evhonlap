@@ -154,7 +154,7 @@ else{
 
 
 try{
-    $main_page = new Page(FILE_FRAME);
+    $main_page = new Page("skeleton.html");
     $main_page->insert("Title", $title);
     $main_page->insert(PLACEHOLDER_CONTENT, $content);
     $main_page->insert(PLACEHOLDER_DAILYWORD, $dailyWord);
