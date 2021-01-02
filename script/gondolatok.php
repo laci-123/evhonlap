@@ -28,12 +28,12 @@ function gondolatok()
 		return $output;
 	}
 	
-	$output .= SEGMENT_LINKS_BLOCK;
+	$output .= "<p>";
 	for($i = count($titles[1]); $i > 0; $i--)
 	{
-		$output .= "<a class='belso_link' href='?hely=gondolatok&cim=".$i."'>".$titles[1][count($titles[1])-$i]."</a>\n";
+		$output .= "<a class='belso_link' href='?hely=gondolatok&cim=".$i."'>".$titles[1][count($titles[1])-$i]."</a><br>\n";
 	}
-	$output .= SEGMENT_LINKS_BLOCK_END;
+	$output .= "</p>";
 	$output .= SEGMENT_SEPARATOR;
 	
 	try{

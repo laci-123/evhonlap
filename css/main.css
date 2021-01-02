@@ -110,8 +110,7 @@ a:hover
 	color: blue;
 }
 .belso_link{
-	margin: 5; 
-	white-space: nowrap;
+    white-space: nowrap;
 }
 .video-container {
     position: relative;
