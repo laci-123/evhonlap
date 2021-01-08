@@ -1,8 +1,8 @@
 <?php
 
 //Uncomment for debugging
-//ini_set('display_errors',1); 
-//error_reporting(E_ALL);
+ini_set('display_errors',1); 
+error_reporting(E_ALL);
 
 require "functions.php";
 
@@ -12,117 +12,117 @@ $content = "";
 
 
 try{
-    $location = GETparameters::get_string(GET_KEY_LOCATION);
+    $location = GETparameters::get_string("hely");
 }
 catch(OutOfBoundsException $ex){
-    $location = GET_VALUE_MAINPAGE;
+    $location = "fooldal";
 }
 
 try{
-    if($location == GET_VALUE_SLIDESHOW){
-	if(include FILE_SLIDESHOW){
+    if($location == "slideshow"){
+	if(include "script/slideshow.php"){
 	    slideshow();
 	    return;
 	}
 	else{
-	    IAException_noSuchFile(FILE_SLIDESHOW);
+	    IAException_noSuchFile("script/slideshow.php");
 	}
     }
     switch($location){
-	case GET_VALUE_MAINPAGE:
-	    if(include FILE_MAINPAGE){
+	case "fooldal":
+	    if(include "script/fo_oldal.php"){
 		$content = fo_oldal();
 	    }
 	    else{
-		IAException_noSuchFile(FILE_MAINPAGE);
+		IAException_noSuchFile("script/fo_oldal.php");
 	    }
 	    break;
-	case GET_VALUE_CONTACT: 
-	    if(include FILE_CONTACTS){
+	case "elerhetosegek": 
+	    if(include "script/elerhetosegek.php"){
 		$content = elerhetosegek();
 	    }
 	    else{
-		IAException_noSuchFile(FILE_CONTACTS);
+		IAException_noSuchFile("script/elerhetosegek.php");
 	    }
 	    break;
-	case GET_VALUE_EVENTS: 
-	    if(include FILE_EVENTS){
+	case "alaklamak": 
+	    if(include "script/allando.php"){
 		$content = allando();
 	    }
 	    else{
-		IAException_noSuchFile(FILE_EVENTS);
+		IAException_noSuchFile("script/allando.php");
 	    }
 	    break;	
-	case GET_VALUE_UPCOMINGEVENTS:
-	    if(include FILE_UPCOMINGEVENTS){
+	case "aktualis":
+	    if(include "script/aktualis.php"){
 		$content = aktualis();
 	    }
 	    else{
-		IAException_noSuchFile(FILE_UPCOMINGEVENTS);
+		IAException_noSuchFile("script/aktualis.php");
 	    }
 	    break;
-	case GET_VALUE_ARCHIVE: 
-	    if(include FILE_ARCHIVE){
+	case "archiv": 
+	    if(include "script/archiv.php"){
 		$content = archiv();
 	    }
 	    else{
-		IAException_noSuchFile(FILE_ARCHIVE);
+		IAException_noSuchFile("script/archiv.php");
 	    }
 	    break;
-	case GET_VALUE_CHARITY:
-	    if(include FILE_CHARITY){
+	case "templomepites":
+	    if(include "script/templomepites.php"){
 		$content = templomepites();
 	    }
 	    else{
-		IAException_noSuchFile(FILE_CHARITY);
+		IAException_noSuchFile("script/templomepites.php");
 	    }
 	    break;
-	case GET_VALUE_PEOPLE:
-	    if(include FILE_PEOPLE){
+	case "tisztsegviselok":
+	    if(include "script/tisztsegviselok.php"){
 		$content = tisztsegviselok();
 	    }
 	    else{
-		IAException_noSuchFile(FILE_PEOPLE);
+		IAException_noSuchFile("script/tisztsegviselok.php");
 	    }
 	    break;
-	case GET_VALUE_THOUGHTS:
-	    if(include FILE_THOUGHTS){
+	case "gondolatok":
+	    if(include "script/gondolatok.php"){
 		$content = gondolatok();
 	    }
 	    else{
-		IAException_noSuchFile(FILE_THOUGHTS);
+		IAException_noSuchFile("script/gondolatok.php");
 	    }
 	    break;
-	case GET_VALUE_HISTORY: 
-	    if(include FILE_HISTORY){
+	case "tortenet": 
+	    if(include "script/tortenet.php"){
 		$content = tortenet();
 	    }
 	    else{
-		IAException_noSuchFile(FILE_HISTORY);
+		IAException_noSuchFile("script/tortenet.php");
 	    }
 	    break;
-	case GET_VALUE_GALERY: 
-	    if(include FILE_GALERY){
+	case "galéria": 
+	    if(include "script/galeria.php"){
 		$content = galeria();
 	    }
 	    else{
-		IAException_noSuchFile(FILE_GALERY);
+		IAException_noSuchFile("script/galeria.php");
 	    }
 	    break;
-	case GET_VALUE_GALERYALL:
-	    if(include FILE_GALERYALL){
+	case "galeria_osszes":
+	    if(include "script/galeria_osszes.php"){
 		$content = galeria_osszes();
 	    }
 	    else{
-		IAException_noSuchFile(FILE_GALERYALL);
+		IAException_noSuchFile("script/galeria_osszes.php");
 	    }
 	    break;
 	default:
-	    if(include FILE_MAINPAGE){
+	    if(include "script/fo_oldal.php"){
 		$content = fo_oldal();
 	    }
 	    else{
-		IAException_noSuchFile(FILE_MAINPAGE);
+		IAException_noSuchFile("script/fo_oldal.php");
 	    }
 	    break;
     }
@@ -156,10 +156,10 @@ else{
 try{
     $main_page = new Page("skeleton.html");
     $main_page->insert("Title", $title);
-    $main_page->insert(PLACEHOLDER_CONTENT, $content);
-    $main_page->insert(PLACEHOLDER_DAILYWORD, $dailyWord);
+    $main_page->insert("content", $content);
+    $main_page->insert("DailyWord", $dailyWord);
     $main_page->insert("News", $news);
-    $main_page->insert_from_file(PLACEHOLDER_LASTMODIFIED, FILE_LASTMODIFIED);
+    $main_page->insert_from_file("LastModified", "last_modified.txt");
     $main_page->show();
 }
 catch(Exception $ex){

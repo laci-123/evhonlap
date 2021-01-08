@@ -77,7 +77,8 @@
 	
 	const SCRIPT_SCROLL_TO_ANCHOR = "<script src='script/scrollToAnchor.js'></script>";
 	const SCRIPT_JQUERY = "<script src='https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>";
-	
+
+        //Marad
 	const ERROR_NOT_ACCESSIBLE = "<p>Ez a tartalom egy váratlan hiba miatt jelenleg nem érhető el. </p>\n";
 	const ERROR_DAILYWORD_NOT_ACCESSIBLE = "<i>[Pillanatnyilag nem érhető el.]</i>";
 	const ERROR_WRONG_URL = "<b>Hibás URL-cím</b>\n<br><br>\n<a href='http://budakeszi.lutheran.hu'>Főoldal</a>";
