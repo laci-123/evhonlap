@@ -56,11 +56,23 @@ function slideshow(){
     $content .= "<a class='link' href='?hely=slideshow&folder=".$folder."&album=".$album_number."&kep=".$prev_item."'>&lt;&lt;Előző&lt;&lt;</a>";
     $content .= "<img src='img/galeria/".$folder."/".$files[$item]."'>\n";
     $content .= "<a class='link' href='?hely=slideshow&folder=".$folder."&album=".$album_number."&kep=".$next_item."'>&gt;&gt;Következő&gt;&gt;</a>";
+
+    if(preg_match("/localhost/", $_SERVER["HTTP_HOST"])){
+	$title = "LOCAL";
+	$statcounter = "statcounter_dummy.html";
+    }
+    else{
+	$title = "Budakeszi Evangélikus Egyházközség";
+	$statcounter = "statcounter.html";
+    }
+
     
     try{
 	$main = new Page("slideshow_frame.html");
 	$main->insert("back_link", $back_link);
 	$main->insert("content", $content);
+	$main->insert("Title", $title);
+	$main->insert_from_file("StatCounter", $statcounter);
 	$main->show();
     }
     catch(Exception $ex){
