@@ -147,9 +147,11 @@ $dailyWord = get_DailyWord();
 
 if(preg_match("/localhost/", $_SERVER["HTTP_HOST"])){
     $title = "LOCAL";
+    $statcounter = "statcounter_dummy.html";
 }
 else{
     $title = "Budakeszi Evangélikus Egyházközség";
+    $statcounter = "statcounter.html";
 }
 
 
@@ -160,6 +162,7 @@ try{
     $main_page->insert("DailyWord", $dailyWord);
     $main_page->insert("News", $news);
     $main_page->insert_from_file("LastModified", "last_modified.txt");
+    $main_page->insert_from_file("StatCounter", $statcounter);
     $main_page->show();
 }
 catch(Exception $ex){
