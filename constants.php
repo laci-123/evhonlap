@@ -44,8 +44,6 @@
         const FILE_SLIDESHOW = "script/slideshow.php";
 	const FILE_LASTMODIFIED = "last_modified.txt";
 	const FILE_ALBUMDATA = "/data.txt";
-	
-	const FOLDER_GALERY = "img/galeria/";
     
 	const PLACEHOLDER_CONTENT = "content";
 	const PLACEHOLDER_DAILYWORD = "DailyWord";

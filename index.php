@@ -101,7 +101,7 @@ try{
 		IAException_noSuchFile("script/tortenet.php");
 	    }
 	    break;
-	case "galéria": 
+	case "galeria": 
 	    if(include "script/galeria.php"){
 		$content = galeria();
 	    }
