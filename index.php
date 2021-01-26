@@ -6,6 +6,9 @@ error_reporting(E_ALL);
 
 require "functions.php";
 
+const ERROR_NOT_ACCESSIBLE = "<p>Ez a tartalom egy váratlan hiba miatt jelenleg nem érhető el. </p>\n";
+const ERROR_INTERNAL_ERROR = "<b>Váratlan hiba történt. </b> \n<br><br><br>\nRészletek: <br>\n";
+
 $location = "";
 $content = "";
 
@@ -45,7 +48,7 @@ try{
 		IAException_noSuchFile("script/elerhetosegek.php");
 	    }
 	    break;
-	case "alaklamak": 
+	case "alkalmak": 
 	    if(include "script/allando.php"){
 		$content = allando();
 	    }

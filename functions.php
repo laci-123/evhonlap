@@ -1,7 +1,5 @@
 <?php
 
-require "constants.php";
-
 /*
  * Returns the content of the URL given in $url. 
  * 
