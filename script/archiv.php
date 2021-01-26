@@ -14,17 +14,17 @@ function archiv()
 	$content = file_get_contents_safe("content/archiv.html");
     }
     catch(Exception $ex){
-	$output .= ERROR_NOT_ACCESSIBLE;
-	$output .= "</article>";
+	$output .= "<p>Ez a tartalom egy váratlan hiba miatt jelenleg nem érhető el. </p>\n";
+	$output .= "</article>\n";
 	return $output;
     }
     
-    preg_match_all(REGEX_ENTRY, $content, $titles);
+    preg_match_all("/<!\-\-§(.*?)§\-\->/s", $content, $titles);
     
     if(count($titles[1]) == 0)
     {
-	$output .= MESSAGE_EMPTY_SECTION;
-	$output .= "</article>";
+	$output .= "<p>Ez a szakasz jelenleg üres. </p>\n";
+	$output .= "</article>\n";
 	return $output;
     }
     
