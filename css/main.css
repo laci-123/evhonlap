@@ -12,6 +12,7 @@
 	margin-left: 3%;
 	background-color: rgb(128, 128, 255);
 	text-align: center;
+        border-radius: 5px;
 }
 #jobb
 {
@@ -67,12 +68,13 @@ a:visited{
 
 html
 {
+        background-color: rgb(255, 200, 130);
 	background: url("/img/allando/hatter_uj_sarga.jpg") no-repeat center center fixed;
 	background-size: cover;
 }
 h1
 {
-	font-size: 2.3em;
+	font-size: 2.2em;
 	margin-bottom: 0px;
 	text-align: center;
 }
