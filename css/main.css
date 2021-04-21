@@ -65,9 +65,9 @@ a:visited{
 	padding: 8px 50px; !important
 }
 
-body
+html
 {
-	background-image: url("/img/allando/hatter.jpg");
+	background: url("/img/allando/hatter.jpg") no-repeat center center fixed;
 	background-size: cover;
 }
 h1
