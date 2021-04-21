@@ -10,7 +10,7 @@
 	width: 65%;
 	display: block;
 	margin-left: 3%;
-	background-color: rgba(0, 0, 200, 0.5);
+	background-color: rgb(128, 128, 255);
 	text-align: center;
 }
 #jobb
@@ -67,7 +67,7 @@ a:visited{
 
 html
 {
-	background: url("/img/allando/hatter.jpg") no-repeat center center fixed;
+	background: url("/img/allando/hatter_uj_sarga.jpg") no-repeat center center fixed;
 	background-size: cover;
 }
 h1
@@ -78,7 +78,7 @@ h1
 }
 .oldalso
 {
-	background-color: rgba(255, 50, 0, 0.5);
+	background-color: rgb(255, 136, 84);
 	border-radius: 20px;
 	width: 13%;
 	margin-top: 100px;
@@ -103,7 +103,7 @@ footer
 {
 	width: 100%;
 	height: 20px;
-	background-color: rgb(255, 200, 200);
+	background-color: rgb(255, 136, 84);
 }
 a:hover
 {
