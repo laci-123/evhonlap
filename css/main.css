@@ -61,17 +61,23 @@ a:visited{
         padding: 10px;
 }
 
-#uj_doboz{
+.uj_kartya{
         display: inline-block; 
         padding: 1em; 
         background-color: rgb(106, 255, 180);
         border-radius: 5px;
         box-shadow: 1px 1px grey;
+        text-decoration: none;
+        color: black;
 }
 
-/*#uj_doboz:hover{
-        background-color: rgb(35, 215, 55);
-}*/
+.uj_kartya:active{
+        box-shadow: -1px -1px grey;
+}
+
+.uj_kartya:hover{
+        text-decoration: underline;
+}
 
 #galeria_album_cim
 {
