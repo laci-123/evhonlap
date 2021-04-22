@@ -7,9 +7,11 @@
 #fo
 {
 	float: left;
+        box-shadow: 2px 2px grey;
 	width: 65%;
 	display: block;
 	margin-left: 3%;
+        margin-bottom: 5px;
 	background-color: rgb(128, 128, 255);
 	text-align: center;
         border-radius: 5px;
@@ -59,6 +61,18 @@ a:visited{
         padding: 10px;
 }
 
+#uj_doboz{
+        display: inline-block; 
+        padding: 1em; 
+        background-color: rgb(106, 255, 180);
+        border-radius: 5px;
+        box-shadow: 1px 1px grey;
+}
+
+/*#uj_doboz:hover{
+        background-color: rgb(35, 215, 55);
+}*/
+
 #galeria_album_cim
 {
 	background-color: white; !important
@@ -69,7 +83,7 @@ a:visited{
 html
 {
         background-color: rgb(255, 200, 130);
-	background: url("/img/allando/hatter_uj_sarga.jpg") no-repeat center center fixed;
+	background: url("/img/allando/hatter.jpg") no-repeat center center fixed;
 	background-size: cover;
 }
 h1
@@ -80,7 +94,8 @@ h1
 }
 .oldalso
 {
-	background-color: rgb(255, 136, 84);
+	background-color: rgb(255, 190, 161);
+        box-shadow: 1px 1px grey;
 	border-radius: 20px;
 	width: 13%;
 	margin-top: 100px;
@@ -105,7 +120,7 @@ footer
 {
 	width: 100%;
 	height: 20px;
-	background-color: rgb(255, 136, 84);
+	background-color: rgb(255, 190, 161);
 }
 a:hover
 {
