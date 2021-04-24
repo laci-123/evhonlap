@@ -3,6 +3,9 @@
 	z-index: 200;
 	position: relative;
 }
+#fomenu > ul{
+        box-shadow: 1px 1px grey;
+}
 #fomenu ul ul 
 {
 	/*a második szinttol lefelé az elemek alapállapotban nem jelennek meg*/
