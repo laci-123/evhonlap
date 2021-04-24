@@ -137,6 +137,8 @@ footer
 	height: 20px;
 	background-color: rgb(255, 190, 161);
         border-radius: 0px 0px 5px 5px;
+        padding-top: 5px;
+        font-size: 85%;
 }
 a:hover
 {
