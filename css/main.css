@@ -79,6 +79,10 @@ a:visited{
         text-decoration: underline;
 }
 
+.uj_kartya:visited{
+        color: black;
+}
+
 #galeria_album_cim
 {
 	background-color: white; !important
