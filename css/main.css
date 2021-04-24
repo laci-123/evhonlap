@@ -121,7 +121,7 @@ h1
 	background-color: white;
 	text-align: left;
 	padding: 20px;
-	min-height: 100vh;
+	min-height: 50vh;
 	margin: 0 auto;
 	overflow: auto;
 }
