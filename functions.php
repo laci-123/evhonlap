@@ -29,15 +29,13 @@ function get_url($url){
  * */
 function get_DailyWord(){
     try{
-	$ige = "";
+	$szoveg = "";
 	$tartalom = get_url("https://www.evangelikus.hu/");
-	preg_match("/Napi ige: <\/a>(.*?)&nbsp;/s", $tartalom, $ige);
-	$ige = preg_replace("/Napi ige: <\/a>/", "", $ige);
-	$ige = preg_replace("/<\/p>/", "", $ige);
-	$ige = preg_replace("/õ/", "ő", $ige);  
-	$ige = preg_replace("/û/", "ű", $ige);
+        preg_match("/Napi ige(.*?)<\/p>/s", $tartalom, $szoveg);
+        $ige = get_string_between($szoveg[0], "„", "”");
+        $ige_hely = get_string_between($szoveg[0], "(", ")");
 	
-	return $ige[0];
+	return "„$ige"."”<div style='text-align: right;'>($ige_hely)</div>";
     }
     catch(Exception $e){
 	return "<i>[Pillanatnyilag nem érhető el.]</i>";
