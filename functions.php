@@ -35,7 +35,7 @@ function get_DailyWord(){
         $ige = get_string_between($szoveg[0], "„", "”");
         $ige_hely = get_string_between($szoveg[0], "(", ")");
 	
-	return "„$ige"."”<div style='text-align: right;'>($ige_hely)</div>";
+	return "<div id='napi_ige_ige'>„$ige"."”</div><div id='napi_ige_hely'>($ige_hely)</div>";
     }
     catch(Exception $e){
 	return "<i>[Pillanatnyilag nem érhető el.]</i>";
