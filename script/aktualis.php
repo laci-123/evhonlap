@@ -26,7 +26,7 @@ function aktualis()
 	$output .= "</article>\n";
 	return $output;
     }
-    else if(count($titles[1]) > 1){
+    else if(count($titles[1]) > 2){
 	$output .= "<p align='center'>\n";
 	for($i = count($titles[1]); $i > 0; $i--)
 	{
