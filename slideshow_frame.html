@@ -10,6 +10,13 @@
 		<div class='slideshow'>
 			{{content}}
 		</div>
+                <script>
+                 document.addEventListener("keydown", function(event){
+                     if(event.key === "Escape"){
+                         document.getElementById("back_link").click();
+                     }
+                 });
+                </script>
 		{{StatCounter}}
 	</body>
 </html>

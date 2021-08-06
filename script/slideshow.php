@@ -64,9 +64,7 @@ function slideshow(){
     else{
 	$title = "Budakeszi Evangélikus Egyházközség";
 	$statcounter = "statcounter.html";
-    }
-
-    
+    }    
     try{
 	$main = new Page("slideshow_frame.html");
 	$main->insert("back_link", $back_link);
