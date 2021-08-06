@@ -13,8 +13,16 @@
 		</div>
                 <script>
                  document.addEventListener("keydown", function(event){
-                     if(event.key === "Escape"){
-                         document.getElementById("back_link").click();
+                     switch(event.key){
+                         case "Escape":
+                             document.getElementById("back_link").click();
+                             break;
+                         case "ArrowLeft":
+                             document.getElementById("prev_link").click();
+                             break;
+                         case "ArrowRight":
+                             document.getElementById("next_link").click();
+                             break;
                      }
                  });
                 </script>

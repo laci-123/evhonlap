@@ -51,11 +51,11 @@ function slideshow(){
 	$next_item = $item + 1;
     }
 
-    $back_link = "<a id='back_link' href='?hely=galeria&album=".$album_number."'>Vissza a galériába</a>";
+    $back_link = "<a id='back_link' href='?hely=galeria&album=".$album_number."'>Vissza a galériába</a>\n";
     
-    $content .= "<a class='link' href='?hely=slideshow&folder=".$folder."&album=".$album_number."&kep=".$prev_item."'>&lt;&lt;Előző&lt;&lt;</a>";
+    $content .= "<a id='prev_link' class='link' href='?hely=slideshow&folder=".$folder."&album=".$album_number."&kep=".$prev_item."'>&lt;&lt;Előző&lt;&lt;</a>\n";
     $content .= "<img src='img/galeria/".$folder."/".$files[$item]."'>\n";
-    $content .= "<a class='link' href='?hely=slideshow&folder=".$folder."&album=".$album_number."&kep=".$next_item."'>&gt;&gt;Következő&gt;&gt;</a>";
+    $content .= "<a id='next_link' class='link' href='?hely=slideshow&folder=".$folder."&album=".$album_number."&kep=".$next_item."'>&gt;&gt;Következő&gt;&gt;</a>\n";
 
     if(preg_match("/localhost/", $_SERVER["HTTP_HOST"])){
 	$title = "LOCAL";
