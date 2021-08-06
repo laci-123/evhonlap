@@ -35,7 +35,7 @@ function archiv()
 		   $titles[1][count($titles[1])-$i]."</a><br>\n";
     }
     $output .= "</p>";
-    $output .= "<hr id='elvalaszto'";
+    $output .= "<hr id='elvalaszto'>";
     
     try{
 	$entry = count($titles[1]) - GETparameters::get_int("cim") + 1;
@@ -55,7 +55,7 @@ function archiv()
     }
     $actual_content = str_replace("<!--§", "", $actual_content);
     $actual_content = str_replace("§-->", "", $actual_content);
-    $actual_content = preg_replace("/<.r>/", "", $actual_content);
+    $actual_content = preg_replace("/<hr>/", "", $actual_content);
     $output .= $actual_content;
     
     $output .= "</article>";
