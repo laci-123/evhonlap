@@ -1,43 +1,46 @@
 <?php
-	function galeria_osszes()
-	{
-		$dir = "img/galeria";											//a könyvtár, ahol a képek vannak
-		$files = scandir($dir);											//ennek a könyvtárnak a tartalma 
-		$albums = array();												//a folderek címei (albumok)
-		$folders = array();												//a folderek fizikai nevei
-		$output = "";
-	
-		for($i = 2; $i < count($files); $i++)							//2-től, mert a scandir($dir) valamiért két üres elemet is visszaad 
-		{
-			$file = fopen("img/galeria/".$files[$i]."/data.txt", "r");	//az összes folderben a data.ini file tartalma 
-			
-			$index = fgets($file);										//az album sorszáma
-			$index = preg_replace('/\r?\n$/', '', $index); 				//a sortörésjelek leszedése
-			$index = intval($index);		
-			
-			$insert = fgets($file);										//az album címe
-			$albums[$index] = $insert;		
-			$folders[$index] = $files[$i];
-			fclose($file);
-		}
-		$countAlbums = count($albums)-1;
-		ksort($albums);													//az albunok és folderek sorbarendezése 
-		ksort($folders);
-		
-		$output .=  "<article class='content'>\n
+class Line{
+    public $title;
+    public $index;
+    public $number_of_imgs;
+
+    function __construct($title, $index, $number_of_imgs){
+        $this->title = $title;
+        $this->index = $index;
+        $this->number_of_imgs = $number_of_imgs;
+    }
+}
+
+const FOLDER_GALERY = "img/galeria/";
+
+function galeria_osszes()
+{
+    $output .= "<article class='content'>\n
 			<h2>Galéria</h2>\n
 			<h3>Összes album</h3>\n";
-		$output .=  "<div style='margin-left: 50px;'>\n";
-		for($i = $countAlbums; $i >= 1; $i--)		
-		{
-			$kepek = scandir("img/galeria/".$folders[$i]);	
-			$kepekSzama = count($kepek) - 4;
-			$output .=  "<a href='?hely=galeria&album=".$i."'>".$albums[$i]."</a> ($kepekSzama kép)\n<br>\n";
-		}
-		$output .=  "</div>\n";
-		
-		$output .=  "</article>";
-		
-		return $output;
-	}
+    $output .= "<div style='margin-left: 50px;'>\n";
+
+    $dirs = scandir_safe_compact(FOLDER_GALERY);
+    $lines = array();
+    foreach($dirs as $directory){
+        $datafile = file_get_contents_safe(FOLDER_GALERY.$directory."/data.txt");
+        $data = explode("\n", $datafile);
+        $index = $data[0];
+        $title = $data[1];
+        $imgs = scandir_safe_compact(FOLDER_GALERY.$directory);
+        $number_of_imgs = count($imgs) - 2; //not counting data.txt and Thumbnails directory
+        $lines[$index] = new Line($title, $index, $number_of_imgs);
+    }
+
+    krsort($lines);
+
+    foreach($lines as $line){
+        $output .= "<a href='?hely=galeria&album=$line->index'>$line->title</a> ($line->number_of_imgs kép)\n<br>\n";
+    }
+    
+    $output .=  "</div>\n";
+    $output .=  "</article>";
+
+    return $output;
+}
 ?>
