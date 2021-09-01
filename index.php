@@ -22,7 +22,7 @@ catch(OutOfBoundsException $ex){
 try{
     if($location == "slideshow"){
 	if(include "script/slideshow.php"){
-	    slideshow();
+	    get_content();
 	    return;
 	}
 	else{
@@ -36,10 +36,7 @@ try{
         throw new InvalidArgumentException("The file 'script/$location' does not exist. ");
     }
 }
-catch(InvalidArgumentException $ex){
-    $content = ERROR_NOT_ACCESSIBLE;
-}
-catch(FileCannotBeOpenedException $ex){
+catch(InvalidArgumentException | FileCannotBeOpenedException $ex){
     $content = ERROR_NOT_ACCESSIBLE;
 }
 
