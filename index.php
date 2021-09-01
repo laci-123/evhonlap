@@ -70,15 +70,7 @@ try{
 		IAException_noSuchFile("script/archiv.php");
 	    }
 	    break;
-	case "templomepites":
-	    if(include "script/templomepites.php"){
-		$content = templomepites();
-	    }
-	    else{
-		IAException_noSuchFile("script/templomepites.php");
-	    }
-	    break;
-	case "tisztsegviselok":
+        case "tisztsegviselok":
 	    if(include "script/tisztsegviselok.php"){
 		$content = tisztsegviselok();
 	    }
