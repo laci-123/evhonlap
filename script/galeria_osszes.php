@@ -13,7 +13,7 @@ class Line{
 
 const FOLDER_GALERY = "img/galeria/";
 
-function galeria_osszes()
+function get_content()
 {
     $output .= "<article class='content'>\n
 			<h2>Galéria</h2>\n

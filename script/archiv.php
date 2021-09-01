@@ -1,5 +1,5 @@
 <?php
-function archiv()
+function get_content()
 {	
     $titles = array();
     $content = "";

@@ -2,7 +2,7 @@
 
 const FOLDER_GALERY = "img/galeria/";
 
-function slideshow(){
+function get_content(){
     $content = "";
     
     try{

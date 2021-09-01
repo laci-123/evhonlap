@@ -1,5 +1,5 @@
 <?php
-function aktualis()
+function get_content()
 {
     $titles = array();
     $content = "";

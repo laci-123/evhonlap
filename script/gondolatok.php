@@ -1,5 +1,5 @@
 <?php
-function gondolatok()
+function get_content()
 {	
     $titles = array();
     $content = "";

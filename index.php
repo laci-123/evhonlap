@@ -29,95 +29,11 @@ try{
 	    IAException_noSuchFile("script/slideshow.php");
 	}
     }
-    switch($location){
-	case "fooldal":
-	    if(include "script/fooldal.php"){
-		$content = fo_oldal();
-	    }
-	    else{
-		IAException_noSuchFile("script/fooldal.php");
-	    }
-	    break;
-	case "elerhetosegek": 
-	    if(include "script/elerhetosegek.php"){
-		$content = elerhetosegek();
-	    }
-	    else{
-		IAException_noSuchFile("script/elerhetosegek.php");
-	    }
-	    break;
-	case "alkalmak": 
-	    if(include "script/allando.php"){
-		$content = allando();
-	    }
-	    else{
-		IAException_noSuchFile("script/allando.php");
-	    }
-	    break;	
-	case "aktualis":
-	    if(include "script/aktualis.php"){
-		$content = aktualis();
-	    }
-	    else{
-		IAException_noSuchFile("script/aktualis.php");
-	    }
-	    break;
-	case "archiv": 
-	    if(include "script/archiv.php"){
-		$content = archiv();
-	    }
-	    else{
-		IAException_noSuchFile("script/archiv.php");
-	    }
-	    break;
-        case "tisztsegviselok":
-	    if(include "script/tisztsegviselok.php"){
-		$content = tisztsegviselok();
-	    }
-	    else{
-		IAException_noSuchFile("script/tisztsegviselok.php");
-	    }
-	    break;
-	case "gondolatok":
-	    if(include "script/gondolatok.php"){
-		$content = gondolatok();
-	    }
-	    else{
-		IAException_noSuchFile("script/gondolatok.php");
-	    }
-	    break;
-	case "tortenet": 
-	    if(include "script/tortenet.php"){
-		$content = tortenet();
-	    }
-	    else{
-		IAException_noSuchFile("script/tortenet.php");
-	    }
-	    break;
-	case "galeria": 
-	    if(include "script/galeria.php"){
-		$content = galeria();
-	    }
-	    else{
-		IAException_noSuchFile("script/galeria.php");
-	    }
-	    break;
-	case "galeria_osszes":
-	    if(include "script/galeria_osszes.php"){
-		$content = galeria_osszes();
-	    }
-	    else{
-		IAException_noSuchFile("script/galeria_osszes.php");
-	    }
-	    break;
-	default:
-	    if(include "script/fooldal.php"){
-		$content = fo_oldal();
-	    }
-	    else{
-		IAException_noSuchFile("script/fooldal.php");
-	    }
-	    break;
+    if(include "script/$location.php"){
+        $content = get_content();
+    }
+    else{
+        IAException_noSuchFile("script/$location");
     }
 }
 catch(InvalidArgumentException $ex){

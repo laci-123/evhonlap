@@ -14,7 +14,7 @@ class Album{
 const MAXALBUMS = 5;
 const FOLDER_GALERY = "img/galeria/";
 
-function galeria(){
+function get_content(){
     $output =  "<article class='content'>\n";
     $output .= "<h2>Galéria</h2>\n";
     $output .= "<nav id='galeria_menu'>\n"; 
