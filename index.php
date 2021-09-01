@@ -12,8 +12,6 @@ const ERROR_INTERNAL_ERROR = "<b>Váratlan hiba történt. </b> \n<br><br><br>\n
 $location = "";
 $content = "";
 
-
-
 try{
     $location = GETparameters::get_string("hely");
 }
