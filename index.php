@@ -26,14 +26,14 @@ try{
 	    return;
 	}
 	else{
-	    IAException_noSuchFile("script/slideshow.php");
+	    throw new InvalidArgumentException("The file 'script/slideshow.php' does not exist. ");
 	}
     }
     if(include "script/$location.php"){
         $content = get_content();
     }
     else{
-        IAException_noSuchFile("script/$location");
+        throw new InvalidArgumentException("The file 'script/$location' does not exist. ");
     }
 }
 catch(InvalidArgumentException $ex){

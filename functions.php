@@ -253,12 +253,3 @@ function scandir_safe_compact($dirname){
     return array_values($files);
 }
 
-/*
- * Throws an InvalidArgumentExeption with the message "The file <file_name> does not exist. "
- * $filename: [string] the name to be included in the error message 
- * returns: [void]
- */
-function IAException_noSuchFile($filename){
-    throw new InvalidArgumentException("The file '".$file_name."' does not exist. ");
-}
-?>
