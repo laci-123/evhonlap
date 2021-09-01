@@ -31,11 +31,11 @@ try{
     }
     switch($location){
 	case "fooldal":
-	    if(include "script/fo_oldal.php"){
+	    if(include "script/fooldal.php"){
 		$content = fo_oldal();
 	    }
 	    else{
-		IAException_noSuchFile("script/fo_oldal.php");
+		IAException_noSuchFile("script/fooldal.php");
 	    }
 	    break;
 	case "elerhetosegek": 
@@ -111,11 +111,11 @@ try{
 	    }
 	    break;
 	default:
-	    if(include "script/fo_oldal.php"){
+	    if(include "script/fooldal.php"){
 		$content = fo_oldal();
 	    }
 	    else{
-		IAException_noSuchFile("script/fo_oldal.php");
+		IAException_noSuchFile("script/fooldal.php");
 	    }
 	    break;
     }
