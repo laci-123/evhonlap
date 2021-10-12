@@ -2,12 +2,12 @@
 class Album{
     public $filename;
     public $title;
-    public $number;
+    public $id;
 
-    function __construct($filename, $title, $number){
+    function __construct($filename, $title, $id){
 	$this->filename = $filename;
 	$this->title = $title;
-	$this->number = $number;
+	$this->id = $id;
     }
 }
 
@@ -29,16 +29,16 @@ function get_content(){
     foreach($dirs as $directory){
 	$datafile = file_get_contents_safe(FOLDER_GALERY.$directory."/data.txt");
 	$data = explode("\n", $datafile);
-	//data[0]: number 
+	//data[0]: id
 	//data[1]: title
-	$albums[$data[0]] = new Album($directory, $data[1], $data[0]);
+	$albums[] = new Album($directory, $data[1], $data[0]);
     }
-    krsort($albums);
+    usort($albums, function($a, $b){return $b->id - $a->id;});
 
     //Printing out links of albums
     $i = 0;
     foreach($albums as $album){
-	$output .= "<li><a href='?hely=galeria&album=$album->number'>$album->title</a></li>\n";
+	$output .= "<li><a href='?hely=galeria&album=$album->id'>$album->title</a></li>\n";
 	if($i > MAXALBUMS){
 	    break;
 	}
@@ -49,28 +49,35 @@ function get_content(){
     $output .= "</ul>\n";
     $output .= "</li>\n";
 
-    //Fetching number of current album
+    //Fetching id of current album
     try{
-	$current_album = GETparameters::get_int("album");
-	if($current_album <= 0 || count($albums) < $current_album){
-	    throw new OutOfBoundsException("Incorrect album ID: $current_album");
+	$current_id = GETparameters::get_int("album");
+	if($current_id <= 0){
+	    throw new OutOfBoundsException("Incorrect album ID: $current_id");
 	}
     }
     catch(OutOfBoundsException $ex){
 	if(count($albums) > 0){
-	    $current_album = count($albums);
+	    $current_id = $albums[count($albums) - 1]->id;
 	}
 	else{
 	    throw new Exception("Couldn't find any pictures. ");
 	}
     }
 
-    $output .= "<li><a style='background-color: white; color: black; padding: 8px 50px;' href='#'>".$albums[$current_album]->title."</a></li>\n";
+    $current_album = $albums[0];
+    for($i = 0; $i < count($albums); $i++){
+	if($albums[$i]->id == $current_id){
+	    $current_album = $albums[$i];
+	}
+    }
+
+    $output .= "<li><a style='background-color: white; color: black; padding: 8px 50px;' href='#'>".$current_album->title."</a></li>\n";
     $output .= "</ul>\n";
     $output .= "</nav>\n";
 
     //Printing out the images
-    $images = scandir_safe_compact(FOLDER_GALERY.$albums[$current_album]->filename);
+    $images = scandir_safe_compact(FOLDER_GALERY.$current_album->filename);
     for($i = 0; $i < count($images); $i++){
 	$info = pathinfo($images[$i]);
 	$file = $info['filename'];
@@ -80,8 +87,8 @@ function get_content(){
 	}
 
 	if($ext == 'jpg' || $ext == 'JPG' || $ext == 'jpeg' || $ext == 'JPEG' || $ext == 'png' || $ext == 'PNG'){
-	    $output .= "<a href='?hely=slideshow&folder=".$albums[$current_album]->filename."&album=".$current_album."&kep=".$i."'>";
-	    $output .= "<img src='".FOLDER_GALERY.$albums[$current_album]->filename."/Thumbnails/".$file.".png' width='45%'></a>\n";
+	    $output .= "<a href='?hely=slideshow&folder=".$current_album->filename."&album=".$current_album->id."&kep=".$i."'>";
+	    $output .= "<img src='".FOLDER_GALERY.$current_album->filename."/Thumbnails/".$file.".png' width='45%'></a>\n";
 	}
     }
 
