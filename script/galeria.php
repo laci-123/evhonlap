@@ -49,28 +49,28 @@ function get_content(){
     $output .= "</ul>\n";
     $output .= "</li>\n";
 
-    //Fetching id of current album
     try{
-	$current_id = GETparameters::get_int("album");
-	if($current_id <= 0){
-	    throw new OutOfBoundsException("Incorrect album ID: $current_id");
-	}
+        $current_id = GETparameters::get_int("album");
+        if($current_id <= 0){
+            throw new OutOfBoundsException("Incorrect album ID: $current_id");
+        }
     }
     catch(OutOfBoundsException $ex){
-	if(count($albums) > 0){
-	    $current_id = $albums[count($albums) - 1]->id;
-	}
-	else{
-	    throw new Exception("Couldn't find any pictures. ");
-	}
+        if(count($albums) > 0){
+            $current_id = $albums[0]->id;
+        }
+        else{
+            throw new Exception("Couldn't find any pictures. ");
+        }
     }
 
     $current_album = $albums[0];
     for($i = 0; $i < count($albums); $i++){
-	if($albums[$i]->id == $current_id){
-	    $current_album = $albums[$i];
-	}
+        if($albums[$i]->id == $current_id){
+            $current_album = $albums[$i];
+        }
     }
+    //echo("current_album->id: $current_album->id");
 
     $output .= "<li><a style='background-color: white; color: black; padding: 8px 50px;' href='#'>".$current_album->title."</a></li>\n";
     $output .= "</ul>\n";
