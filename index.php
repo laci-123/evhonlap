@@ -1,37 +1,11 @@
 <?php
 //Uncomment for debugging
-ini_set('display_errors',1); 
-error_reporting(E_ALL);
+//ini_set('display_errors',1); 
+//error_reporting(E_ALL);
 ?>
 
 <?php
-//Returns a segment of a string between a given start and end point
-//(from: http://stackoverflow.com/questions/5696412/get-substring-between-two-strings-php)
-function get_string_between($string, $start, $end){
-    $string = ' ' . $string;
-    $ini = strpos($string, $start);
-    if ($ini == 0) return '';
-    $ini += strlen($start);
-    $len = strpos($string, $end, $ini) - $ini;
-    return substr($string, $ini, $len);
-}
-
-//Returns the content of the URL given in $url. 
-function get_url($url){
-    $curl = curl_init();
-    curl_setopt($curl, CURLOPT_URL, $url);
-    curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
-    
-    $result = curl_exec($curl);
-    if($result === false){
-        throw new Exception(curl_error($curl), curl_errno($curl));
-    }
-    
-    curl_close($curl);
-    
-    return $result;
-}
-
+require "functions.php";
 
 $localaddr = ["127.0.0.1", "::1"];
 $isLocal = false;
@@ -103,8 +77,6 @@ if(in_array($_SERVER["REMOTE_ADDR"], $localaddr)){
             if(isset($_GET[$key]) and !is_null($_GET[$key])){
                 $location = $_GET[$key];
             }
-
-            require "functions.php";
 
             if(include "script/$location.php"){
                 echo get_content();
