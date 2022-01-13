@@ -6,21 +6,21 @@ function get_content(){
     $content = "";
     
     try{
-	$folder = GETparameters::get_string("folder");
+	$folder = getparam_string("folder");
     }
     catch(OutOfBoundsException $ex){
 	die("<b>Hibás URL-cím</b>\n<br><br>\n<a href='http://budakeszi.lutheran.hu'>Főoldal</a>");
     }
 
     try{
-	$item = GETparameters::get_int("kep");
+	$item = getparam_int("kep");
     }
     catch(OutOfBoundsException $ex){
 	$item = 0;
     }
 
     try{
-	$album_number = GETparameters::get_string("album");
+	$album_number = getparam_string("album");
     }
     catch(OutOfBoundsException $ex){
 	$album = 1;

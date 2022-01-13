@@ -1,58 +1,21 @@
 <?php
 
-
-/*
- * Functions to safely get the values of GET parameters. 
- * 
- * All functions:
- * 		$key: [string] 
- * 		returns: [their respective type named in their name]
- * 		throws: OutOfBoundsException
- * 		*/
-class GETparameters{
-    public static function get_string($key){
+function getparam_string($key){
 	if(isset($_GET[$key]) and !is_null($_GET[$key])){
 	    return $_GET[$key];
 	}
 	else{
 	    throw new OutOfBoundsException("No string GET parameter belongs to the key '".$key."'");
 	}
-    }
-    
-    public static function get_float($key){
-	if(isset($_GET[$key]) and is_numeric($_GET[$key])){
-	    return floatval($_GET[$key]);
-	}
-	else{
-	    throw new OutOfBoundsException("No float GET parameter belongs to the key '".$key."'");
-	}
-    }
-    
-    public static function get_int($key){
+}
+
+function getparam_int($key){
 	if(isset($_GET[$key]) and is_numeric($_GET[$key]) and is_int(intval($_GET[$key]))){
 	    return intval($_GET[$key]);
 	}
 	else{
 	    throw new OutOfBoundsException("No integer GET parameter belongs to the key '".$key."'");
 	}
-    }
-    
-    public static function get_boolean($key){
-	if(isset($_GET[$key])){
-	    if(strcasecmp($_GET[$key], "true") == 0){
-		return true;
-	    }
-	    else if(strcasecmp($_GET[$key], "false") == 0){
-		return false;
-	    }
-	    else{
-		throw new OutOfBoundsException("No boolean GET parameter belongs to the key '".$key."'");
-	    }
-	}
-	else{
-	    throw new OutOfBoundsException("No boolean GET parameter belongs to the key '".$key."'");
-	}
-    }
 }
 
 

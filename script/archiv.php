@@ -38,7 +38,7 @@ function get_content()
     $output .= "<hr id='elvalaszto'>";
     
     try{
-	$entry = count($titles[1]) - GETparameters::get_int("cim") + 1;
+	$entry = count($titles[1]) - getparam_int("cim") + 1;
     }
     catch(OutOfBoundsException $ex){
 	$entry = 1;

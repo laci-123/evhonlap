@@ -50,7 +50,7 @@ function get_content(){
     $output .= "</li>\n";
 
     try{
-        $current_id = GETparameters::get_int("album");
+        $current_id = getparam_int("album");
         if($current_id <= 0){
             throw new OutOfBoundsException("Incorrect album ID: $current_id");
         }
