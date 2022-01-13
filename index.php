@@ -106,14 +106,6 @@ if(in_array($_SERVER["REMOTE_ADDR"], $localaddr)){
 
             require "functions.php";
 
-            if($location == "slideshow"){
-                if(include "script/slideshow.php"){
-                    get_content();
-                }
-                else{
-                    echo "<p>Ez a tartalom egy váratlan hiba miatt jelenleg nem érhető el.</p>\n";
-                }
-            }
             if(include "script/$location.php"){
                 echo get_content();
             }

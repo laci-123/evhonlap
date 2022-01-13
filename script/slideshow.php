@@ -1,81 +1,49 @@
 <?php
 
-const FOLDER_GALERY = "img/galeria/";
-
 function get_content(){
-    $content = "";
-    
+    $galery = "img/galeria/";
+    $folder = "";
+    $files = [];
+    $album = 0;
+    $kep = 0;
     try{
-	$folder = getparam_string("folder");
-    }
-    catch(OutOfBoundsException $ex){
-	die("<b>Hibás URL-cím</b>\n<br><br>\n<a href='http://budakeszi.lutheran.hu'>Főoldal</a>");
-    }
-
-    try{
-	$item = getparam_int("kep");
-    }
-    catch(OutOfBoundsException $ex){
-	$item = 0;
-    }
-
-    try{
-	$album_number = getparam_string("album");
-    }
-    catch(OutOfBoundsException $ex){
-	$album = 1;
-    }
-
-    try{
-	$files = scandir_safe_compact(FOLDER_GALERY.$folder);
+        $folder = getparam_string("folder")."/";
+        $files = scandir_safe_compact($galery.$folder);
+        $album = getparam_int("album");
+        $kep = getparam_int("kep");
     }
     catch(Exception $ex){
-	die("<b>Error: </b>".$ex->getMessage());
-    }
-    
-    $max_index = count($files) - 3;
-    
-    if($item < 0 or $item > $max_index){
-	$item = 0;
-    }
-    if($item == 0){
-	$prev_item = $max_index;
-    }
-    else{
-	$prev_item = $item - 1;
-    }
-    if($item == $max_index){
-	$next_item = 0;
-    }
-    else{
-	$next_item = $item + 1;
+        die("<b>Error: </b>".$ex->getMessage());
     }
 
-    $back_link = "<a id='back_link' href='?hely=galeria&album=".$album_number."'>Vissza a galériába</a>\n";
-    
-    $content .= "<a id='prev_link' class='link' href='?hely=slideshow&folder=".$folder."&album=".$album_number."&kep=".$prev_item."'>&lt;&lt;Előző&lt;&lt;</a>\n";
-    $content .= "<img src='img/galeria/".$folder."/".$files[$item]."'>\n";
-    $content .= "<a id='next_link' class='link' href='?hely=slideshow&folder=".$folder."&album=".$album_number."&kep=".$next_item."'>&gt;&gt;Következő&gt;&gt;</a>\n";
+    $output =  "<article class='content'>\n";
+    $output .= "<h2>Galéria</h2>\n";
 
-    if(preg_match("/localhost/", $_SERVER["HTTP_HOST"])){
-	$title = "LOCAL";
-	$statcounter = "statcounter_dummy.html";
+    $output .= "<div id='images' style='display: none;'>\n";
+    foreach($files as $file){
+        if(strtolower(substr(strrchr($file, "."), 1)) == "jpg"){ 
+            $output .= "<div>$galery$folder$file</div>\n"; 
+        }
     }
-    else{
-	$title = "Budakeszi Evangélikus Egyházközség";
-	$statcounter = "statcounter.html";
-    }    
-    try{
-	$main = new Page("slideshow_frame.html");
-	$main->insert("back_link", $back_link);
-	$main->insert("content", $content);
-	$main->insert("Title", $title);
-	$main->insert_from_file("StatCounter", $statcounter);
-	$main->show();
-    }
-    catch(Exception $ex){
-	echo "<b>Error: </b>".$ex->getMessage();
-    }
+    $output .= "</div>\n";
+    $output .= "<div id='current_image' style='display: none;'>$kep</div>\n";
+
+    $output .= "<a href='?hely=galeria&album=$album'>Vissza</a>\n<br><br>\n";
+
+    $output .= "<div id='slideshow_container'>\n";
+    $output .= "<div id='slide'>\n";
+
+    $output .= "<div id='slide_number'>".($kep+1)."/".(count($files) - 2)."</div>";
+    $output .= "<img id='the_slide' src='".$galery.$folder.$files[$kep]."' style='width: 100%;'>\n<br>\n";
+    $output .= "<a id='prev_slide'>&#10094;</a>\n";
+    $output .= "<a id='next_slide'>&#10095;</a>\n";
+
+    $output .= "</div>\n";
+    $output .= "</div>\n";
+
+    $output .= "</article>\n";
+    $output .= "<script src='script/slideshow.js'></script>\n";
+    return $output;
 }
 
 ?>
