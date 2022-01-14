@@ -37,6 +37,7 @@ function get_content(){
     $output .= "<img id='the_slide' src='".$galery.$folder.$files[$kep]."' style='width: 100%;'>\n<br>\n";
     $output .= "<a id='prev_slide'>&#10094;</a>\n";
     $output .= "<a id='next_slide'>&#10095;</a>\n";
+    $output .= "<div id='slideshow_loading' class='lds-roller'><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>\n";
 
     $output .= "</div>\n";
     $output .= "</div>\n";
