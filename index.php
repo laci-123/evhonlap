@@ -106,10 +106,11 @@ if(in_array($_SERVER["REMOTE_ADDR"], $localaddr)){
                 $ige = get_string_between($szoveg[0], "„", "”");
                 $ige_hely = get_string_between($szoveg[0], "(", ")");
                 
-                echo "<div id='napi_ige_ige'>„${ige}”</div><div id='napi_ige_hely'>($ige_hely)</div>";
+                echo "<div id='napi_ige_ige'>„${ige}”</div><div id='napi_ige_hely'>($ige_hely)</div>\n";
+
             }
             catch(Exception $e){
-                echo "<i>[Pillanatnyilag nem érhető el.]</i>";
+                echo "<i>[Pillanatnyilag nem érhető el.]</i>\n";
             }
             ?>
 		    </div>
