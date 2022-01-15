@@ -3,7 +3,6 @@
 //ini_set('display_errors',1); 
 //error_reporting(E_ALL);
 ?>
-
 <?php
 require "functions.php";
 
@@ -13,9 +12,6 @@ if(in_array($_SERVER["REMOTE_ADDR"], $localaddr)){
     $isLocal = true;
 }
 ?>
-
-
-
 <!DOCTYPE html>
 <html lang="hu">
 	<head>
