@@ -91,23 +91,24 @@
 	     position: fixed;
 	     top: -15vh;
 	     left: 0;
-	     right: 0;
+	     right: 25vw;
 	     bottom: -15vh;
-	     transform: translateX(101vw);
+	     transform: translateX(-101vw);
 	     transition: transform 0.2s;
-	     background: #38929b;
-	     background-image: linear-gradient(135deg, #38929b, #ffffff);
+	     background-color: #fbfbfb;
 	     padding-top: 20vh;
-	     color: #ffffff;
+	     color: #000000;
+	     box-shadow: 1vw 0vw 2vw #909090;
 	     font-size: 7vw;
 	     font-family: Helvetica, sans-serif;
+	     border-right: 1vw solid #38929b;
 	 }
 
 	 nav ul li{
 	     margin-left: 5vw;
 	     margin-bottom: 3vh;
 	     padding-bottom: 3vh;
-	     border-bottom: 3px solid #ffffff;
+	     border-bottom: 3px solid #000000;
 	     list-style-type: none;
 	     width: 80%;
 	 }
@@ -135,7 +136,14 @@
 
 	 nav input:checked ~ ul {
 	     transform: none;
-	     transition: transform 0.4s; 
+	     transition: transform 0.6s; 
+	 }
+
+	 @media (min-aspect-ratio: 7/5) and (max-width: 1000px){
+	     nav ul{
+		 right: 50vw;
+		 font-size: 7vh;
+	     }
 	 }
 	</style>
     </head>
@@ -148,16 +156,19 @@
 		<label aria-label="open main navigation" for="trigger"><span></span></label>
 		<ul>
 		    <li>
-			<a href="#">Első</a>
+			<a href="#">Alkalmaink</a>
 		    </li>
 		    <li>
-			<a href="#">Második</a>
+			<a href="#">Elérhetőségek</a>
 		    </li>
 		    <li>
-			<a href="#">Harmadik</a>
+			<a href="#">Képgaléria</a>
 		    </li>
 		    <li>
-			<a href="#">Negyedik</a>
+			<a href="#">Archívum</a>
+		    </li>
+		    <li>
+			<a href="#">Rólunk</a>
 		    </li>
 		</ul>
 	    </nav>
