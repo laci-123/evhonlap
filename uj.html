@@ -29,8 +29,14 @@
 	     font-weight: normal;
 	 }
 
+	 header a{
+	     display: flex;
+	     text-decoration: none;
+	     color: inherit;
+	 }
+
 	 header img{
-	     width: 25%;
+	     width: 25vw;
 	     max-size: 149px;
 	     display: block;
 	     margin-right: 5vw;
@@ -309,6 +315,7 @@
 	     footer{
 		 width: 75%;
 		 margin-top: 5em;
+		 font-weight: bold;
 		 background-image: linear-gradient(to right, #38929b, #ffffff);
 	     }
 	 }
@@ -342,15 +349,21 @@
 		 padding-left: 2em;
 	     }
 	 }
+
+	 @media tty{
+	     #trigger{
+		 display: none;
+	     }
+	 }
 	</style>
     </head>
     <body>
 	<header>
-	    <img src="img/allando/templom.png" id="templom_logo">
-	    <h1>Budakeszi <br>Evangélikus <br>Egyházközség</h1>
+	    <a href="?hely=fooldal"><img src="img/allando/templom.png" id="templom_logo" alt="Főoldal">
+	    <h1>Budakeszi <br>Evangélikus <br>Egyházközség</h1></a>
 	    <nav>
-		<input type="checkbox" id="trigger" />
-		<label aria-label="Főmenü megnyitása illetve bezárása" for="trigger"><span></span></label>
+		<input type="checkbox" id="trigger" role="menu" aria-label="Főmenü megnyitása illetve bezárása"/>
+		<label for="trigger"><span></span></label>
 		<ul>
 		    <li>
 			<a href="#">Alkalmaink</a>
