@@ -12,6 +12,7 @@
 
 	 body{
 	     font-size: 4.5vw;
+	     font-family: "Times New Roman", serif;
 	     padding: 3vw;
 	     padding-right: 12vw;
 	 }
@@ -155,6 +156,7 @@
 
 	     header{
 		 border-bottom: 2em solid #38929b;
+		 margin-bottom: 3em;
 	     }
 
 	     header h1{
@@ -210,8 +212,41 @@
 		 list-style-type: none;
 	     }
 
+	     nav ul li:last-of-type{
+		 margin-right: 0.2em;
+	     }
+
 	     nav ul li a{
 		 color: #000000;
+		 transition: color 1s ease-out 100ms
+	     }
+
+	     nav ul li a:hover{
+		 color: #38929b;
+		 text-decoration: underline;
+	     }
+
+	     main{
+		 display: flex;
+		 justify-content: space-around;
+	     }
+
+	     #content{
+		 width: 65%;
+	     }
+
+	     #sidebar{
+		 border: 1px solid red;
+		 padding: 1em;
+		 width: 25%;
+	     }
+
+	     #sidebar h2{
+		 font-weight: normal;
+	     }
+
+	     #sidebar div{
+		 
 	     }
 	 }
 
@@ -231,6 +266,28 @@
 	     nav ul li{
 		 margin-right: 2em;
 	     }
+
+	     #content{
+		 width: 70%;
+	     }
+
+	     #sidebar{
+		 width: 20%;
+		 align-self: center;
+	     }
+
+	     #napi_ige p{
+		 font-style: italic;
+		 font-size: 16pt;
+	     }
+
+	     #elerhetosegek ul{
+		 font-family: Helvetica, sans-serif;
+	     }
+
+	     #elerhetosegek li{
+		 margin-bottom: 1em;
+	     }
 	 }
 	</style>
     </head>
@@ -240,7 +297,7 @@
 	    <h1>Budakeszi <br>Evangélikus <br>Egyházközség</h1>
 	    <nav>
 		<input type="checkbox" id="trigger" />
-		<label aria-label="open main navigation" for="trigger"><span></span></label>
+		<label aria-label="Főmenü megnyitása illetve bezárása" for="trigger"><span></span></label>
 		<ul>
 		    <li>
 			<a href="#">Alkalmaink</a>
@@ -261,94 +318,134 @@
 	    </nav>
 	</header>
 	<main>
-	    <h2>Ez egy cím</h2>
-	    <p>
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-		sed do eiusmod tempor incididunt ut labore et dolore magna
-		aliqua. Elit scelerisque mauris pellentesque
-		pulvinar. Habitant morbi tristique senectus et netus
-		et. Lectus vestibulum mattis ullamcorper velit sed
-		ullamcorper morbi tincidunt. Bibendum enim facilisis
-		gravida neque convallis a cras semper. In pellentesque
-		massa placerat duis ultricies lacus sed turpis. Purus
-		faucibus ornare suspendisse sed nisi lacus sed viverra
-		tellus. Vivamus arcu felis bibendum ut tristique et. Ac
-		orci phasellus egestas tellus rutrum. Dui nunc mattis enim
-		ut. Cursus euismod quis viverra nibh cras pulvinar. Non
-		odio euismod lacinia at quis risus sed vulputate odio. Sed
-		velit dignissim sodales ut eu. Sapien faucibus et molestie
-		ac feugiat. Vitae nunc sed velit dignissim sodales. Rutrum
-		tellus pellentesque eu tincidunt. Quisque sagittis purus
-		sit amet volutpat consequat mauris nunc congue. Nullam
-		vehicula ipsum a arcu cursus vitae congue. Venenatis cras
-		sed felis eget. Dolor sit amet consectetur adipiscing elit
-		ut aliquam.
-	    </p>
-	    <hr>
-	    <h2>Ez a második cím</h2>
-	    <p>
-		Turpis egestas sed tempus urna et pharetra pharetra massa
-		massa. Nunc lobortis mattis aliquam faucibus purus. Amet
-		mauris commodo quis imperdiet massa tincidunt nunc
-		pulvinar sapien. Sed felis eget velit aliquet
-		sagittis. Pellentesque habitant morbi tristique senectus
-		et netus et. Non odio euismod lacinia at quis risus sed
-		vulputate odio. Ut venenatis tellus in metus vulputate
-		eu. Pretium fusce id velit ut tortor pretium viverra. Eu
-		feugiat pretium nibh ipsum consequat. Malesuada fames ac
-		turpis egestas sed tempus urna et. Aliquam etiam erat
-		velit scelerisque in dictum non consectetur. Pellentesque
-		id nibh tortor id aliquet lectus proin nibh
-		nisl. Pellentesque diam volutpat commodo sed.
-	    </p>
-	    <p>
-		Faucibus scelerisque eleifend donec pretium vulputate
-		sapien nec sagittis. Enim ut sem viverra aliquet eget sit
-		amet tellus. Posuere morbi leo urna molestie. Dui accumsan
-		sit amet nulla facilisi. Arcu non odio euismod lacinia at
-		quis risus. Enim ut tellus elementum sagittis vitae
-		et. Malesuada fames ac turpis egestas. Quis enim lobortis
-		scelerisque fermentum. Aliquam eleifend mi in nulla
-		posuere sollicitudin aliquam ultrices. Auctor augue mauris
-		augue neque gravida in. Interdum velit euismod in
-		pellentesque. Velit sed ullamcorper morbi tincidunt ornare
-		massa. Et ligula ullamcorper malesuada proin libero nunc
-		consequat. Proin nibh nisl condimentum id venenatis a.
-	    </p>
-	    <hr>
-	    <p>
-		Pulvinar sapien et ligula ullamcorper malesuada proin
-		libero. Egestas purus viverra accumsan in nisl nisi
-		scelerisque. Mattis ullamcorper velit sed ullamcorper
-		morbi tincidunt ornare massa. Viverra maecenas accumsan
-		lacus vel facilisis volutpat. Nulla pharetra diam sit amet
-		nisl suscipit. Malesuada proin libero nunc consequat
-		interdum varius sit amet mattis. Porttitor leo a diam
-		sollicitudin tempor id eu nisl. Mattis pellentesque id
-		nibh tortor id. Id volutpat lacus laoreet non curabitur
-		gravida arcu. Gravida in fermentum et sollicitudin
-		ac. Viverra nibh cras pulvinar mattis nunc sed. In hac
-		habitasse platea dictumst vestibulum rhoncus est. Eget
-		egestas purus viverra accumsan in nisl nisi scelerisque
-		eu. At consectetur lorem donec massa sapien. Risus in
-		hendrerit gravida rutrum quisque non. Sapien nec sagittis
-		aliquam malesuada bibendum arcu vitae elementum. Dictum
-		non consectetur a erat nam at.
-	    </p>
-	    <p>
-		A condimentum vitae sapien pellentesque habitant morbi
-		tristique senectus et. Sed vulputate odio ut enim blandit
-		volutpat maecenas volutpat blandit. In cursus turpis massa
-		tincidunt dui ut ornare. Risus ultricies tristique nulla
-		aliquet enim tortor at auctor urna. Mi sit amet mauris
-		commodo quis imperdiet. Venenatis cras sed felis
-		eget. Arcu odio ut sem nulla pharetra diam sit. Ornare
-		quam viverra orci sagittis eu volutpat odio facilisis
-		mauris. Risus at ultrices mi tempus. Ac turpis egestas sed
-		tempus urna et pharetra. Tincidunt tortor aliquam nulla
-		facilisi cras fermentum odio eu. Nunc faucibus a
-		pellentesque sit amet porttitor eget dolor morbi.
-	    </p>
+	    <div id="content">
+		<h2>Ez egy cím</h2>
+		<p>
+		    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+		    sed do eiusmod tempor incididunt ut labore et dolore magna
+		    aliqua. Elit scelerisque mauris pellentesque
+		    pulvinar. Habitant morbi tristique senectus et netus
+		    et. Lectus vestibulum mattis ullamcorper velit sed
+		    ullamcorper morbi tincidunt. Bibendum enim facilisis
+		    gravida neque convallis a cras semper. In pellentesque
+		    massa placerat duis ultricies lacus sed turpis. Purus
+		    faucibus ornare suspendisse sed nisi lacus sed viverra
+		    tellus. Vivamus arcu felis bibendum ut tristique et. Ac
+		    orci phasellus egestas tellus rutrum. Dui nunc mattis enim
+		    ut. Cursus euismod quis viverra nibh cras pulvinar. Non
+		    odio euismod lacinia at quis risus sed vulputate odio. Sed
+		    velit dignissim sodales ut eu. Sapien faucibus et molestie
+		    ac feugiat. Vitae nunc sed velit dignissim sodales. Rutrum
+		    tellus pellentesque eu tincidunt. Quisque sagittis purus
+		    sit amet volutpat consequat mauris nunc congue. Nullam
+		    vehicula ipsum a arcu cursus vitae congue. Venenatis cras
+		    sed felis eget. Dolor sit amet consectetur adipiscing elit
+		    ut aliquam.
+		</p>
+		<hr>
+		<h2>Ez a második cím</h2>
+		<p>
+		    Turpis egestas sed tempus urna et pharetra pharetra massa
+		    massa. Nunc lobortis mattis aliquam faucibus purus. Amet
+		    mauris commodo quis imperdiet massa tincidunt nunc
+		    pulvinar sapien. Sed felis eget velit aliquet
+		    sagittis. Pellentesque habitant morbi tristique senectus
+		    et netus et. Non odio euismod lacinia at quis risus sed
+		    vulputate odio. Ut venenatis tellus in metus vulputate
+		    eu. Pretium fusce id velit ut tortor pretium viverra. Eu
+		    feugiat pretium nibh ipsum consequat. Malesuada fames ac
+		    turpis egestas sed tempus urna et. Aliquam etiam erat
+		    velit scelerisque in dictum non consectetur. Pellentesque
+		    id nibh tortor id aliquet lectus proin nibh
+		    nisl. Pellentesque diam volutpat commodo sed.
+		</p>
+		<p>
+		    Faucibus scelerisque eleifend donec pretium vulputate
+		    sapien nec sagittis. Enim ut sem viverra aliquet eget sit
+		    amet tellus. Posuere morbi leo urna molestie. Dui accumsan
+		    sit amet nulla facilisi. Arcu non odio euismod lacinia at
+		    quis risus. Enim ut tellus elementum sagittis vitae
+		    et. Malesuada fames ac turpis egestas. Quis enim lobortis
+		    scelerisque fermentum. Aliquam eleifend mi in nulla
+		    posuere sollicitudin aliquam ultrices. Auctor augue mauris
+		    augue neque gravida in. Interdum velit euismod in
+		    pellentesque. Velit sed ullamcorper morbi tincidunt ornare
+		    massa. Et ligula ullamcorper malesuada proin libero nunc
+		    consequat. Proin nibh nisl condimentum id venenatis a.
+		</p>
+		<hr>
+		<p>
+		    Pulvinar sapien et ligula ullamcorper malesuada proin
+		    libero. Egestas purus viverra accumsan in nisl nisi
+		    scelerisque. Mattis ullamcorper velit sed ullamcorper
+		    morbi tincidunt ornare massa. Viverra maecenas accumsan
+		    lacus vel facilisis volutpat. Nulla pharetra diam sit amet
+		    nisl suscipit. Malesuada proin libero nunc consequat
+		    interdum varius sit amet mattis. Porttitor leo a diam
+		    sollicitudin tempor id eu nisl. Mattis pellentesque id
+		    nibh tortor id. Id volutpat lacus laoreet non curabitur
+		    gravida arcu. Gravida in fermentum et sollicitudin
+		    ac. Viverra nibh cras pulvinar mattis nunc sed. In hac
+		    habitasse platea dictumst vestibulum rhoncus est. Eget
+		    egestas purus viverra accumsan in nisl nisi scelerisque
+		    eu. At consectetur lorem donec massa sapien. Risus in
+		    hendrerit gravida rutrum quisque non. Sapien nec sagittis
+		    aliquam malesuada bibendum arcu vitae elementum. Dictum
+		    non consectetur a erat nam at.
+		</p>
+		<p>
+		    A condimentum vitae sapien pellentesque habitant morbi
+		    tristique senectus et. Sed vulputate odio ut enim blandit
+		    volutpat maecenas volutpat blandit. In cursus turpis massa
+		    tincidunt dui ut ornare. Risus ultricies tristique nulla
+		    aliquet enim tortor at auctor urna. Mi sit amet mauris
+		    commodo quis imperdiet. Venenatis cras sed felis
+		    eget. Arcu odio ut sem nulla pharetra diam sit. Ornare
+		    quam viverra orci sagittis eu volutpat odio facilisis
+		    mauris. Risus at ultrices mi tempus. Ac turpis egestas sed
+		    tempus urna et pharetra. Tincidunt tortor aliquam nulla
+		    facilisi cras fermentum odio eu. Nunc faucibus a
+		    pellentesque sit amet porttitor eget dolor morbi.
+		</p>
+	    </div>
+	    <div id="sidebar">
+		<div id="napi_ige">
+		    <h2>Napi Ige</h2>
+		    <p>
+			„Nem minden szarka farka tarka-barka,
+			csak a tarka-barka szarka farka tarka-barka.
+			Mit sütsz kis szűcs? Talán sós húst sütsz, kis szűcs?”
+		    </p>
+		</div>
+		<hr>
+		<div id="elerhetosegek">
+		    <h2>Elérhetőségek</h2>
+		    <ul>
+			<li>
+			    <b>Templom:</b> <a href="https://goo.gl/maps/TfnN3yhUEpkhSziCA">Budakeszi, Márity László utca 12.</a><br>
+			</li>
+			<li>
+			    <b>Lelkész:</b> Lacknerné Puskás Sára <br>
+			</li>
+			<li>
+			    <b>Telefon:</b> 06 20 770 00 56 <br>
+			</li>
+			<li>
+			    <b>E-mail: </b>lelkesz@evangelikustemplom.hu<br>
+			</li>
+			<li>
+			    <b>Hitoktató: </b> Harangozó Katalin
+			    <div style="margin-left: 20">
+				Telefon: 06 30 28 95 848 <br>
+				E-mail: kati.harangozo@gmail.com
+			    </div>
+			</li>
+			<li>
+			    <b>Számlaszám:</b> 11784009-20604682 <br>
+			</li>
+		    </ul>
+		</div>
+	    </div>
 	</main>
     </body>
 </html>
