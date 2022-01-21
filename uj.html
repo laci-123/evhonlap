@@ -2,8 +2,8 @@
 <html lang="hu">
     <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<title>Budakeszi Evangélikus Gyülekezet</title>
-	<link rel="icon" href="img/allando/lutherrozsa.ico">
+	<title>ÚJ Budakeszi Evangélikus Gyülekezet</title>
+	<link rel="icon" href="img/allando/templom.png">
 	<!--<link rel="stylesheet" type="text/css" href="">-->
 	<style>
 	 *{
@@ -14,6 +14,7 @@
 	     font-size: 4.5vw;
 	     font-family: "Times New Roman", serif;
 	     padding: 3vw;
+	     padding-bottom: 0.5vw;
 	     padding-right: 12vw;
 	 }
 
@@ -37,7 +38,7 @@
 	 }
 
 	 hr{
-	     border-top: 3px solid #000000;
+	     border-top: 2px solid #000000;
 	 }
 
 	 nav input {
@@ -140,6 +141,40 @@
 	     transition: transform 0.6s; 
 	 }
 
+	 #sidebar{
+	     margin-top: 4em;
+	     border: 1vw solid #38929b;
+	     padding: 1em;
+	 }
+
+	 #napi_ige p{
+	     font-style: italic;
+	 }
+
+	 #sidebar h2{
+	     margin-top: 0;
+	     font-weight: normal;
+	 }
+
+	 #sidebar hr{
+	     display: none;
+	 }
+
+	 #elerhetosegek{
+	     display: none;
+	 }
+
+	 footer{
+	     font-size: 10pt;
+	     font-family: Helvetica, sans-serif;
+	     color: #ffffff;
+	     background-color: #38929b;
+	     margin-top: 20vw;
+	     padding-top: 0.75em;
+	     padding-bottom: 0.5em;
+	     padding-left: 1em;
+	 }
+
 	 @media (min-aspect-ratio: 7/5){
 	     nav ul{
 		 right: 50vw;
@@ -147,7 +182,7 @@
 	     }
 	 }
 
-	 @media (min-width: 1000px){
+	 @media (min-width: 950px){
 	     body{
 		 font-size: 14pt;
 		 padding: 0;
@@ -207,7 +242,7 @@
 	     nav ul li{
 		 margin: 0;
 		 margin-right: 1em;
-		 margin-bottom: -1em;
+		 margin-bottom: -0.75em;
 		 border: none;
 		 list-style-type: none;
 	     }
@@ -226,27 +261,55 @@
 		 text-decoration: underline;
 	     }
 
+	     #menu_elerhetosegek{
+		 display: none;
+	     }
+
 	     main{
 		 display: flex;
 		 justify-content: space-around;
 	     }
 
 	     #content{
-		 width: 65%;
+		 width: 60%;
 	     }
 
 	     #sidebar{
-		 border: 1px solid red;
-		 padding: 1em;
-		 width: 25%;
+		 border: 1px solid #38929b;
+		 width: 30%;
+		 align-self: center;
 	     }
 
-	     #sidebar h2{
-		 font-weight: normal;
+	     #sidebar hr{
+		 display: block;
+	     }
+	     
+	     #napi_ige p{
+		 font-size: 16pt;
 	     }
 
-	     #sidebar div{
-		 
+	     #elerhetosegek{
+		 display: block;
+	     }
+	     
+	     #elerhetosegek ul{
+		 font-family: Helvetica, sans-serif;
+		 font-size: 12pt;
+		 padding-left: 1em;
+	     }
+
+	     #elerhetosegek ul li{
+		 margin-bottom: 1em;
+	     }
+
+	     #elerhetosegek ul li li{
+		 margin-bottom: 0;
+	     }
+
+	     footer{
+		 width: 75%;
+		 margin-top: 5em;
+		 background-image: linear-gradient(to right, #38929b, #ffffff);
 	     }
 	 }
 
@@ -273,20 +336,10 @@
 
 	     #sidebar{
 		 width: 20%;
-		 align-self: center;
-	     }
-
-	     #napi_ige p{
-		 font-style: italic;
-		 font-size: 16pt;
 	     }
 
 	     #elerhetosegek ul{
-		 font-family: Helvetica, sans-serif;
-	     }
-
-	     #elerhetosegek li{
-		 margin-bottom: 1em;
+		 padding-left: 2em;
 	     }
 	 }
 	</style>
@@ -302,7 +355,7 @@
 		    <li>
 			<a href="#">Alkalmaink</a>
 		    </li>
-		    <li>
+		    <li id="menu_elerhetosegek">
 			<a href="#">Elérhetőségek</a>
 		    </li>
 		    <li>
@@ -407,6 +460,36 @@
 		    facilisi cras fermentum odio eu. Nunc faucibus a
 		    pellentesque sit amet porttitor eget dolor morbi.
 		</p>
+		<hr>
+		<p>
+		    Turpis egestas sed tempus urna et pharetra pharetra massa
+		    massa. Nunc lobortis mattis aliquam faucibus purus. Amet
+		    mauris commodo quis imperdiet massa tincidunt nunc
+		    pulvinar sapien. Sed felis eget velit aliquet
+		    sagittis. Pellentesque habitant morbi tristique senectus
+		    et netus et. Non odio euismod lacinia at quis risus sed
+		    vulputate odio. Ut venenatis tellus in metus vulputate
+		    eu. Pretium fusce id velit ut tortor pretium viverra. Eu
+		    feugiat pretium nibh ipsum consequat. Malesuada fames ac
+		    turpis egestas sed tempus urna et. Aliquam etiam erat
+		    velit scelerisque in dictum non consectetur. Pellentesque
+		    id nibh tortor id aliquet lectus proin nibh
+		    nisl. Pellentesque diam volutpat commodo sed.
+		</p>
+		<p>
+		    Faucibus scelerisque eleifend donec pretium vulputate
+		    sapien nec sagittis. Enim ut sem viverra aliquet eget sit
+		    amet tellus. Posuere morbi leo urna molestie. Dui accumsan
+		    sit amet nulla facilisi. Arcu non odio euismod lacinia at
+		    quis risus. Enim ut tellus elementum sagittis vitae
+		    et. Malesuada fames ac turpis egestas. Quis enim lobortis
+		    scelerisque fermentum. Aliquam eleifend mi in nulla
+		    posuere sollicitudin aliquam ultrices. Auctor augue mauris
+		    augue neque gravida in. Interdum velit euismod in
+		    pellentesque. Velit sed ullamcorper morbi tincidunt ornare
+		    massa. Et ligula ullamcorper malesuada proin libero nunc
+		    consequat. Proin nibh nisl condimentum id venenatis a.
+		</p>		
 	    </div>
 	    <div id="sidebar">
 		<div id="napi_ige">
@@ -435,10 +518,10 @@
 			</li>
 			<li>
 			    <b>Hitoktató: </b> Harangozó Katalin
-			    <div style="margin-left: 20">
-				Telefon: 06 30 28 95 848 <br>
-				E-mail: kati.harangozo@gmail.com
-			    </div>
+			    <ul>
+				<li>Telefon: 06 30 28 95 848</li>
+				<li>E-mail: kati.harangozo@gmail.com</li>
+			    </ul>
 			</li>
 			<li>
 			    <b>Számlaszám:</b> 11784009-20604682 <br>
@@ -447,5 +530,8 @@
 		</div>
 	    </div>
 	</main>
+	<footer>
+	    Utolsó frissítés dátuma: 2022.01.21
+	</footer>
     </body>
 </html>
