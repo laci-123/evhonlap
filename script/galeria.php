@@ -95,4 +95,8 @@ function get_content(){
     $output .= "</article>\n";
     return $output;
 }
+
+function get_content_uj(){
+    return get_content();
+}
 ?>

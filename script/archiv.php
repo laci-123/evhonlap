@@ -62,4 +62,8 @@ function get_content()
     
     return $output;
 }
+
+function get_content_uj(){
+    echo "<p>Itt lesznek majd az archív dolgok...</p>";
+}
 ?>

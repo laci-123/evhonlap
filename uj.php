@@ -1,10 +1,33 @@
+<?php
+//Uncomment for debugging
+ini_set('display_errors',1); 
+error_reporting(E_ALL);
+?>
+<?php
+require "functions.php";
+
+$localaddr = ["127.0.0.1", "::1"];
+$isLocal = false;
+if(in_array($_SERVER["REMOTE_ADDR"], $localaddr)){
+    $isLocal = true;
+}
+?>
 <!DOCTYPE html>
 <html lang="hu">
     <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<title>ÚJ Budakeszi Evangélikus Gyülekezet</title>
+	<title>
+	    <?php
+            if($isLocal){
+		echo "LOCAL";
+            }
+            else{
+		echo "Budakeszi Evangélikus Egyházközség";
+            }
+            ?>
+	</title>
 	<link rel="icon" href="img/allando/templom.png">
-	<!--<link rel="stylesheet" type="text/css" href="">-->
+	<!-- <link rel="stylesheet" type="text/css" href="css/uj.css"> -->
 	<style>
 	 *{
 	     box-sizing: border-box;
@@ -385,133 +408,39 @@
 	</header>
 	<main>
 	    <div id="content">
-		<h2>Ez egy cím</h2>
-		<p>
-		    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-		    sed do eiusmod tempor incididunt ut labore et dolore magna
-		    aliqua. Elit scelerisque mauris pellentesque
-		    pulvinar. Habitant morbi tristique senectus et netus
-		    et. Lectus vestibulum mattis ullamcorper velit sed
-		    ullamcorper morbi tincidunt. Bibendum enim facilisis
-		    gravida neque convallis a cras semper. In pellentesque
-		    massa placerat duis ultricies lacus sed turpis. Purus
-		    faucibus ornare suspendisse sed nisi lacus sed viverra
-		    tellus. Vivamus arcu felis bibendum ut tristique et. Ac
-		    orci phasellus egestas tellus rutrum. Dui nunc mattis enim
-		    ut. Cursus euismod quis viverra nibh cras pulvinar. Non
-		    odio euismod lacinia at quis risus sed vulputate odio. Sed
-		    velit dignissim sodales ut eu. Sapien faucibus et molestie
-		    ac feugiat. Vitae nunc sed velit dignissim sodales. Rutrum
-		    tellus pellentesque eu tincidunt. Quisque sagittis purus
-		    sit amet volutpat consequat mauris nunc congue. Nullam
-		    vehicula ipsum a arcu cursus vitae congue. Venenatis cras
-		    sed felis eget. Dolor sit amet consectetur adipiscing elit
-		    ut aliquam.
-		</p>
-		<hr>
-		<h2>Ez a második cím</h2>
-		<p>
-		    Turpis egestas sed tempus urna et pharetra pharetra massa
-		    massa. Nunc lobortis mattis aliquam faucibus purus. Amet
-		    mauris commodo quis imperdiet massa tincidunt nunc
-		    pulvinar sapien. Sed felis eget velit aliquet
-		    sagittis. Pellentesque habitant morbi tristique senectus
-		    et netus et. Non odio euismod lacinia at quis risus sed
-		    vulputate odio. Ut venenatis tellus in metus vulputate
-		    eu. Pretium fusce id velit ut tortor pretium viverra. Eu
-		    feugiat pretium nibh ipsum consequat. Malesuada fames ac
-		    turpis egestas sed tempus urna et. Aliquam etiam erat
-		    velit scelerisque in dictum non consectetur. Pellentesque
-		    id nibh tortor id aliquet lectus proin nibh
-		    nisl. Pellentesque diam volutpat commodo sed.
-		</p>
-		<p>
-		    Faucibus scelerisque eleifend donec pretium vulputate
-		    sapien nec sagittis. Enim ut sem viverra aliquet eget sit
-		    amet tellus. Posuere morbi leo urna molestie. Dui accumsan
-		    sit amet nulla facilisi. Arcu non odio euismod lacinia at
-		    quis risus. Enim ut tellus elementum sagittis vitae
-		    et. Malesuada fames ac turpis egestas. Quis enim lobortis
-		    scelerisque fermentum. Aliquam eleifend mi in nulla
-		    posuere sollicitudin aliquam ultrices. Auctor augue mauris
-		    augue neque gravida in. Interdum velit euismod in
-		    pellentesque. Velit sed ullamcorper morbi tincidunt ornare
-		    massa. Et ligula ullamcorper malesuada proin libero nunc
-		    consequat. Proin nibh nisl condimentum id venenatis a.
-		</p>
-		<hr>
-		<p>
-		    Pulvinar sapien et ligula ullamcorper malesuada proin
-		    libero. Egestas purus viverra accumsan in nisl nisi
-		    scelerisque. Mattis ullamcorper velit sed ullamcorper
-		    morbi tincidunt ornare massa. Viverra maecenas accumsan
-		    lacus vel facilisis volutpat. Nulla pharetra diam sit amet
-		    nisl suscipit. Malesuada proin libero nunc consequat
-		    interdum varius sit amet mattis. Porttitor leo a diam
-		    sollicitudin tempor id eu nisl. Mattis pellentesque id
-		    nibh tortor id. Id volutpat lacus laoreet non curabitur
-		    gravida arcu. Gravida in fermentum et sollicitudin
-		    ac. Viverra nibh cras pulvinar mattis nunc sed. In hac
-		    habitasse platea dictumst vestibulum rhoncus est. Eget
-		    egestas purus viverra accumsan in nisl nisi scelerisque
-		    eu. At consectetur lorem donec massa sapien. Risus in
-		    hendrerit gravida rutrum quisque non. Sapien nec sagittis
-		    aliquam malesuada bibendum arcu vitae elementum. Dictum
-		    non consectetur a erat nam at.
-		</p>
-		<p>
-		    A condimentum vitae sapien pellentesque habitant morbi
-		    tristique senectus et. Sed vulputate odio ut enim blandit
-		    volutpat maecenas volutpat blandit. In cursus turpis massa
-		    tincidunt dui ut ornare. Risus ultricies tristique nulla
-		    aliquet enim tortor at auctor urna. Mi sit amet mauris
-		    commodo quis imperdiet. Venenatis cras sed felis
-		    eget. Arcu odio ut sem nulla pharetra diam sit. Ornare
-		    quam viverra orci sagittis eu volutpat odio facilisis
-		    mauris. Risus at ultrices mi tempus. Ac turpis egestas sed
-		    tempus urna et pharetra. Tincidunt tortor aliquam nulla
-		    facilisi cras fermentum odio eu. Nunc faucibus a
-		    pellentesque sit amet porttitor eget dolor morbi.
-		</p>
-		<hr>
-		<p>
-		    Turpis egestas sed tempus urna et pharetra pharetra massa
-		    massa. Nunc lobortis mattis aliquam faucibus purus. Amet
-		    mauris commodo quis imperdiet massa tincidunt nunc
-		    pulvinar sapien. Sed felis eget velit aliquet
-		    sagittis. Pellentesque habitant morbi tristique senectus
-		    et netus et. Non odio euismod lacinia at quis risus sed
-		    vulputate odio. Ut venenatis tellus in metus vulputate
-		    eu. Pretium fusce id velit ut tortor pretium viverra. Eu
-		    feugiat pretium nibh ipsum consequat. Malesuada fames ac
-		    turpis egestas sed tempus urna et. Aliquam etiam erat
-		    velit scelerisque in dictum non consectetur. Pellentesque
-		    id nibh tortor id aliquet lectus proin nibh
-		    nisl. Pellentesque diam volutpat commodo sed.
-		</p>
-		<p>
-		    Faucibus scelerisque eleifend donec pretium vulputate
-		    sapien nec sagittis. Enim ut sem viverra aliquet eget sit
-		    amet tellus. Posuere morbi leo urna molestie. Dui accumsan
-		    sit amet nulla facilisi. Arcu non odio euismod lacinia at
-		    quis risus. Enim ut tellus elementum sagittis vitae
-		    et. Malesuada fames ac turpis egestas. Quis enim lobortis
-		    scelerisque fermentum. Aliquam eleifend mi in nulla
-		    posuere sollicitudin aliquam ultrices. Auctor augue mauris
-		    augue neque gravida in. Interdum velit euismod in
-		    pellentesque. Velit sed ullamcorper morbi tincidunt ornare
-		    massa. Et ligula ullamcorper malesuada proin libero nunc
-		    consequat. Proin nibh nisl condimentum id venenatis a.
-		</p>		
+		<?php
+		$key = "hely";
+		$location = "fooldal";
+		if(isset($_GET[$key]) and !is_null($_GET[$key])){
+                    $location = $_GET[$key];
+		}
+
+		if(include "script/$location.php"){
+                    echo get_content_uj();
+		}
+		else{
+                    echo "<p>Ez a tartalom egy váratlan hiba miatt jelenleg nem érhető el.</p>\n";
+		}
+		?>
 	    </div>
 	    <div id="sidebar">
 		<div id="napi_ige">
 		    <h2>Napi Ige</h2>
-		    <p>
-			„Nem minden szarka farka tarka-barka,
-			csak a tarka-barka szarka farka tarka-barka.
-			Mit sütsz kis szűcs? Talán sós húst sütsz, kis szűcs?”
-		    </p>
+		    <?php
+		    try{
+			$szoveg = "";
+			$tartalom = get_url("https://www.evangelikus.hu/");
+			preg_match("/Napi ige(.*?)<\/p>/s", $tartalom, $szoveg);
+			$ige = get_string_between($szoveg[0], "„", "”");
+			$ige_hely = get_string_between($szoveg[0], "(", ")");
+			
+			echo "<div id='napi_ige_ige'>„${ige}”</div><div id='napi_ige_hely'>($ige_hely)</div>\n";
+
+		    }
+		    catch(Exception $e){
+			echo "<i>[Pillanatnyilag nem érhető el.]</i>\n";
+		    }
+		    ?>
 		</div>
 		<hr>
 		<div id="elerhetosegek">
@@ -544,7 +473,15 @@
 	    </div>
 	</main>
 	<footer>
-	    Utolsó frissítés dátuma: 2022.01.21
+	    <?php
+            $lastmodified = "last_modified.txt";
+            if(file_exists($lastmodified)){
+                $content = file_get_contents($lastmodified);
+                if($content !== false){
+                    echo "A honlap utoljára firssítve: $content";
+                }
+            }
+            ?>
 	</footer>
     </body>
 </html>
