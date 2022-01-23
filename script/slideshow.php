@@ -16,8 +16,7 @@ function get_content(){
         die("<b>Error: </b>".$ex->getMessage());
     }
 
-    $output =  "<article class='content'>\n";
-    $output .= "<h2>Galéria</h2>\n";
+    $output = "<h2>Galéria</h2>\n";
 
     $output .= "<div id='images' style='display: none;'>\n";
     foreach($files as $file){
@@ -28,7 +27,7 @@ function get_content(){
     $output .= "</div>\n";
     $output .= "<div id='current_image' style='display: none;'>$kep</div>\n";
 
-    $output .= "<a href='?hely=galeria&album=$album'>Vissza</a>\n<br><br>\n";
+    $output .= "<a href='?hely=galeria&album=$album' id='slideshow_back'>Vissza</a>\n<br><br>\n";
 
     $output .= "<div id='slideshow_container'>\n";
     $output .= "<div id='slide'>\n";
@@ -42,7 +41,6 @@ function get_content(){
     $output .= "</div>\n";
     $output .= "</div>\n";
 
-    $output .= "</article>\n";
     $output .= "<script src='script/slideshow.js'></script>\n";
     return $output;
 }
