@@ -38,19 +38,19 @@ if(in_array($_SERVER["REMOTE_ADDR"], $localaddr)){
 		<label for="trigger"><span></span></label>
 		<ul>
 		    <li>
-			<a href="#">Alkalmaink</a>
+			<a href="?hely=alkalmak">Alkalmaink</a>
 		    </li>
 		    <li id="menu_elerhetosegek">
-			<a href="#">Elérhetőségek</a>
+			<a href="?hely=elerhetosegek">Elérhetőségek</a>
 		    </li>
 		    <li>
-			<a href="#">Képgaléria</a>
+			<a href="?hely=galeria">Képgaléria</a>
 		    </li>
 		    <li>
-			<a href="#">Archívum</a>
+			<a href="?hely=archiv">Archívum</a>
 		    </li>
 		    <li>
-			<a href="#">Rólunk</a>
+			<a href="?hely=tortenet">Rólunk</a>
 		    </li>
 		</ul>
 	    </nav>
