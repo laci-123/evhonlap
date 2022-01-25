@@ -1,6 +1,7 @@
 <?php
-$get_content = function
+$get_content = function()
 {
+    echo "<!-- cica -->\n";
     $titles = array();
     $content = "";
     $output = "";
@@ -47,6 +48,7 @@ $get_content = function
 };
 
 $get_content_uj = function()
+{
     echo "<p>Itt lesznek majd az aktuális alkalmak...</p>";
 };
 ?>
