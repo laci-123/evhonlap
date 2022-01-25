@@ -1,5 +1,5 @@
 <?php
-function get_content()
+$get_content = function()
 {	
     $titles = array();
     $content = "";
@@ -61,9 +61,9 @@ function get_content()
     $output .= "</article>";
     
     return $output;
-}
+};
 
-function get_content_uj(){
+$get_content_uj = function(){
     echo "<p>Itt lesznek majd az archív dolgok...</p>";
-}
+};
 ?>

@@ -143,6 +143,21 @@ header nav input:checked ~ ul {
 	transition: transform 0.6s; 
 }
 
+.elerhetosegek_lista{
+    font-family: Helvetica, sans-serif;
+    font-size: 12pt;
+    padding-left: 1em;
+    list-style: none;
+}
+
+.elerhetosegek_lista li{
+    margin-bottom: 1em;
+}
+
+.elerhetosegek_lista li li{
+    margin-bottom: 0;
+}
+
 #sidebar{
     margin-top: 4em;
     border: 1vw solid #38929b;
@@ -506,20 +521,6 @@ footer{
 
     #elerhetosegek{
 	display: block;
-    }
-    
-    #elerhetosegek ul{
-	font-family: Helvetica, sans-serif;
-	font-size: 12pt;
-	padding-left: 1em;
-    }
-
-    #elerhetosegek ul li{
-	margin-bottom: 1em;
-    }
-
-    #elerhetosegek ul li li{
-	margin-bottom: 0;
     }
 
     footer{

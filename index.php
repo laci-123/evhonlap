@@ -81,7 +81,7 @@ if(in_array($_SERVER["REMOTE_ADDR"], $localaddr)){
             }
 
             if(include "script/$location.php"){
-                echo get_content();
+                echo $get_content();
             }
             else{
                 echo "<p>Ez a tartalom egy váratlan hiba miatt jelenleg nem érhető el.</p>\n";

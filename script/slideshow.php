@@ -1,6 +1,6 @@
 <?php
 
-function get_content(){
+$get_content = function(){
     $galery = "img/galeria/";
     $folder = "";
     $files = [];
@@ -43,9 +43,9 @@ function get_content(){
 
     $output .= "<script src='script/slideshow.js'></script>\n";
     return $output;
-}
+};
 
-function get_content_uj(){
+$get_content_uj = function(){
     return get_content();
-}
+};
 ?>

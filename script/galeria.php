@@ -14,7 +14,7 @@ class Album{
 const MAXALBUMS = 5;
 const FOLDER_GALERY = "img/galeria/";
 
-function get_content(){
+$get_content = function(){
     $output =  "<article class='content'>\n";
     $output .= "<h2>Galéria</h2>\n";
     $output .= "<nav id='galeria_menu'>\n"; 
@@ -94,9 +94,9 @@ function get_content(){
 
     $output .= "</article>\n";
     return $output;
-}
+};
 
-function get_content_uj(){
+$get_content_uj = function(){
     $output = "<h2>Galéria</h2>\n";
     $output .= "<nav id='galeria_menu'>\n";
 
@@ -175,5 +175,5 @@ function get_content_uj(){
     }
 
     return $output;
-}
+};
 ?>

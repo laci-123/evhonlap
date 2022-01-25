@@ -47,7 +47,7 @@ if(in_array($_SERVER["REMOTE_ADDR"], $localaddr)){
 			<a href="?hely=galeria">Képgaléria</a>
 		    </li>
 		    <li>
-			<a href="?hely=archiv">Archívum</a>
+			<a href="?hely=archiv">Hírek</a>
 		    </li>
 		    <li>
 			<a href="?hely=tortenet">Rólunk</a>
@@ -65,7 +65,7 @@ if(in_array($_SERVER["REMOTE_ADDR"], $localaddr)){
 		}
 
 		if(include "script/$location.php"){
-                    echo get_content_uj();
+                    echo $get_content_uj();
 		}
 		else{
                     echo "<p>Ez a tartalom egy váratlan hiba miatt jelenleg nem érhető el.</p>\n";
@@ -93,31 +93,14 @@ if(in_array($_SERVER["REMOTE_ADDR"], $localaddr)){
 		</div>
 		<hr>
 		<div id="elerhetosegek">
-		    <h2>Elérhetőségek</h2>
-		    <ul>
-			<li>
-			    <b>Templom:</b> <a href="https://goo.gl/maps/TfnN3yhUEpkhSziCA">Budakeszi, Márity László utca 12.</a><br>
-			</li>
-			<li>
-			    <b>Lelkész:</b> Lacknerné Puskás Sára <br>
-			</li>
-			<li>
-			    <b>Telefon:</b> 06 20 770 00 56 <br>
-			</li>
-			<li>
-			    <b>E-mail: </b>lelkesz@evangelikustemplom.hu<br>
-			</li>
-			<li>
-			    <b>Hitoktató: </b> Harangozó Katalin
-			    <ul>
-				<li>Telefon: 06 30 28 95 848</li>
-				<li>E-mail: kati.harangozo@gmail.com</li>
-			    </ul>
-			</li>
-			<li>
-			    <b>Számlaszám:</b> 11784009-20604682 <br>
-			</li>
-		    </ul>
+		    <?php
+		    if(include "script/elerhetosegek.php"){
+			echo $get_content_uj();
+		    }
+		    else{
+			echo "<p>Ez a tartalom egy váratlan hiba miatt jelenleg nem érhető el.</p>\n";
+		    }
+		    ?>
 		</div>
 	    </div>
 	</main>

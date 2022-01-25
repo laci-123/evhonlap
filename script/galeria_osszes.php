@@ -13,7 +13,7 @@ class Line{
 
 const FOLDER_GALERY = "img/galeria/";
 
-function get_content()
+$get_content = function()
 {
     $output .= "<article class='content'>\n
 			<h2>Galéria</h2>\n
@@ -42,9 +42,9 @@ function get_content()
     $output .=  "</article>";
 
     return $output;
-}
+};
 
-function get_content_uj(){
+$get_content_uj = function(){
     return get_content();
-}
+};
 ?>
