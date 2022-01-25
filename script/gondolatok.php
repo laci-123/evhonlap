@@ -1,5 +1,5 @@
 <?php
-function get_content()
+$get_content = function()
 {	
     $titles = array();
     $content = "";
@@ -60,5 +60,9 @@ function get_content()
     $output .= "</article>\n";
     
     return $output;
-}
+};
+
+$get_content_uj = function(){
+    echo "<p>Itt lesznek majd a gondolatok...</p>";
+};
 ?>

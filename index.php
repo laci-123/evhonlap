@@ -3,7 +3,6 @@
 //ini_set('display_errors',1); 
 //error_reporting(E_ALL);
 ?>
-
 <?php
 require "functions.php";
 
@@ -13,9 +12,6 @@ if(in_array($_SERVER["REMOTE_ADDR"], $localaddr)){
     $isLocal = true;
 }
 ?>
-
-
-
 <!DOCTYPE html>
 <html lang="hu">
 	<head>
@@ -79,7 +75,7 @@ if(in_array($_SERVER["REMOTE_ADDR"], $localaddr)){
             }
 
             if(include "script/$location.php"){
-                echo get_content();
+                echo $get_content();
             }
             else{
                 echo "<p>Ez a tartalom egy váratlan hiba miatt jelenleg nem érhető el.</p>\n";
@@ -110,10 +106,11 @@ if(in_array($_SERVER["REMOTE_ADDR"], $localaddr)){
                 $ige = get_string_between($szoveg[0], "„", "”");
                 $ige_hely = get_string_between($szoveg[0], "(", ")");
                 
-                echo "<div id='napi_ige_ige'>„${ige}”</div><div id='napi_ige_hely'>($ige_hely)</div>";
+                echo "<div id='napi_ige_ige'>„${ige}”</div><div id='napi_ige_hely'>($ige_hely)</div>\n";
+
             }
             catch(Exception $e){
-                echo "<i>[Pillanatnyilag nem érhető el.]</i>";
+                echo "<i>[Pillanatnyilag nem érhető el.]</i>\n";
             }
             ?>
 		    </div>
