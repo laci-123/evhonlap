@@ -15,7 +15,7 @@ const FOLDER_GALERY = "img/galeria/";
 
 $get_content = function()
 {
-    $output .= "<article class='content'>\n
+    $output = "<article class='content'>\n
 			<h2>Galéria</h2>\n
 			<h3>Összes album</h3>\n";
     $output .= "<div style='margin-left: 50px;'>\n";
@@ -44,7 +44,7 @@ $get_content = function()
     return $output;
 };
 
-$get_content_uj = function(){
-    return get_content();
+$get_content_uj = function() use($get_content){
+    return $get_content();
 };
 ?>
