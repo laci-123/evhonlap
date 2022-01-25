@@ -50,7 +50,7 @@ if(in_array($_SERVER["REMOTE_ADDR"], $localaddr)){
 			<a href="?hely=archiv">Hírek</a>
 		    </li>
 		    <li>
-			<a href="?hely=tortenet">Rólunk</a>
+			<a href="?hely=rolunk">Rólunk</a>
 		    </li>
 		</ul>
 	    </nav>

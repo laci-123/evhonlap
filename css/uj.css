@@ -32,7 +32,9 @@ header img{
 }
 
 hr{
-    border-top: 2px solid #000000;
+    border-top: 2px solid #808080;
+    width: 80%;
+    margin-top: 4em;
 }
 
 #content table, td
@@ -40,6 +42,10 @@ hr{
     border: 1px solid black;
     border-collapse: collapse;
     padding: 10px;
+}
+
+#content h3{
+    margin-top: 3em;
 }
 
 header nav input {
@@ -258,6 +264,21 @@ footer{
 
 .galeria_kep{
     width: 48%;
+}
+
+#tisztsegviselok_lista > li{
+    margin-bottom: 0.5em;
+}
+
+.tisztsegviselok_fej{
+    font-weight: bold;
+    display: inline-block;
+    min-width: 5em;
+}
+
+#motto{
+    font-style: italic;
+    margin-bottom: 4em;
 }
 
 #slideshow_container {
@@ -523,6 +544,11 @@ footer{
 	display: block;
     }
 
+    #motto{
+	width: 50%;
+	margin-bottom: 5em;
+    }
+
     footer{
 	width: 75%;
 	margin-top: 5em;
@@ -583,6 +609,10 @@ footer{
 
     #elerhetosegek ul{
 	padding-left: 2em;
+    }
+
+    #motto{
+	width: 30%;
     }
 
     .galeria_kep{
