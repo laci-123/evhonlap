@@ -4,12 +4,6 @@
 //error_reporting(E_ALL);
 ?>
 <?php
-if(isset($_GET["v"]) and $_GET["v"] == "uj"){
-    header("Location:uj.php");
-    exit;
-}
-?>
-<?php
 require "functions.php";
 
 $localaddr = ["127.0.0.1", "::1"];
