@@ -36,7 +36,7 @@ if(in_array($_SERVER["REMOTE_ADDR"], $localaddr)){
 	    <nav>
 		<input type="checkbox" id="trigger" role="menu" aria-label="Főmenü megnyitása illetve bezárása"/>
 		<label for="trigger"><span></span></label>
-		<ul>
+		<ul id="menu_lista">
 		    <li>
 			<a href="?hely=alkalmak">Alkalmaink</a>
 		    </li>
@@ -115,5 +115,18 @@ if(in_array($_SERVER["REMOTE_ADDR"], $localaddr)){
             }
             ?>
 	</footer>
+	<script>
+	 let trigger = document.getElementById("trigger");
+	 document.addEventListener("click", function(event){
+	     if(event.target.closest("#menu_lista") ||
+		event.target.closest("#trigger") ||
+		event.target.tagName == "LABEL" ||
+		event.target.tagName == "SPAN")
+	     {
+		 return;
+	     }
+	     trigger.checked = false;
+	 });
+	</script>
     </body>
 </html>
