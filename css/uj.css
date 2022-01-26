@@ -84,17 +84,9 @@ hr{
     object-fit: contain;
 }
 
-.link_box:hover img{
-    transform: scale(1.1);
-}
-
 .link_box span{
     margin-left: 1em;
     align-self: center;
-}
-
-.link_box:hover span{
-    text-decoration: underline;
 }
 
 .link_box:active{
@@ -609,6 +601,10 @@ footer{
 
     #content{
 	width: 60%;
+    }
+
+    .link_box:hover img{
+	transform: scale(1.1);
     }
 
     #sidebar{
