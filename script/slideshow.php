@@ -83,17 +83,22 @@ $get_content_uj = function(){
     $files = [];
     $album = 0;
     $kep = 0;
+    $title = "";
     try{
         $folder = getparam_string("folder")."/";
         $files = scandir_safe_compact($galery.$folder);
-        $album = getparam_int("album");
+	$datafile = file_get_contents_safe($galery.$folder."/data.txt");
+	$data = explode("\n", $datafile);
+        $album = $data[0];
+	$title = $data[1];
         $kep = getparam_int("kep");
     }
     catch(Exception $ex){
         die("<b>Error: </b>".$ex->getMessage());
     }
 
-    $output = "<h2>Galéria</h2>\n";
+    $output =  "<h2>Galéria</h2>\n";
+    $output .= "<h3>$title</h3>\n";
 
     $output .= slideshow($galery, $folder, $files, $album, $kep);
 

@@ -169,7 +169,7 @@ $get_content_uj = function(){
 	}
 
 	if($ext == 'jpg' || $ext == 'JPG' || $ext == 'jpeg' || $ext == 'JPEG' || $ext == 'png' || $ext == 'PNG'){
-	    $output .= "<a href='?hely=slideshow&folder=".$current_album->filename."&album=".$current_album->id."&kep=".$i."'>";
+	    $output .= "<a href='?hely=slideshow&folder=".$current_album->filename."&kep=".$i."'>";
 	    $output .= "<img src='".FOLDER_GALERY.$current_album->filename."/Thumbnails/".$file.".png' class='galeria_kep'></a>\n";
 	}
     }
