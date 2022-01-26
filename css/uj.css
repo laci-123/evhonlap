@@ -684,6 +684,15 @@ footer{
     .galeria_kep{
 	width: 22%;
     }
+
+    #fooldal_kepek{
+	width: 60%;
+    }
+
+    #fooldal_archiv{
+	width: 60%;
+	margin-left: 10%;
+    }
 }
 
 @media tty{
