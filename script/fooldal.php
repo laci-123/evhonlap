@@ -16,9 +16,12 @@ $get_content_uj = function(){
 	$galery = "img/galeria/";
 	//TODO: automate
 	$folder = "szenteste_2021/";
+	$album = 37;
+	$title = "Szenteste 2021";
 	try{
 	    $files = scandir_safe_compact($galery.$folder);
             $output .= slideshow($galery, $folder, $files, "", 0);
+	    $output .= "<a href='?hely=galeria&album=$album' id='fooldal_kepek_link' title='$title'></a>\n";
 	}
 	catch(Exception $ex){
             $output .= "<b>Error: </b>".$ex->getMessage();
