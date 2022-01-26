@@ -273,6 +273,7 @@ footer{
 }
 
 #galeria_menu{
+    font-size: 3vw;
     color: #ffffff;
     background-color: #38929b;
     font-family: Helvetica, sans-serif;
@@ -639,6 +640,7 @@ footer{
     }
 
     #galeria_menu{
+	font-size: inherit;
 	padding-top: 0.5em;
 	width: 90%;
     }
