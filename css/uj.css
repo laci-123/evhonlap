@@ -628,6 +628,14 @@ footer{
 	width: 30%;
     }
 
+    .galeria_kep:hover{
+	box-shadow: 3px 3px 1px gray;
+    }
+
+    .galeria_kep:active{
+	box-shadow: -1px -1px 1px gray;
+    }
+
     #prev_slide, #next_slide {
 	top: calc(50% - 110px);
 	padding: 100px 16px;
