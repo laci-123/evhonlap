@@ -6,6 +6,11 @@ body{
     padding-right: 12vw;
 }
 
+a{
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
 header {
     display: flex;
 }
