@@ -41,7 +41,8 @@ hr{
 {
     border: 1px solid black;
     border-collapse: collapse;
-    padding: 10px;
+    padding: 5px;
+    font-size: 3vw;
 }
 
 #content h3{
@@ -457,6 +458,11 @@ footer{
     #content h2{
 	font-size: 25pt;
 	margin-bottom: 2em;
+    }
+
+    #content table, td{
+	padding: 10px;
+	font-size: inherit;
     }
 
     hr{
