@@ -6,7 +6,9 @@ $get_content = function(){
 $get_content_uj = function(){
     $output =  file_get_contents_safe("content/fooldal_uj.html");
     
-    $output .= "<p style='font-family: monospace; margin-top: 6em; margin-bottom: 6em;'>%%%%%%%% Ide jönnek majd az aktuális alkalmak. %%%%%%%%</p>\n";
+    $output .= "<a href='img/cikk/pelda1.pdf' class='link_box aktualis_box_odd'>\n<img src='img/cikk/pelda1.png' alt=''>\n<span>Példa Esemény</span>\n</a>\n";
+    $output .= "<a href='img/cikk/pelda2.pdf' class='link_box aktualis_box_even'>\n<img src='img/cikk/pelda2.png' alt=''>\n<span>Teszt Alkalom</span>\n</a>\n";
+    $output .= "<hr>\n";
 
     $output .= "<div id='fooldal_kepek'>\n";
     if(include "slideshow.php"){

@@ -70,11 +70,13 @@ hr{
     font-family: Height, sans-serif;
     box-shadow: 2px 2px 1px gray;
     overflow: hidden;
+    max-height: 10em;
 }
 
 .link_box img{
     width: 50%;
     transition: transform 1s;
+    object-fit: contain;
 }
 
 .link_box:hover img{
@@ -92,6 +94,14 @@ hr{
 
 .link_box:active{
     box-shadow: -1px -1px 1px gray;
+}
+
+#udvozles{
+    margin-bottom: 5em;
+}
+
+.aktualis_box_odd, .aktualis_box_even{
+    margin-bottom: 2em;
 }
 
 
@@ -692,6 +702,14 @@ footer{
     #fooldal_archiv{
 	width: 60%;
 	margin-left: 10%;
+    }
+
+    .aktualis_box_odd, .aktualis_box_even{
+	margin-bottom: 1em;
+    }
+
+    .aktualis_box_even{
+	margin-left: 20%;
     }
 }
 
