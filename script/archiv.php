@@ -64,6 +64,6 @@ $get_content = function()
 };
 
 $get_content_uj = function(){
-    echo "<p>Itt lesznek majd a hírek dolgok...</p>";
+    echo file_get_contents_safe("content/archiv.html");
 };
 ?>
