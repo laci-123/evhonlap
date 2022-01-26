@@ -37,6 +37,7 @@ $get_content_uj = function(){
     $output .= $archiv_output;
     $output .= "<a href='?hely=archiv' class='link_box'>Régebbi események...</a>\n";
     $output .= "</div>\n<hr>\n";
+    $output .= "<script src='script/step_slideshow.js'></script>";
 
     $output .= file_get_contents_safe("content/alkalmak.html");
     
