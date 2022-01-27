@@ -6,7 +6,7 @@ body{
     padding-right: 12vw;
 }
 
-a{
+a:not(.link_box){
     white-space: pre-wrap;
     word-wrap: break-word;
 }
