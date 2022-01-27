@@ -738,8 +738,8 @@ footer{
     }
 }
 
-@media tty{
-    #trigger{
+@media speech, tty{
+    #trigger, #trigger_label{
 	display: none;
     }
 }

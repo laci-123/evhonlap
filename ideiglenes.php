@@ -35,8 +35,8 @@ if(in_array($_SERVER["REMOTE_ADDR"], $localaddr)){
 	    <a href="?hely=fooldal"><img src="img/allando/templom.png" id="templom_logo" alt="Főoldal">
 	    <h1>Budakeszi <br>Evangélikus <br>Egyházközség</h1></a>
 	    <nav>
-		<input type="checkbox" id="trigger" role="menu" aria-label="Főmenü megnyitása illetve bezárása"/>
-		<label for="trigger"><span></span></label>
+		<input type="checkbox" id="trigger"/>
+		<label for="trigger" id="trigger_label"><span></span></label>
 		<ul id="menu_lista">
 		    <li>
 			<a href="?hely=alkalmak">Alkalmaink</a>
