@@ -49,6 +49,7 @@ $get_content = function()
 
 $get_content_uj = function()
 {
-    echo "<p>Itt lesznek majd az aktuális alkalmak...</p>";
+    $file = getparam_string("alkalom");
+    return file_get_contents_safe("content/aktualis/$file.html");
 };
 ?>
