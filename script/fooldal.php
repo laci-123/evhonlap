@@ -44,7 +44,7 @@ $get_content_uj = function(){
     $output .= "</div>\n<hr>\n";
     $output .= "<script src='script/step_slideshow.js'></script>";
 
-    $output .= file_get_contents_safe("content/alkalmak.html");
+    $output .= file_get_contents_safe("content/alkalmak_uj.html");
     
     return $output;
 };
