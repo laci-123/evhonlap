@@ -266,6 +266,15 @@ header nav input:checked ~ ul {
     display: none;
 }
 
+#kulso_linkek{
+    display: none;
+}
+
+#kulso_linkek a{
+    display: block;
+    margin-bottom: 1em;
+}
+
 footer{
     font-size: 10pt;
     font-family: Helvetica, sans-serif;
@@ -644,6 +653,17 @@ footer{
 
     #elerhetosegek{
 	display: block;
+    }
+
+    #kulso_linkek{
+	display: block;
+    }
+
+    #kulso_linkek a{
+	display: block;
+	margin-bottom: 1em;
+	padding-left: 1em;
+	padding-right: 1em;
     }
 
     #motto{

@@ -103,6 +103,15 @@ if(in_array($_SERVER["REMOTE_ADDR"], $localaddr)){
 		    }
 		    ?>
 		</div>
+		<hr>
+		<div id="kulso_linkek">
+		    <h2>Linkek</h2>
+		    <a href="https://www.evangelikustemplom.hu/">Budakeszi Evangélikus Templomért Alapítvány</a>
+		    <a href="https://www.youtube.com/channel/UC1ref27GKKDuIHIJ5-u4SuQ">Youtube-csatornánk</a>
+		    <a href="https://www.evangelikus.hu/">Magyarországi Evangélikus Egyház</a>
+		    <a href="https://eszak.lutheran.hu/">Északi Egyházkerület</a>
+		    <a href="https://buda.lutheran.hu/">Budai Egyházmegye</a>
+		</div>
 	    </div>
 	</main>
 	<footer>
