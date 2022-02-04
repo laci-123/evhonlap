@@ -4,7 +4,7 @@
 //(from: http://stackoverflow.com/questions/5696412/get-substring-between-two-strings-php)
 function get_string_between($string, $start, $end){
     $string = ' ' . $string;
-    $ini = strpos($string, $start);
+    $ini = strpos($string, strval($start));
     if ($ini == 0) return '';
     $ini += strlen($start);
     $len = strpos($string, $end, $ini) - $ini;

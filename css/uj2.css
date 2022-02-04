@@ -50,10 +50,6 @@ hr{
     font-size: 3vw;
 }
 
-#content h3{
-    margin-top: 3em;
-}
-
 .video-container {
     position: relative;
     padding-bottom: 56.25%; /* 16:9 */
@@ -104,6 +100,20 @@ hr{
 
 .aktualis_img{
     max-width: 90%;
+}
+
+.igehirdetes_box{
+    display: block;
+    white-space: nowrap;
+    color: inherit;
+    text-decoration: none;
+    font-size: 10pt;
+    height: 13em;
+    border: 1px solid red;
+    overflow: hidden;
+    padding: 1em;
+    -webkit-mask-image: linear-gradient(to bottom, white, transparent);
+    mask-image: linear-gradient(to bottom, white, transparent);
 }
 
 #fooldal_kepek{
