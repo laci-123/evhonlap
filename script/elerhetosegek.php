@@ -4,6 +4,6 @@ $get_content = function(){
 };
 
 $get_content_uj = function(){
-    return file_get_contents_safe("content/elerhetosegek.html");
+    return file_get_contents_safe("content/elerhetosegek_uj.html");
 };
 ?>
