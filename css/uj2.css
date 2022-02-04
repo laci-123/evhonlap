@@ -532,6 +532,10 @@ footer{
 	margin-right: 1em;
     }
 
+    #content{
+	text-align: justify;
+    }
+
     #content h2{
 	font-size: 25pt;
 	margin-top: 5vh;
@@ -645,6 +649,7 @@ footer{
     #motto{
 	width: 50%;
 	margin-bottom: 5em;
+	text-align: left;
     }
 
     footer{
