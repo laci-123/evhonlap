@@ -533,6 +533,7 @@ footer{
 
     #content h2{
 	font-size: 25pt;
+	margin-top: 5vh;
 	margin-bottom: 2em;
     }
 
@@ -615,7 +616,7 @@ footer{
     #sidebar{
 	border: 1px solid #38929b;
 	width: 30%;
-	margin-top: 15%;
+	margin-top: 5vh;
 	align-self: flex-start;
     }
 
@@ -625,6 +626,11 @@ footer{
     
     #napi_ige p{
 	font-size: 16pt;
+    }
+
+    #napi_ige_ige{
+	padding-left: 1em;
+	padding-right: 1em;
     }
 
     #elerhetosegek{
@@ -705,11 +711,10 @@ footer{
 
     #sidebar{
 	width: 20%;
-	margin-top: 10%;
     }
 
     #elerhetosegek ul{
-	padding-left: 2em;
+	padding-left: 1em;
     }
 
     #motto{
