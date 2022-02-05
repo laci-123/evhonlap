@@ -102,18 +102,30 @@ hr{
     max-width: 90%;
 }
 
+.igehirdetes_wrapper{
+    box-shadow: 2px 2px 1px gray;
+    border: 1px solid #000000;
+    margin-bottom: 3em;
+}
+
 .igehirdetes_box{
-    display: block;
-    white-space: nowrap;
-    color: inherit;
-    text-decoration: none;
     font-size: 10pt;
     height: 13em;
-    border: 1px solid red;
     overflow: hidden;
     padding: 1em;
     -webkit-mask-image: linear-gradient(to bottom, white, transparent);
     mask-image: linear-gradient(to bottom, white, transparent);
+    cursor: pointer;
+    transition: transform 0.5s;
+}
+
+.igehirdetes_box:hover{
+    transform: translateY(-1em);
+    transition: transform 1.5s ease-out 0.5s;
+}
+
+.igehirdetes_wrapper:active{
+    box-shadow: -2px -2px 1px gray;
 }
 
 #fooldal_kepek{
@@ -415,7 +427,7 @@ footer{
     top: 0;
 }
 
-#slideshow_back{
+.backlink{
     text-decoration: none;
     color: #ffffff;
     background-color: #38929b;
@@ -423,8 +435,12 @@ footer{
     font-family: Helvetica, sans-serif;
 }
 
-#slideshow_back:hover{
+.backlink:hover{
     text-decoration: underline;
+}
+
+#igehirdetes_vissza{
+    float: right;
 }
 
 .lds-roller {

@@ -28,7 +28,7 @@ $get_content = function(){
     $output .= "</div>\n";
     $output .= "<div id='current_image' style='display: none;'>$kep</div>\n";
 
-    $output .= "<a href='?hely=galeria&album=$album' id='slideshow_back'>Vissza</a>\n<br><br>\n";
+    $output .= "<a href='?hely=galeria&album=$album' class='backlink'>Vissza</a>\n<br><br>\n";
 
     $output .= "<div id='slideshow_container'>\n";
     $output .= "<div id='slide'>\n";
@@ -58,7 +58,7 @@ function slideshow($galery, $folder, $files, $album, $kep){
     $output .= "<div id='current_image' style='display: none;'>$kep</div>\n";
 
     if($album != ""){
-	$output .= "<a href='?hely=galeria&album=$album' id='slideshow_back'>Vissza</a>\n<br><br>\n";
+	$output .= "<a href='?hely=galeria&album=$album' class='backlink'>Vissza</a>\n<br><br>\n";
     }
 
     $output .= "<div id='slideshow_container'>\n";
