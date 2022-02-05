@@ -544,7 +544,8 @@ footer{
 @media (min-aspect-ratio: 7/5){
     header nav ul{
 	right: 50vw;
-	font-size: 7vh;
+	font-size: 6vh;
+	padding-top: 15vh;
     }
 
     #galeria_menu{
@@ -618,7 +619,7 @@ footer{
 
     header nav ul {
 	position: static;
-	font-size: 16pt;
+	font-size: 14pt;
 	margin: 0;
 	padding: 0;
 	transform: none;

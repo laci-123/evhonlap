@@ -39,7 +39,10 @@ if(in_array($_SERVER["REMOTE_ADDR"], $localaddr)){
 		<label for="trigger" id="trigger_label"><span></span></label>
 		<ul id="menu_lista">
 		    <li>
-			<a href="?hely=alkalmak">Alkalmaink</a>
+			<a href="?hely=alkalmak">Aktuális</a>
+		    </li>
+		    <li>
+			<a href="?hely=alkalmaink">Alkalmaink</a>
 		    </li>
 		    <li id="menu_elerhetosegek">
 			<a href="?hely=elerhetosegek">Elérhetőségek</a>
