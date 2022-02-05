@@ -47,9 +47,7 @@ $get_content = function()
     return $output;
 };
 
-$get_content_uj = function()
-{
-    $file = getparam_string("alkalom");
-    return file_get_contents_safe("content/aktualis/$file.html");
+$get_content_uj = function(){
+    return file_get_contents_safe("content/aktualis_uj.html");
 };
 ?>
