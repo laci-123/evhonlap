@@ -7,8 +7,8 @@ $get_content_uj = function(){
     $output =  file_get_contents_safe("content/fooldal_uj.html");
 
     //TODO: automate
-    $output .= "<a href='?hely=aktualis&alkalom=pelda1' class='link_box aktualis_box'>\n<img src='img/cikk/pelda1.png' alt=''>\n<span>Példa Esemény</span>\n</a>\n";
-    $output .= "<a href='?hely=aktualis&alkalom=pelda2' class='link_box aktualis_box'>\n<img src='img/cikk/pelda2.png' alt=''>\n<span>Teszt Alkalom</span>\n</a>\n";
+    $output .= "<a href='?hely=esemeny&cim=pelda1' class='link_box aktualis_box'>\n<img src='img/cikk/pelda1.png' alt=''>\n<span>Példa Esemény</span>\n</a>\n";
+    $output .= "<a href='?hely=esemeny&cim=pelda2' class='link_box aktualis_box'>\n<img src='img/cikk/pelda2.png' alt=''>\n<span>Teszt Alkalom</span>\n</a>\n";
     $output .= "<hr>\n";
 
     $output .= "<div id='fooldal_kepek'>\n";
@@ -40,11 +40,11 @@ $get_content_uj = function(){
     $archiv_output = str_replace("<hr>", "", $archiv_output);
 
     $output .= $archiv_output;
-    $output .= "<a href='?hely=archiv' class='link_box'>Régebbi események...</a>\n";
+    $output .= "<a href='?hely=archiv' class='backlink'>Régebbi események...</a>\n";
     $output .= "</div>\n<hr>\n";
     $output .= "<script src='script/step_slideshow.js'></script>";
 
-    $output .= file_get_contents_safe("content/alkalmak_uj.html");
+    $output .= file_get_contents_safe("content/aktualis_uj.html");
     
     return $output;
 };
