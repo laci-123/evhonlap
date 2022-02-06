@@ -86,6 +86,7 @@ hr{
     margin-left: 1em;
     margin-right: 1em;
     align-self: center;
+    width: min-content;
 }
 
 .link_box:active{
@@ -588,6 +589,10 @@ footer{
 	margin-bottom: 2em;
     }
 
+    #content table{
+	width: 100%;
+    }
+
     #content table, td{
 	padding: 10px;
 	font-size: inherit;
@@ -673,7 +678,7 @@ footer{
     }
 
     .aktualis_box{
-	width: 75%;
+	width: 100%;
     }
 
     #sidebar{
@@ -784,12 +789,16 @@ footer{
 	width: 65%;
     }
 
+    #content table{
+	width: 60%;
+    }
+
     .link_box{
 	width: 40%;
     }
 
     .aktualis_box{
-	width: 50%;
+	width: 60%;
     }
 
     .alkalom_kep{
