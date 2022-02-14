@@ -7,7 +7,7 @@ $get_content_uj = function(){
     $output =  file_get_contents_safe("content/fooldal_uj.html");
 
     //TODO: automate
-    $output .= "<a href='?hely=esemeny&cim=csaladi_istentisztelet' class='link_box aktualis_box'>\n<img src='img/cikk/családi_istentisztelet.png' alt=''>\n<span>Családi Istentisztelet</span>\n</a>\n";
+    $output .= "<a href='?hely=esemeny&cim=vilagimanap' class='link_box aktualis_box'>\n<img src='img/cikk/ökumenikus_világmanap.png' alt=''>\n<span>Ökumenikus Világimanap</span>\n</a>\n";
     $output .= "<a href='?hely=esemeny&cim=protestans_kor' class='link_box aktualis_box'>\n<img src='img/cikk/nagy_gábor_előadása.jpg' alt=''>\n<span>Protestáns Kör</span>\n</a>\n";
     $output .= "<hr>\n";
 
