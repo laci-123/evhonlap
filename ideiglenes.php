@@ -33,11 +33,14 @@ if(in_array($_SERVER["REMOTE_ADDR"], $localaddr)){
     <body>
 	<header>
 	    <a href="?hely=fooldal"><img src="img/allando/templom.png" id="templom_logo" alt="Főoldal">
-	    <h1>Budakeszi <br>Evangélikus <br>Egyházközség</h1></a>
+		<h1>Budakeszi <br>Evangélikus <br>Egyházközség</h1></a>
 	    <nav>
 		<input type="checkbox" id="trigger"/>
 		<label for="trigger" id="trigger_label"><span></span></label>
 		<ul id="menu_lista">
+		    <li>
+			<img src="img/allando/lutherrozsa_monochrom_fekete.png" alt="Luther-Rózsa" id="lutherrozsa_mobil">
+		    </li>
 		    <li>
 			<a href="?hely=aktualis">Aktuális</a>
 		    </li>

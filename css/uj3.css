@@ -101,8 +101,22 @@ hr{
     width: 100%;
 }
 
-#udvozles{
+#udvozles_wrapper{
+    display: flex;
     margin-bottom: 5em;
+}
+
+#lutherrozsa_desktop{
+    display: none;
+}
+
+#lutherrozsa_mobil{
+    width: 3em;
+    object-fit: contain;
+}
+
+#udvozles{
+    align-self: center;
 }
 
 .aktualis_img{
@@ -203,16 +217,16 @@ header label span::after {
 header nav ul {
     position: fixed;
     top: -15vh;
+    bottom: -15vh;
     left: 0;
     right: 25vw;
-    bottom: -15vh;
     transform: translateX(-101vw);
     transition: transform 0.2s;
     background-color: #fbfbfb;
-    padding-top: 20vh;
+    padding-top: 15vh;
     color: #000000;
     box-shadow: 1vw 0vw 2vw #909090;
-    font-size: 7vw;
+    font-size: 4vh;
     font-family: Helvetica, sans-serif;
     border-right: 1vw solid #38929b;
     z-index: 100;
@@ -227,7 +241,7 @@ header nav ul li{
     width: 80%;
 }
 
-header nav ul li:last-of-type{
+header nav ul li:last-of-type, header nav ul li:first-of-type{
     border: none;
 }
 
@@ -546,7 +560,7 @@ footer{
     header nav ul{
 	right: 50vw;
 	font-size: 6vh;
-	padding-top: 15vh;
+	padding-top: 10vh;
     }
 
     #galeria_menu{
@@ -556,6 +570,10 @@ footer{
     #galeria_trigger:checked ~ ul{
 	max-height: 200vw;
     }    
+
+    #lutherrozsa_mobil{
+	display: none;
+    }
 }
 
 @media (min-width: 950px){
@@ -667,6 +685,17 @@ footer{
 
     #content{
 	width: 60%;
+    }
+
+    #lutherrozsa_mobil{
+	display: none;
+    }
+
+    #lutherrozsa_desktop{
+	display: inherit;
+	width: 7em;
+	object-fit: contain;
+	margin-right: 1em;
     }
 
     .link_box{
