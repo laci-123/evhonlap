@@ -8,7 +8,6 @@ $get_content_uj = function(){
 
     //TODO: automate
     $output .= "<a href='?hely=esemeny&cim=vilagimanap' class='link_box aktualis_box'>\n<img src='img/cikk/ökumenikus_világmanap.png' alt=''>\n<span>Ökumenikus Világimanap</span>\n</a>\n";
-    $output .= "<a href='?hely=esemeny&cim=protestans_kor' class='link_box aktualis_box'>\n<img src='img/cikk/nagy_gábor_előadása.jpg' alt=''>\n<span>Protestáns Kör</span>\n</a>\n";
     $output .= "<hr>\n";
 
     $output .= "<div id='fooldal_kepek'>\n";
