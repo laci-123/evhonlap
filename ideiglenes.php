@@ -28,7 +28,7 @@ if(in_array($_SERVER["REMOTE_ADDR"], $localaddr)){
             ?>
 	</title>
 	<link rel="icon" href="img/allando/templom.png">
-	<link rel="stylesheet" type="text/css" href="css/uj3.css">
+	<link rel="stylesheet" type="text/css" href="css/uj4.css">
     </head>
     <body>
 	<header>
