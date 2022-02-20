@@ -1,5 +1,5 @@
 <?php
-$get_content_uj = function()
+$get_content = function()
 {	
     $base = "content/igehirdetesek";
     

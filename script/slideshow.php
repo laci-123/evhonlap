@@ -77,7 +77,7 @@ function slideshow($galery, $folder, $files, $album, $kep){
     return $output;
 }
 
-$get_content_uj = function(){
+$get_content = function(){
     $galery = "img/galeria/";
     $folder = "";
     $files = [];

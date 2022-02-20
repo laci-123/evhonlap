@@ -1,10 +1,6 @@
 <?php 
 $get_content = function(){
-    return file_get_contents_safe("content/fooldal.html");
-};
-
-$get_content_uj = function(){
-    $output =  file_get_contents_safe("content/fooldal_uj.html");
+    $output =  file_get_contents_safe("content/fooldal.html");
 
     //TODO: automate
     $output .= "<a href='?hely=esemeny&cim=vilagimanap' class='link_box aktualis_box'>\n<img src='img/cikk/ökumenikus_világmanap.png' alt=''>\n<span>Ökumenikus Világimanap</span>\n</a>\n";
@@ -43,7 +39,7 @@ $get_content_uj = function(){
     $output .= "</div>\n<hr>\n";
     $output .= "<script src='script/step_slideshow.js'></script>";
 
-    $output .= file_get_contents_safe("content/aktualis_uj.html");
+    $output .= file_get_contents_safe("content/aktualis.html");
     
     return $output;
 };

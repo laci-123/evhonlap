@@ -1,5 +1,5 @@
 <?php
-$get_content_uj = function()
+$get_content = function()
 {
     $file = getparam_string("cim");
     return file_get_contents_safe("content/aktualis/$file.html");

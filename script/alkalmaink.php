@@ -1,7 +1,7 @@
 <?php
-$get_content_uj = function()
+$get_content = function()
 {	
-    $output = file_get_contents_safe("content/alkalmaink_uj.html");
+    $output = file_get_contents_safe("content/alkalmaink.html");
     return $output;
 };
 ?>

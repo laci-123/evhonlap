@@ -1,5 +1,5 @@
 <?php
-$get_content_uj = function(){
+$get_content = function(){
     return file_get_contents_safe("content/rolunk.html");
 }
 ?>

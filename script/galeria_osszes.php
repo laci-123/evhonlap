@@ -43,8 +43,4 @@ $get_content = function()
 
     return $output;
 };
-
-$get_content_uj = function() use($get_content){
-    return $get_content();
-};
 ?>
