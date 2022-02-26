@@ -15,7 +15,8 @@ $get_content = function(){
 	$title = "Szenteste 2021";
 	try{
 	    $files = scandir_safe_compact($galery.$folder);
-            $output .= slideshow($galery, $folder, $files, "", 0);
+        $output .= "<h3>$title</h3>";
+        $output .= slideshow($galery, $folder, $files, "", 0);
 	    $output .= "<a href='?hely=galeria&album=$album' id='fooldal_kepek_link' title='$title'></a>\n";
 	}
 	catch(Exception $ex){
