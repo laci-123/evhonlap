@@ -3,7 +3,7 @@ $get_content = function(){
     $output =  file_get_contents_safe("content/fooldal.html");
 
     //TODO: automate
-    $output .= "<a href='?hely=esemeny&cim=vilagimanap' class='link_box aktualis_box'>\n<img src='img/cikk/ökumenikus_világmanap.png' alt=''>\n<span>Ökumenikus Világimanap</span>\n</a>\n";
+    $output .= "<a href='?hely=esemeny&cim=csaladi' class='link_box aktualis_box'>\n<img src='img/cikk/családi_istentisztelet.png' alt=''>\n<span>Családi Istentisztelet</span>\n</a>\n";
     $output .= "<hr>\n";
 
     $output .= "<div id='fooldal_kepek'>\n";
