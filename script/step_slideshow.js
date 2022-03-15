@@ -11,40 +11,41 @@ function auto_next_slide(){
     timeout_set = false;
     
     if(stopped){
-	return;
+		return;
     }
     
     container.classList.add("slideshow_transition");
     setTimeout(function(){
-	click_by_user = false
-	next.click();
-	click_by_user = true;
+		click_by_user = false
+		next.click();
+		click_by_user = true;
     }, 250);
+
     setTimeout(function(){
-	container.classList.remove("slideshow_transition");
+		container.classList.remove("slideshow_transition");
     }, 500);
 }
 
 function user_click(){
     if(click_by_user){
-	if(stopped){
-	    return;
-	}
-	
-	stopped = true;
-	setTimeout(function(){
-	    stopped = false;
-	    auto_next_slide();
-	}, 20000);
+		if(stopped){
+			return;
+		}
+		
+		stopped = true;
+		setTimeout(function(){
+			stopped = false;
+			auto_next_slide();
+		}, 20000);
     }
 }
 
 slide.addEventListener("load", function(){
     if(!timeout_set){
-	timeout_set = true;
-	setTimeout(function(){
-	    auto_next_slide();
-	}, 5000);
+		timeout_set = true;
+		setTimeout(function(){
+			auto_next_slide();
+		}, 5000);
     }
 });
 
@@ -53,6 +54,6 @@ prev.addEventListener("click", user_click);
 
 if(!timeout_set){
     setTimeout(function(){
-	auto_next_slide();
+		auto_next_slide();
     }, 5000);
 }
