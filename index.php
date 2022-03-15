@@ -20,10 +20,10 @@ if(in_array($_SERVER["REMOTE_ADDR"], $localaddr)){
 	<title>
 	    <?php
             if($isLocal){
-		echo "LOCAL";
+				echo "LOCAL";
             }
             else{
-		echo "Budakeszi Evangélikus Egyházközség";
+				echo "Budakeszi Evangélikus Egyházközség";
             }
             ?>
 	</title>
@@ -68,47 +68,46 @@ if(in_array($_SERVER["REMOTE_ADDR"], $localaddr)){
 	<main>
 	    <div id="content">
 		<?php
-		$key = "hely";
-		$location = "fooldal";
-		if(isset($_GET[$key]) and !is_null($_GET[$key])){
-                    $location = $_GET[$key];
-		}
+			$key = "hely";
+			$location = "fooldal";
+			if(isset($_GET[$key]) and !is_null($_GET[$key])){
+				$location = $_GET[$key];
+			}
 
-		if(include "script/$location.php"){
-                    echo $get_content();
-		}
-		else{
-                    echo "<p>Ez a tartalom egy váratlan hiba miatt jelenleg nem érhető el.</p>\n";
-		}
+			if(include "script/$location.php"){
+				echo $get_content();
+			}
+			else{
+				echo "<p>Ez a tartalom egy váratlan hiba miatt jelenleg nem érhető el.</p>\n";
+			}
 		?>
 	    </div>
 	    <div id="sidebar">
 		<div id="napi_ige">
 		    <h2>Napi Ige</h2>
 		    <?php
-		    try{
-			$szoveg = "";
-			$tartalom = get_url("https://www.evangelikus.hu/");
-			preg_match("/Napi ige(.*?)<\/p>/s", $tartalom, $szoveg);
-			$ige = get_string_between($szoveg[0], "„", "”");
-			$ige_hely = get_string_between($szoveg[0], "(", ")");
-			
-			echo "<div id='napi_ige_ige'>„${ige}”</div><div id='napi_ige_hely'>($ige_hely)</div>\n";
-
-		    }
-		    catch(Exception $e){
-			echo "<i>[Pillanatnyilag nem érhető el.]</i>\n";
-		    }
+				try{
+					$szoveg = "";
+					$tartalom = get_url("https://www.evangelikus.hu/");
+					preg_match("/Napi ige(.*?)<\/p>/s", $tartalom, $szoveg);
+					$ige = get_string_between($szoveg[0], "„", "”");
+					$ige_hely = get_string_between($szoveg[0], "(", ")");
+					
+					echo "<div id='napi_ige_ige'>„${ige}”</div><div id='napi_ige_hely'>($ige_hely)</div>\n";
+				}
+				catch(Exception $e){
+					echo "<i>[Pillanatnyilag nem érhető el.]</i>\n";
+				}
 		    ?>
 		</div>
 		<hr>
 		<div id="elerhetosegek">
 		    <?php
 		    if(include "script/elerhetosegek.php"){
-			echo $get_content();
+				echo $get_content();
 		    }
 		    else{
-			echo "<p>Ez a tartalom egy váratlan hiba miatt jelenleg nem érhető el.</p>\n";
+				echo "<p>Ez a tartalom egy váratlan hiba miatt jelenleg nem érhető el.</p>\n";
 		    }
 		    ?>
 		</div>
@@ -136,22 +135,14 @@ if(in_array($_SERVER["REMOTE_ADDR"], $localaddr)){
 	</footer>
 	<script src="script/menu.js">
 	</script>
-	<!-- Statcounter code -->
-	<script type="text/javascript">
-		var sc_project=12377334; 
-		var sc_invisible=1; 
-		var sc_security="ded33eea"; 
-		var sc_https=1; 
-		var sc_remove_link=1; 
-	</script>
-	<script type="text/javascript" src="https://www.statcounter.com/counter/counter.js" async></script>
-	<noscript>
-		<div class="statcounter">
-		<img class="statcounter"
-			src="https://c.statcounter.com/12377334/0/ded33eea/1/"
-			alt="látogatószámláló">
-		</div>
-	</noscript>
-	<!-- End of Statcounter Code -->
+	<?php
+		$statcounter = "statcounter.html";
+		if(file_exists($statcounter)){
+			$content = file_get_contents($statcounter);
+			if($content !== false){
+				echo $content;
+			}
+		}
+	?>
     </body>
 </html>
