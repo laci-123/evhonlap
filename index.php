@@ -134,18 +134,7 @@ if(in_array($_SERVER["REMOTE_ADDR"], $localaddr)){
             }
             ?>
 	</footer>
-	<script>
-	 let trigger = document.getElementById("trigger");
-	 document.addEventListener("click", function(event){
-	     if(event.target.closest("#menu_lista") ||
-		event.target.closest("#trigger") ||
-		event.target.tagName == "LABEL" ||
-		event.target.tagName == "SPAN")
-	     {
-		 return;
-	     }
-	     trigger.checked = false;
-	 });
+	<script src="script/menu.js">
 	</script>
 	<!-- Statcounter code -->
 	<script type="text/javascript">
