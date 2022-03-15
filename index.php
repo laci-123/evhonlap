@@ -147,5 +147,22 @@ if(in_array($_SERVER["REMOTE_ADDR"], $localaddr)){
 	     trigger.checked = false;
 	 });
 	</script>
+	<!-- Statcounter code -->
+	<script type="text/javascript">
+		var sc_project=12377334; 
+		var sc_invisible=1; 
+		var sc_security="ded33eea"; 
+		var sc_https=1; 
+		var sc_remove_link=1; 
+	</script>
+	<script type="text/javascript" src="https://www.statcounter.com/counter/counter.js" async></script>
+	<noscript>
+		<div class="statcounter">
+		<img class="statcounter"
+			src="https://c.statcounter.com/12377334/0/ded33eea/1/"
+			alt="látogatószámláló">
+		</div>
+	</noscript>
+	<!-- End of Statcounter Code -->
     </body>
 </html>
