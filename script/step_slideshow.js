@@ -1,7 +1,7 @@
-let next = document.getElementById("next_slide");
-let prev = document.getElementById("prev_slide");
-let container = document.getElementById("slideshow_container");
-let slide = document.getElementById("the_slide");
+const next = document.getElementById("next_slide");
+const prev = document.getElementById("prev_slide");
+const container = document.getElementById("slideshow_container");
+const slide = document.getElementById("the_slide");
 
 let timeout_set = false;
 let click_by_user = true;

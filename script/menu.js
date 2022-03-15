@@ -1,4 +1,4 @@
-let trigger = document.getElementById("trigger");
+const trigger = document.getElementById("trigger");
 document.addEventListener("click", function (event) {
     if (event.target.closest("#menu_lista") ||
         event.target.closest("#trigger") ||
