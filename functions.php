@@ -1,6 +1,6 @@
 <?php
 
-//Returns a segment of a string between a given start and end point
+//Returns a segment of a string between a given start and end point 
 //(from: http://stackoverflow.com/questions/5696412/get-substring-between-two-strings-php)
 function get_string_between($string, $start, $end){
     $string = ' ' . $string;
