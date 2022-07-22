@@ -17,9 +17,9 @@ $get_content = function(){
     if(include "slideshow.php"){
 	$galery = "img/galeria/";
 	//TODO: automate
-	$folder = "bojti_est_2022/";
-	$album = 39;
-	$title = "Böjti est 2022";
+	$folder = "keszohidegkut_2022/";
+	$album = 41;
+	$title = "Keszőhidegkúti tábor 2022";
 	try{
 	    $files = scandir_safe_compact($galery.$folder);
         $output .= "<h3>$title</h3>";
