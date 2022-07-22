@@ -34,10 +34,11 @@ $get_content = function(){
 
     $output .= "<div id='fooldal_archiv'>\n";
     $archiv = file_get_contents_safe("content/archiv.html");
-    preg_match_all("/<!\-\-§(.*?)§\-\->/s", $archiv, $archiv_titles);
-    $n_titles = count($archiv_titles) - 1;
+    //preg_match_all("/<!\-\-\§(.*?)\§\-\->/s", $archiv, $archiv_titles);
+    //$n_titles = count($archiv_titles) - 1;
 
-    $archiv_output = get_string_between($archiv, $archiv_titles[1][$n_titles - 1], $archiv_titles[1][$n_titles]);
+    //$archiv_output = get_string_between($archiv, $archiv_titles[1][$n_titles - 1], $archiv_titles[1][$n_titles]);
+    $archiv_output = get_string_between($archiv, "<!--§Táborok$-->", "<!--§Templomszentelés§-->");
     $archiv_output = str_replace("<!--§", "", $archiv_output);
     $archiv_output = str_replace("§-->", "", $archiv_output);
     $archiv_output = str_replace("<hr>", "", $archiv_output);
