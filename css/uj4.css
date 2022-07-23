@@ -30,7 +30,6 @@ header a{
 
 header img{
     width: 25vw;
-    max-size: 149px;
     display: block;
     margin-right: 5vw;
     object-fit: contain;
