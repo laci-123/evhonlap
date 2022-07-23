@@ -51,10 +51,10 @@ if(in_array($_SERVER["REMOTE_ADDR"], $localaddr)){
 			<a href="?hely=elerhetosegek">Elérhetőségek</a>
 		    </li>
 		    <li>
-			<a href="?hely=galeria">Képgaléria</a>
+			<a href="?hely=archiv">Hírek</a>
 		    </li>
 		    <li>
-			<a href="?hely=archiv">Hírek</a>
+			<a href="?hely=galeria">Képgaléria</a>
 		    </li>
 		    <li>
 			<a href="?hely=igehirdetesek">Igehirdetések</a>
