@@ -1,7 +1,7 @@
 <?php
 //Uncomment for debugging
-ini_set('display_errors',1); 
-error_reporting(E_ALL);
+//ini_set('display_errors',1); 
+//error_reporting(E_ALL);
 ?>
 <?php
 require "functions.php";
@@ -28,7 +28,7 @@ if(in_array($_SERVER["REMOTE_ADDR"], $localaddr)){
             ?>
 	</title>
 	<link rel="icon" href="img/allando/templom.png">
-	<link rel="stylesheet" type="text/css" href="css/uj4.css">
+	<link rel="stylesheet" type="text/css" href="css/uj5.css">
     </head>
     <body>
 	<header>
