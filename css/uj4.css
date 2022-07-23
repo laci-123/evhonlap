@@ -83,9 +83,10 @@ hr{
 
 .link_box span{
     margin-left: 2em;
-    margin-right: 1em;
+    margin-right: 2em;
     align-self: center;
-    width: min-content;
+    text-align: left;
+    width: 50%;
 }
 
 .link_box:active{
