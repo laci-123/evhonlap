@@ -17,7 +17,7 @@ $get_content = function(){
         $file_content = file_get_contents_safe("content/archiv/$file");
         $img_src = get_image($file_content);
         $output .= "<img src='$img_src' alt=''>\n";
-        $title = get_string_between($file_content, "<h3>", "</h3>");
+        $title = get_string_between($file_content, "<h2>", "</h2>");
         $output .= "<span>$title</span>\n";
         $output .= "</a>";
     }
