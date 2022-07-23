@@ -5,9 +5,9 @@ class Album{
     public $id;
 
     function __construct($filename, $title, $id){
-	$this->filename = $filename;
-	$this->title = $title;
-	$this->id = $id;
+        $this->filename = $filename;
+        $this->title = $title;
+        $this->id = $id;
     }
 }
 
@@ -23,11 +23,11 @@ $get_content = function(){
     $dirs = scandir_safe_compact(FOLDER_GALERY);
     $albums = array();
     foreach($dirs as $directory){
-	$datafile = file_get_contents_safe(FOLDER_GALERY.$directory."/data.txt");
-	$data = explode("\n", $datafile);
-	//data[0]: id
-	//data[1]: title
-	$albums[] = new Album($directory, $data[1], $data[0]);
+        $datafile = file_get_contents_safe(FOLDER_GALERY.$directory."/data.txt");
+        $data = explode("\n", $datafile);
+        $id = $data[0];
+        $title = $data[1];
+        $albums[] = new Album($directory, $title, $id);
     }
     usort($albums, function($a, $b){return $b->id - $a->id;});
 
