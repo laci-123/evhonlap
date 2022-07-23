@@ -8,7 +8,7 @@ function get_image($str){
 }
 
 $get_content = function(){
-    $output = "<h2>Régebbi események</h2>\n";
+    $output = "<h2>Hírek</h2>\n";
     $files = scandir_safe_compact("content/archiv/");
     for($i = count($files) - 1; $i >= 0; --$i){
         $file = $files[$i];
