@@ -1,6 +1,7 @@
 <?php 
 $get_content = function(){
     $output =  file_get_contents_safe("content/fooldal.html");
+    $output .= "<hr>\n";
 
     $files = scandir_safe_compact("content/aktualis/");
     foreach($files as $file){
@@ -13,6 +14,9 @@ $get_content = function(){
         $output .= "<span>$title</span>\n";
         $output .= "</a>";
     }
+    $output .= "<hr>\n";
+
+    $output .=  file_get_contents_safe("content/ukrajna_fooldal.html");
     $output .= "<hr>\n";
 
     $output .= "<div id='fooldal_kepek'>\n";
