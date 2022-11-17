@@ -1,7 +1,7 @@
 <?php
 
 /*Set it to `true` to allow showing php_info on server. */
-$allow = true;
+$allow = false;
 
 $local = preg_match("/localhost/", $_SERVER["HTTP_HOST"]);
 

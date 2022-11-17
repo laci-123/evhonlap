@@ -50,7 +50,8 @@ $get_content = function(){
 function slideshow($galery, $folder, $files, $album, $kep){
     $output = "<div id='images' style='display: none;'>\n";
     foreach($files as $file){
-        if(strtolower(substr(strrchr($file, "."), 1)) == "jpg"){ 
+        $extension = strtolower(substr(strrchr($file, "."), 1));
+        if($extension == "jpg" or $extension == "jpeg"){ 
             $output .= "<div>$galery$folder$file</div>\n"; 
         }
     }
