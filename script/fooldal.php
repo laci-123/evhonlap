@@ -22,23 +22,13 @@ $get_content = function(){
     $output .=  file_get_contents_safe("content/ukrajna_fooldal.html");
     $output .= "<hr>\n";
 
-    // ======== Hírek =============
-    $output .= "<div id='fooldal_archiv'>\n";
-    $archiv = scandir_safe_compact("content/archiv");
-    $archiv_last = count($archiv) - 1;
-    $archiv_output = file_get_contents_safe("content/archiv/$archiv[$archiv_last]");
-
-    $output .= $archiv_output;
-    $output .= "<a href='?hely=archiv' class='backlink'>Régebbi események...</a>\n";
-    $output .= "</div>\n<hr>\n";
-
     // ======= Képek =========
     $output .= "<div id='fooldal_kepek'>\n";
     if(include "slideshow.php"){
         $galery = "img/galeria/";
-        $folder = "keszohidegkut_2022/";
-        $album = 41;
-        $title = "Keszőhidegkúti tábor 2022";
+        $folder = "musa/";
+        $album = 45;
+        $title = "Panti Filibus Musa, a Lutheránus Világszövetség elnöke meglátogatta templomunkat";
         try{
             $files = scandir_safe_compact($galery.$folder);
             $output .= "<h3>$title</h3>";
@@ -50,7 +40,17 @@ $get_content = function(){
         }
     }
     $output .= "</div>\n<hr>\n";
-    
+
+    // ======== Hírek =============
+    $output .= "<div id='fooldal_archiv'>\n";
+    $archiv = scandir_safe_compact("content/archiv");
+    $archiv_last = count($archiv) - 1;
+    $archiv_output = file_get_contents_safe("content/archiv/$archiv[$archiv_last]");
+
+    $output .= $archiv_output;
+    $output .= "<a href='?hely=archiv' class='backlink'>Régebbi események...</a>\n";
+    $output .= "</div>\n<hr>\n";
+ 
     // ========= Aktuális eseméynek táblázat =======
     $output .= file_get_contents_safe("content/aktualis.html");
 
