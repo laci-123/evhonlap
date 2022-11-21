@@ -22,6 +22,16 @@ $get_content = function(){
     $output .=  file_get_contents_safe("content/ukrajna_fooldal.html");
     $output .= "<hr>\n";
 
+    // ======== Hírek =============
+    $output .= "<div id='fooldal_archiv'>\n";
+    $archiv = scandir_safe_compact("content/archiv");
+    $archiv_last = count($archiv) - 1;
+    $archiv_output = file_get_contents_safe("content/archiv/$archiv[$archiv_last]");
+
+    $output .= $archiv_output;
+    $output .= "<a href='?hely=archiv' class='backlink'>Régebbi események...</a>\n";
+    $output .= "</div>\n<hr>\n";
+
     // ======= Képek =========
     $output .= "<div id='fooldal_kepek'>\n";
     if(include "slideshow.php"){
@@ -39,16 +49,6 @@ $get_content = function(){
                 $output .= "<b>Error: </b>".$ex->getMessage();
         }
     }
-    $output .= "</div>\n<hr>\n";
-
-    // ======== Hírek =============
-    $output .= "<div id='fooldal_archiv'>\n";
-    $archiv = scandir_safe_compact("content/archiv");
-    $archiv_last = count($archiv) - 1;
-    $archiv_output = file_get_contents_safe("content/archiv/$archiv[$archiv_last]");
-
-    $output .= $archiv_output;
-    $output .= "<a href='?hely=archiv' class='backlink'>Régebbi események...</a>\n";
     $output .= "</div>\n<hr>\n";
  
     // ========= Aktuális eseméynek táblázat =======
