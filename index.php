@@ -1,7 +1,7 @@
 <?php
 //Uncomment for debugging
-//ini_set('display_errors',1); 
-//error_reporting(E_ALL);
+/* ini_set('display_errors',1); 
+ * error_reporting(E_ALL); */
 ?>
 <?php
 require "functions.php";
@@ -86,18 +86,44 @@ if(in_array($_SERVER["REMOTE_ADDR"], $localaddr)){
 		<div id="napi_ige">
 		    <h2>Napi Ige</h2>
 		    <?php
-				try{
-					$szoveg = "";
-					$tartalom = get_url("https://www.evangelikus.hu/");
-					preg_match("/Napi ige(.*?)<\/p>/s", $tartalom, $szoveg);
-					$ige = get_string_between($szoveg[0], "„", "”");
-					$ige_hely = get_string_between($szoveg[0], "(", ")");
-					
-					echo "<div id='napi_ige_ige'>„${ige}”</div><div id='napi_ige_hely'>($ige_hely)</div>\n";
-				}
-				catch(Exception $e){
-					echo "<i>[Pillanatnyilag nem érhető el.]</i>\n";
-				}
+                    $file = fopen("napiige.txt", "r");
+                    if ($file) {
+                        $today = date("Y-m-d");
+                        $date_regex = "/^([0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]):$/";
+                        $read_ige = false;
+                        $read_ige_hely = false;
+                        $done = false;
+                        $ige = "";
+
+                        while (($line = fgets($file)) !== false) {
+                            if($read_ige){
+                                $ige = $line;
+                                $read_ige = false;
+                                $read_ige_hely = true;
+                            }
+                            else if($read_ige_hely){
+                                $ige_hely = $line;
+                                echo "<div id='napi_ige_ige'>„${ige}”</div><div id='napi_ige_hely'>($ige_hely)</div>\n";
+                                $done = true;
+                                break;
+                            }
+                            if(preg_match($date_regex, $line, $matches)){
+                                $date = $matches[1];
+                                if($date == $today){
+                                    $read_ige = true;
+                                }
+                            }
+                        }
+
+                        fclose($file);
+
+                        if(!$done){
+                            echo "<i>[Pillanatnyilag nem érhető el.]</i>\n";
+                        }
+                    }
+                    else{
+		       echo "<i>[Pillanatnyilag nem érhető el.]</i>\n";
+                    }
 		    ?>
 		</div>
 		<hr>
