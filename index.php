@@ -22,10 +22,10 @@
 	<title>
 	    <?php
                 if($isLocal){
-                    echo "LOCAL";
+                    echo "LOCAL\n";
                 }
                 else{
-                    echo "Budakeszi Evangélikus Egyházközség";
+                    echo "Budakeszi Evangélikus Egyházközség\n";
                 }
             ?>
 	</title>
@@ -187,11 +187,19 @@
 	</script>
 
 	<?php
-            $statcounter = "statcounter.html";
-            if(file_exists($statcounter)){
-                $content = file_get_contents($statcounter);
-                if($content !== false){
-                    echo $content;
+            if($isLocal){
+                echo "<!-- StatCounter code is here in live version -->\n";
+            }
+            else{
+                $statcounter = "statcounter.html";
+                if(file_exists($statcounter)){
+                    $content = file_get_contents($statcounter);
+                    if($content !== false){
+                        echo $content;
+                    }
+                    else{
+                        // do nothing, it isn't that big of a problem if this section is missing
+                    }
                 }
             }
 	?>
