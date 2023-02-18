@@ -21,12 +21,12 @@
 	<meta name="viewport" content="width=device-width,initial-scale=1.0">
 	<title>
 	    <?php
-            if($isLocal){
-				echo "LOCAL";
-            }
-            else{
-				echo "Budakeszi Evangélikus Egyházközség";
-            }
+                if($isLocal){
+                    echo "LOCAL";
+                }
+                else{
+                    echo "Budakeszi Evangélikus Egyházközség";
+                }
             ?>
 	</title>
 	<link rel="icon" href="img/allando/templom.png">
@@ -73,14 +73,14 @@
 			$key = "hely";
 			$location = "fooldal";
 			if(isset($_GET[$key]) and !is_null($_GET[$key])){
-				$location = $_GET[$key];
+                            $location = $_GET[$key];
 			}
 
 			if(include "script/$location.php"){
-				echo $get_content();
+                            echo $get_content();
 			}
 			else{
-				echo "<p>Ez a tartalom egy váratlan hiba miatt jelenleg nem érhető el.</p>\n";
+                            echo "<p>Ez a tartalom egy váratlan hiba miatt jelenleg nem érhető el.</p>\n";
 			}
 		?>
 	    </div>
@@ -88,55 +88,73 @@
 		<div id="napi_ige">
 		    <h2>Napi Ige</h2>
 		    <?php
-                    $file = fopen("napiige.txt", "r");
-                    if ($file) {
-                        $today = date("Y-m-d");
-                        $date_regex = "/^([0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]):$/";
-                        $read_ige = false;
-                        $read_ige_hely = false;
-                        $done = false;
-                        $ige = "";
+                        // An entry in "napiige.txt" looks like this:
+                        // 
+                        // 2022-11-26:
+                        // Az Úr színe előtt járhatok az élők földjén. 
+                        // <a href="https://szentiras.hu/RUF/Zsolt 116,9" target="_blank">Zsolt 116,9</a>
+                        // 
 
-                        while (($line = fgets($file)) !== false) {
-                            if($read_ige){
-                                $ige = $line;
-                                $read_ige = false;
-                                $read_ige_hely = true;
-                            }
-                            else if($read_ige_hely){
-                                $ige_hely = $line;
-                                echo "<div id='napi_ige_ige'>„${ige}”</div><div id='napi_ige_hely'>($ige_hely)</div>\n";
-                                $done = true;
-                                break;
-                            }
-                            if(preg_match($date_regex, $line, $matches)){
-                                $date = $matches[1];
-                                if($date == $today){
-                                    $read_ige = true;
+                        $file = fopen("napiige.txt", "r");
+                        if ($file) {
+                            $today = date("Y-m-d");
+                            $date_regex = "/^([0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]):$/";
+                            $read_ige = false;
+                            $read_ige_hely = false;
+                            $done = false;
+                            $ige = "";
+
+                            while (($line = fgets($file)) !== false) {
+                                if($read_ige){
+                                    $ige = $line;
+
+                                    // if the current line goes into $ige
+                                    // then the next line should go to $ige_hely
+                                    $read_ige = false;
+                                    $read_ige_hely = true;
+                                }
+                                else if($read_ige_hely){
+                                    $ige_hely = $line;
+                                    echo "<div id='napi_ige_ige'>„${ige}”</div><div id='napi_ige_hely'>($ige_hely)</div>\n";
+
+                                    // when we have read both $ige and $ige_hely we are done
+                                    $done = true;
+                                    break;
+                                }
+
+                                if(preg_match($date_regex, $line, $matches)){
+                                    $date = $matches[1];
+
+                                    if($date == $today){
+                                        // if the current line is today's date
+                                        // then the we should read the next line into $ige
+                                        $read_ige = true;
+                                    }
                                 }
                             }
+
+                            fclose($file);
+
+                            if(!$done){
+                                // couldn't find an entry with today's date
+                                echo "<i>[Pillanatnyilag nem érhető el.]</i>\n";
+                            }
                         }
-
-                        fclose($file);
-
-                        if(!$done){
+                        else{
+                            // couldn't open "napiige.txt"
                             echo "<i>[Pillanatnyilag nem érhető el.]</i>\n";
                         }
-                    }
-                    else{
-		       echo "<i>[Pillanatnyilag nem érhető el.]</i>\n";
-                    }
 		    ?>
 		</div>
 		<hr>
 		<div id="elerhetosegek">
 		    <?php
-		    if(include "script/elerhetosegek.php"){
-				echo $get_content();
-		    }
-		    else{
-				echo "<p>Ez a tartalom egy váratlan hiba miatt jelenleg nem érhető el.</p>\n";
-		    }
+                        if(include "script/elerhetosegek.php"){
+                            echo $get_content();
+                        }
+                        else{
+                            echo "<p>Ez a tartalom egy váratlan hiba miatt jelenleg nem érhető el.</p>\n";
+                        }
 		    ?>
 		</div>
 		<hr>
@@ -152,25 +170,30 @@
 	</main>
 	<footer>
 	    <?php
-            $lastmodified = "last_modified.txt";
-            if(file_exists($lastmodified)){
-                $content = file_get_contents($lastmodified);
-                if($content !== false){
-                    echo "A honlap utoljára firssítve: $content";
+                $lastmodified = "last_modified.txt";
+                if(file_exists($lastmodified)){
+                    $content = file_get_contents($lastmodified);
+                    if($content !== false){
+                        echo "A honlap utoljára firssítve: $content";
+                    }
+                    else{
+                        // do nothing, it isn't that big of a problem if this section is missing
+                    }
                 }
-            }
             ?>
 	</footer>
+
 	<script src="script/menu.js">
 	</script>
+
 	<?php
-		$statcounter = "statcounter.html";
-		if(file_exists($statcounter)){
-			$content = file_get_contents($statcounter);
-			if($content !== false){
-				echo $content;
-			}
-		}
+            $statcounter = "statcounter.html";
+            if(file_exists($statcounter)){
+                $content = file_get_contents($statcounter);
+                if($content !== false){
+                    echo $content;
+                }
+            }
 	?>
     </body>
 </html>
