@@ -1,17 +1,53 @@
 <?php
 $get_content = function(){
     $output = "<h2>Aktuális</h2>\n";
-    $files = scandir_safe_compact("content/aktualis/");
-    foreach($files as $file){
-        $name         = substr($file, 0, strpos($file, "."));
-        $output       .= "<a href='?hely=esemeny&cim=$name' class='link_box aktualis_box'>\n";
-        $img_name     = preg_replace("/^[0-9]*_/", "", $name);
-        $output       .= "<img src='img/cikk/Thumbnails/$img_name.png' alt=''>\n";
-        $file_content = file_get_contents_safe("content/aktualis/$file");
-        $title        = get_string_between($file_content, "<h2>", "</h2>");
-        $output       .= "<span>$title</span>\n";
-        $output       .= "</a>";
+
+    $toc = file_get_contents_safe("content/aktualis/aktualis.txt");
+    $lines = preg_split("/\n/", $toc);
+
+    $filename = "";
+    $title = "";
+    $thumbnail = "";
+    $now_reading = "filename";
+
+    foreach($lines as $line){
+        if(preg_match("/^ *#.*/", $line)){
+            // ignore comments (lines staring with '#')
+            continue;
+        }
+
+        if(preg_match("/^ *$/", $line) and $now_reading != "emptyline"){
+            // ignore extra empty lines
+            continue;
+        }
+        
+        switch($now_reading){
+            case "filename":
+                $filename = $line;
+                
+                $now_reading = "title";
+                break;
+            case "title":
+                $title = $line;
+
+                $now_reading = "thumbnail";
+                break;
+            case "thumbnail":
+                $thumbnail = $line;
+
+                $now_reading = "emptyline";
+                break;
+            case "emptyline":
+                $output .= "<a href='?hely=esemeny&cim=$filename' class='link_box aktualis_box'>\n";
+                $output .= "    <img src='img/cikk/$thumbnail' alt=''>\n";
+                $output .= "    <span>$title</span>\n";
+                $output .= "</a>\n";
+
+                $now_reading = "filename";
+                break;
+        }
     }
+
     $output .= file_get_contents_safe("content/aktualis.html");
 
     return $output;

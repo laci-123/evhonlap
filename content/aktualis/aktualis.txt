@@ -1,0 +1,32 @@
+# This file describes what is displayed on the 'aktuális' page.
+#
+# Structure:
+#
+# filename (without the '.html' extension)
+# title
+# filename of thumbnail image (relative to 'img/cikk/')
+# [at least one empty line]
+# 
+# The links will be displayed in the same order as they are in this file. 
+#
+# Lines starting with '#' are ignored. 
+
+foldrenges
+Felhívás adakozásra
+foldrenges.jpg
+
+vilagimanap
+Ökumenikus Világimanap
+vilagimanap.jpg
+
+napkozis_tabor
+Nyári napközis tábor
+napkozis_tabor.jpg
+
+ottalvos_tabor
+Nyári ottalvós tábor
+ottalvos_tabor.jpg
+
+kulturalis_estek
+Budakeszi Evangélikus Kultúrális Estek
+kulturális_estek.png
