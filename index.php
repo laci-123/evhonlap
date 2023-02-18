@@ -1,17 +1,19 @@
 <?php
-//Uncomment for debugging
-/* ini_set('display_errors',1); 
- * error_reporting(E_ALL); */
+    //Uncomment for debugging
+    ini_set('display_errors',1); 
+    error_reporting(E_ALL);
 ?>
-<?php
-require "functions.php";
 
-$localaddr = ["127.0.0.1", "::1"];
-$isLocal = false;
-if(in_array($_SERVER["REMOTE_ADDR"], $localaddr)){
-    $isLocal = true;
-}
+<?php
+    require "functions.php";
+
+    $localaddr = ["127.0.0.1", "::1"];
+    $isLocal = false;
+    if(in_array($_SERVER["REMOTE_ADDR"], $localaddr)){
+        $isLocal = true;
+    }
 ?>
+
 <!DOCTYPE html>
 <html lang="hu">
     <head>
