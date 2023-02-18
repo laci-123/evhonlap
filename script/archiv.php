@@ -1,7 +1,7 @@
 <?php
-$get_content = function(){
-    $output = "<h2>Hírek</h2>\n";
-
+function archiv(){
+    $output = "";
+    
     $toc = file_get_contents_safe("content/archiv/archiv.txt");
     $lines = preg_split("/\n/", $toc);
 
@@ -53,6 +53,14 @@ $get_content = function(){
                 break;
         }
     }
+
+    return $output;
+}
+
+$get_content = function(){
+    $output = "<h2>Hírek</h2>\n";
+
+    $output .= archiv();
 
     return $output;
 };

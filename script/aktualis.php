@@ -1,6 +1,6 @@
 <?php
-$get_content = function(){
-    $output = "<h2>Aktuális</h2>\n";
+function aktualis(){
+    $output = "";
 
     $toc = file_get_contents_safe("content/aktualis/aktualis.txt");
     $lines = preg_split("/\n/", $toc);
@@ -47,6 +47,14 @@ $get_content = function(){
                 break;
         }
     }
+
+    return $output;
+}
+
+$get_content = function(){
+    $output = "<h2>Aktuális</h2>\n";
+
+    $output .= aktualis();
 
     $output .= file_get_contents_safe("content/aktualis.html");
 
