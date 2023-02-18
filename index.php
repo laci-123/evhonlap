@@ -77,7 +77,12 @@
 			}
 
 			if(include "script/$location.php"){
-                            echo $get_content();
+                            try{
+                                echo $get_content();
+                            }
+                            catch(Exception $e){
+                                echo "<p>Ez a tartalom egy váratlan hiba miatt jelenleg nem érhető el.</p>\n";
+                            }
 			}
 			else{
                             echo "<p>Ez a tartalom egy váratlan hiba miatt jelenleg nem érhető el.</p>\n";
