@@ -28,7 +28,7 @@ $get_content = function()
         $index = $data[0];
         $title = $data[1];
         $imgs = scandir_safe_compact(FOLDER_GALERY.$directory);
-        $number_of_imgs = count($imgs) - 2; //not counting data.txt and Thumbnails directory
+        $number_of_imgs = count($imgs) - 2; // not counting data.txt and Thumbnails directory
         $lines[$index] = new Line($title, $index, $number_of_imgs);
     }
 

@@ -35,7 +35,6 @@ function prev_slide(){
 }
 
 function doc_keyUp(e) {
-
     if(e.key === "ArrowRight"){
         next_slide();
     }

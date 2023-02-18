@@ -19,7 +19,7 @@ $get_content = function(){
     $output .= "<nav id='galeria_menu'>\n";
 
     
-    //Fetching directories, their numbers and their titles, then sorting them
+    // Fetching directories, their numbers and their titles, then sorting them
     $dirs = scandir_safe_compact(FOLDER_GALERY);
     $albums = array();
     foreach($dirs as $directory){
@@ -32,9 +32,9 @@ $get_content = function(){
     usort($albums, function($a, $b){return $b->id - $a->id;});
 
     
-    //Finding current album
+    // Finding current album
     try{
-        $current_id = getparam_int("album");
+        $current_id = getparam_int("album"); // throws OutOfboundsException when there is no such int GET parameter
         if($current_id <= 0){
             throw new OutOfBoundsException("Incorrect album ID: $current_id");
         }
@@ -55,11 +55,12 @@ $get_content = function(){
         }
     }
 
+    // Printing out current album
     $output .= "<input type='checkbox' id='galeria_trigger'>";
     $output .= "<label for='galeria_trigger'>$current_album->title</label>\n";
     $output .= "<ul>\n"; 
 
-    //Printing out links of albums
+    // Printing out links of albums
     $i = 0;
     foreach($albums as $album){
 	if($album->id == $current_album->id){
@@ -76,7 +77,7 @@ $get_content = function(){
 
     $output .= "</nav>\n";
 
-    //Printing out the images
+    // Printing out the images
     $images = scandir_safe_compact(FOLDER_GALERY.$current_album->filename);
     for($i = 0; $i < count($images); $i++){
 	$info = pathinfo($images[$i]);
