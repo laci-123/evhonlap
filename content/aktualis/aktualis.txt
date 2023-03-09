@@ -15,6 +15,10 @@ foldrenges
 Felhívás adakozásra
 foldrenges.jpg
 
+csaladi
+Családi Istentisztelet
+csaladi_istentisztelet.png
+
 vilagimanap
 Ökumenikus Világimanap
 vilagimanap.jpg
