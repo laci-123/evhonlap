@@ -19,14 +19,6 @@ csaladi
 Családi Istentisztelet
 csaladi_istentisztelet.png
 
-vilagimanap
-Ökumenikus Világimanap
-vilagimanap.jpg
-
-kesz
-KÉSZ máriusi előadása
-kesz.png
-
 napkozis_tabor
 Nyári napközis tábor
 napkozis_tabor.jpg
