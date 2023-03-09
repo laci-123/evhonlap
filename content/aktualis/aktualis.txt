@@ -19,6 +19,14 @@ csaladi
 Családi Istentisztelet
 csaladi_istentisztelet.png
 
+bojti_est
+Böjti est
+bojti_est_thumbnail.png
+
+zenes_istentisztelet
+Ifjúsági zenés istentisztelet
+zenés_istentisztelet.png
+
 napkozis_tabor
 Nyári napközis tábor
 napkozis_tabor.jpg
