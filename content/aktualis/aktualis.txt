@@ -11,6 +11,10 @@
 #
 # Lines starting with '#' are ignored. 
 
+orgona_est
+Böjti orgonazenés áhitat
+orgona.jpg
+
 foldrenges
 Felhívás adakozásra
 foldrenges.jpg
