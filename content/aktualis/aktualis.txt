@@ -15,6 +15,10 @@ foldrenges
 Felhívás adakozásra
 foldrenges.jpg
 
+protestans_kor
+Protestáns Kör
+lutherrozsa.png
+
 napkozis_tabor
 Nyári napközis tábor
 napkozis_tabor.jpg
