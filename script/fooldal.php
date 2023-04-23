@@ -15,20 +15,20 @@ $get_content = function(){
     $output .= "<hr>\n";
 
     // ======== Főhír =============
-    if(include "hir.php"){
-        $output .= "<div id='fooldal_archiv'>\n";
-        $output .= hir("kerti_nap_2022");
-        $output .= "<a href='?hely=archiv' class='backlink'>Régebbi események...</a>\n";
-        $output .= "</div>\n<hr>\n";
-    }
+    //if(include "hir.php"){
+    //    $output .= "<div id='fooldal_archiv'>\n";
+    //    $output .= hir("kerti_nap_2022");
+    //    $output .= "<a href='?hely=archiv' class='backlink'>Régebbi események...</a>\n";
+    //    $output .= "</div>\n<hr>\n";
+    //}
 
     // ======= Képek =========
     if(include "slideshow.php"){
         $output .= "<div id='fooldal_kepek'>\n";
         $galery = "img/galeria/";
-        $folder = "musa/";
-        $album = 45;
-        $title = "Panti Filibus Musa, a Lutheránus Világszövetség elnöke meglátogatta templomunkat";
+        $folder = "kerti_nap_2023/";
+        $album = 47;
+        $title = "Tavaszi kerti nap";
         $files = scandir_safe_compact($galery.$folder);
         $output .= "<h3>$title</h3>";
         $output .= slideshow($galery, $folder, $files, "", 0);
