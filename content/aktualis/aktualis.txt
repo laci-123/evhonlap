@@ -11,9 +11,9 @@
 #
 # Lines starting with '#' are ignored. 
 
-foldrenges
-Felhívás adakozásra
-foldrenges.jpg
+szakralitas
+Benczúr László és Emese a Budavári Evangélikus Szabadegyetemen
+szakralitas_kep.png
 
 napkozis_tabor
 Nyári napközis tábor
@@ -22,6 +22,10 @@ napkozis_tabor.jpg
 ottalvos_tabor
 Nyári ottalvós tábor
 ottalvos_tabor.jpg
+
+foldrenges
+Felhívás adakozásra
+foldrenges.jpg
 
 kulturalis_estek
 Budakeszi Evangélikus Kultúrális Estek
