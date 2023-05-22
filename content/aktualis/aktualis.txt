@@ -11,10 +11,6 @@
 #
 # Lines starting with '#' are ignored. 
 
-szakralitas
-Benczúr László és Emese a Budavári Evangélikus Szabadegyetemen
-szakralitas_kep.png
-
 napkozis_tabor
 Nyári napközis tábor
 napkozis_tabor.jpg
