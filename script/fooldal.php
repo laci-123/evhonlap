@@ -4,6 +4,12 @@ $get_content = function(){
     $output =  file_get_contents_safe("content/fooldal.html");
     $output .= "<hr>\n";
 
+    // ========= Aktuális eseméynek táblázat =======
+    $output .= "<h3>Júniusi alkalmak</h3>\n";
+    $output .= file_get_contents_safe("content/aktualis.html");
+    $output .= "<hr>\n";
+
+
     // ======= Aktuális alkalmak =========
     if(include "aktualis.php"){
         $output .= aktualis();
@@ -36,9 +42,6 @@ $get_content = function(){
         $output .= "</div>\n<hr>\n";
     }
  
-    // ========= Aktuális eseméynek táblázat =======
-    $output .= file_get_contents_safe("content/aktualis.html");
-
     // ========== Slideshow script =======
     $output .= "<script src='script/step_slideshow.js'></script>";
     

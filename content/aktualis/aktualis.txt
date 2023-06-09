@@ -22,11 +22,3 @@ napkozis_tabor.jpg
 ottalvos_tabor
 Nyári ottalvós tábor
 ottalvos_tabor.jpg
-
-foldrenges
-Felhívás adakozásra
-foldrenges.jpg
-
-kulturalis_estek
-Budakeszi Evangélikus Kultúrális Estek
-kulturális_estek.png
