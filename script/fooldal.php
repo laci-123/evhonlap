@@ -5,28 +5,29 @@ $get_content = function(){
     $output .= "<hr>\n";
 
     // ========= Aktuális eseméynek táblázat =======
-    $output .= "<h3>Júniusi alkalmak</h3>\n";
-    $output .= file_get_contents_safe("content/aktualis.html");
-    $output .= "<hr>\n";
-
+    /* $output .= "<h3>Júniusi alkalmak</h3>\n";
+     * $output .= file_get_contents_safe("content/aktualis.html");
+     * $output .= "<hr>\n";
+     */
 
     // ======= Aktuális alkalmak =========
-    if(include "aktualis.php"){
-        $output .= aktualis();
-        $output .= "<hr>\n";
-    }
+    /* if(include "aktualis.php"){
+     *     $output .= aktualis();
+     *     $output .= "<hr>\n";
+     * }
+     */
 
     // ======= Ukrajna ========
     $output .=  file_get_contents_safe("content/ukrajna_fooldal.html");
     $output .= "<hr>\n";
 
     // ======== Főhír =============
-    //if(include "hir.php"){
-    //    $output .= "<div id='fooldal_archiv'>\n";
-    //    $output .= hir("kerti_nap_2022");
-    //    $output .= "<a href='?hely=archiv' class='backlink'>Régebbi események...</a>\n";
-    //    $output .= "</div>\n<hr>\n";
-    //}
+        if(include "hir.php"){
+            $output .= "<div id='fooldal_archiv'>\n";
+            $output .= hir("nyari_taborok_2023");
+            $output .= "<a href='?hely=archiv' class='backlink'>Régebbi események...</a>\n";
+            $output .= "</div>\n<hr>\n";
+        }
 
     // ======= Képek =========
     if(include "slideshow.php"){

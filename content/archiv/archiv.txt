@@ -11,6 +11,10 @@
 #
 # Lines starting with '#' are ignored. 
 
+nyari_taborok_2023
+Nyári táborok 2023
+galeria/ottalvos_tabor_2023/20230704_212532.jpg
+
 kerti_nap_2022
 Kerti nap
 ?
