@@ -11,14 +11,3 @@
 #
 # Lines starting with '#' are ignored. 
 
-protestans_kor
-Protestáns Kör
-lutherrozsa.png
-
-napkozis_tabor
-Nyári napközis tábor
-napkozis_tabor.jpg
-
-ottalvos_tabor
-Nyári ottalvós tábor
-ottalvos_tabor.jpg
