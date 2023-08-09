@@ -10,12 +10,12 @@ $get_content = function(){
      * $output .= "<hr>\n";
      */
 
-    // ======= Aktuális alkalmak =========
-    /* if(include "aktualis.php"){
-     *     $output .= aktualis();
-     *     $output .= "<hr>\n";
-     * }
-     */
+    //======= Aktuális alkalmak =========
+    if(include "aktualis.php"){
+        $output .= aktualis();
+        $output .= "<hr>\n";
+    }
+    
 
     // ======= Ukrajna ========
     $output .=  file_get_contents_safe("content/ukrajna_fooldal.html");
@@ -40,7 +40,7 @@ $get_content = function(){
         $output .= "<h3>$title</h3>";
         $output .= slideshow($galery, $folder, $files, "", 0);
         $output .= "<a href='?hely=galeria&album=$album' id='fooldal_kepek_link' title='$title'></a>\n";
-        $output .= "</div>\n<hr>\n";
+        $output .= "</div>\n";
     }
  
     // ========== Slideshow script =======

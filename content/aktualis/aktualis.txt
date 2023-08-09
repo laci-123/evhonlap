@@ -11,3 +11,6 @@
 #
 # Lines starting with '#' are ignored. 
 
+szlovénia_árvíz
+Segítségnyújtás a szlovéniai árvíz károsultjainak
+szlovénia_árvíz.jpg
