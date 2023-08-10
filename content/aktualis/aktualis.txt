@@ -11,6 +11,10 @@
 #
 # Lines starting with '#' are ignored. 
 
+ars_sacra
+Ars Sacra Fesztivál
+benczur_ybl.jpg
+
 szlovénia_árvíz
 Segítségnyújtás a szlovéniai árvíz károsultjainak
 szlovénia_árvíz.jpg
