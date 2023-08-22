@@ -11,6 +11,10 @@
 #
 # Lines starting with '#' are ignored. 
 
+diszpolgar
+Benczúr László  Budakeszi új díszpolgára
+diszpolgar.jpg
+
 ars_sacra
 Ars Sacra Fesztivál
 benczur_ybl.jpg
