@@ -11,6 +11,10 @@
 #
 # Lines starting with '#' are ignored. 
 
+csaladi_istentisztelet
+Családi Istentisztelet
+templom_egere.png
+
 diszpolgar
 Benczúr László  Budakeszi új díszpolgára
 diszpolgar.jpg
