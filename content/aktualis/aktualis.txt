@@ -11,13 +11,13 @@
 #
 # Lines starting with '#' are ignored. 
 
+ars_sacra
+Ars Sacra Fesztivál
+ars_sacra.png
+
 diszpolgar
 Benczúr László  Budakeszi új díszpolgára
 diszpolgar.jpg
-
-ars_sacra
-Ars Sacra Fesztivál
-benczur_ybl.jpg
 
 szlovénia_árvíz
 Segítségnyújtás a szlovéniai árvíz károsultjainak
