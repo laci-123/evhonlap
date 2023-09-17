@@ -11,6 +11,10 @@
 #
 # Lines starting with '#' are ignored. 
 
+pascal
+Protestáns Kör
+pascal.jpg
+
 ars_sacra
 Ars Sacra Fesztivál
 ars_sacra.png
