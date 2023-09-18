@@ -11,6 +11,10 @@
 #
 # Lines starting with '#' are ignored. 
 
+epuletek
+Épületek a templomban
+ars_sacra.png
+
 pascal
 Protestáns Kör
 pascal.jpg
@@ -18,11 +22,3 @@ pascal.jpg
 ars_sacra
 Ars Sacra Fesztivál
 ars_sacra.png
-
-diszpolgar
-Benczúr László  Budakeszi új díszpolgára
-diszpolgar.jpg
-
-szlovénia_árvíz
-Segítségnyújtás a szlovéniai árvíz károsultjainak
-szlovénia_árvíz.jpg
