@@ -13,7 +13,7 @@
 
 epuletek
 Épületek a templomban
-ars_sacra.png
+benczur.png
 
 pascal
 Protestáns Kör
