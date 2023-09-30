@@ -11,14 +11,14 @@
 #
 # Lines starting with '#' are ignored. 
 
+kozgyules
+Közgyűlés
+kozgyules.jpg
+
+jovo
+Felelősséggel gyülekezetünk jövőéért
+jovo.jpg
+
 epuletek
 Épületek a templomban
 benczur.png
-
-pascal
-Protestáns Kör
-pascal.jpg
-
-ars_sacra
-Ars Sacra Fesztivál
-ars_sacra.png
