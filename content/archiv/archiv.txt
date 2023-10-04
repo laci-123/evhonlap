@@ -11,6 +11,11 @@
 #
 # Lines starting with '#' are ignored. 
 
+norveg_puspok
+Ingeborg Midttømme püspök látogatása
+cikk/norveg.jpg
+
+
 konfis_tabor
 Konfirmációs tábor
 cikk/konfis.jpg

@@ -20,7 +20,7 @@ $get_content = function(){
     // ======== Főhír =============
     if(include "hir.php"){
         $output .= "<div id='fooldal_archiv'>\n";
-        $output .= hir("konfis_tabor");
+        $output .= hir("norveg_puspok");
         $output .= "<a href='?hely=archiv' class='backlink'>Régebbi események...</a>\n";
         $output .= "</div>\n<hr>\n";
     }
