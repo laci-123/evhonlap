@@ -17,11 +17,17 @@ $get_content = function(){
     }
 
 
-    // ======== Főhír =============
-    if(include "hir.php"){
-        $output .= "<div id='fooldal_archiv'>\n";
-        $output .= hir("norveg_puspok");
-        $output .= "<a href='?hely=archiv' class='backlink'>Régebbi események...</a>\n";
+    // ======= Képek =========
+    if(include "slideshow.php"){
+        $output .= "<div id='fooldal_kepek'>\n";
+        $galery = "img/galeria/";
+        $folder = "konfirmacio_2023/";
+        $album = 48;
+        $title = "Konfirmació 2023";
+        $files = scandir_safe_compact($galery.$folder);
+        $output .= "<h3>$title</h3>";
+        $output .= slideshow($galery, $folder, $files, "", 0);
+        $output .= "<a href='?hely=galeria&album=$album' id='fooldal_kepek_link' title='$title'></a>\n";
         $output .= "</div>\n<hr>\n";
     }
     
@@ -31,17 +37,11 @@ $get_content = function(){
     $output .= "<hr>\n";
 
 
-    // ======= Képek =========
-    if(include "slideshow.php"){
-        $output .= "<div id='fooldal_kepek'>\n";
-        $galery = "img/galeria/";
-        $folder = "balatonszarszo_2023/";
-        $album = 48;
-        $title = "Gyülekezeti hétvége Balatonszárszón";
-        $files = scandir_safe_compact($galery.$folder);
-        $output .= "<h3>$title</h3>";
-        $output .= slideshow($galery, $folder, $files, "", 0);
-        $output .= "<a href='?hely=galeria&album=$album' id='fooldal_kepek_link' title='$title'></a>\n";
+    // ======== Főhír =============
+    if(include "hir.php"){
+        $output .= "<div id='fooldal_archiv'>\n";
+        $output .= hir("norveg_puspok");
+        $output .= "<a href='?hely=archiv' class='backlink'>Régebbi események...</a>\n";
         $output .= "</div>\n";
     }
  
