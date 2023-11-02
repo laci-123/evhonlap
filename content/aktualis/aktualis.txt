@@ -11,13 +11,9 @@
 #
 # Lines starting with '#' are ignored. 
 
-2023reform
-Reformáció ünnepe
-2023reform.png
-
-jovo
-Felelősséggel gyülekezetünk jövőéért
-jovo.jpg
+ifis_istentisztelet
+Ifjúsági Istentisztelet
+ifis_istentisztelet.png
 
 epuletek
 Épületek a templomban
