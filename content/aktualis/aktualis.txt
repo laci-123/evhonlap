@@ -11,6 +11,14 @@
 #
 # Lines starting with '#' are ignored. 
 
+csaladi_istentisztelet
+Családi Istentisztelet
+csaladi_istentisztelet.png
+
+kerti_nap
+Kerti nap
+kerti_nap_23_osz.png
+
 ifis_istentisztelet
 Ifjúsági Istentisztelet
 ifis_istentisztelet.png
