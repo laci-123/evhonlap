@@ -19,9 +19,9 @@ kerti_nap
 Kerti nap
 kerti_nap_23_osz.png
 
-ifis_istentisztelet
-Ifjúsági Istentisztelet
-ifis_istentisztelet.png
+gradics
+Ádventre hangoló zenei est
+gradics.png
 
 epuletek
 Épületek a templomban
