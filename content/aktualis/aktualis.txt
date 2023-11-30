@@ -11,18 +11,6 @@
 #
 # Lines starting with '#' are ignored. 
 
-csaladi_istentisztelet
-Családi Istentisztelet
-csaladi_istentisztelet.png
-
-kerti_nap
-Kerti nap
-kerti_nap_23_osz.png
-
-gradics
-Ádventre hangoló zenei est
-gradics.png
-
 epuletek
 Épületek a templomban
 benczur.png
