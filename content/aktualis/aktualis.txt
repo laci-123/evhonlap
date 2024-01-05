@@ -10,7 +10,3 @@
 # The links will be displayed in the same order as they are in this file. 
 #
 # Lines starting with '#' are ignored. 
-
-epuletek
-Épületek a templomban
-benczur.png
