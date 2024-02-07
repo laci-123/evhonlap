@@ -32,7 +32,7 @@
             ?>
 	</title>
 	<link rel="icon" href="img/allando/templom.png">
-	<link rel="stylesheet" type="text/css" href="css/uj5.css">
+	<link rel="stylesheet" type="text/css" href="css/uj6.css">
     </head>
     <body>
 	<header>
