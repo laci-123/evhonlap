@@ -11,6 +11,10 @@
 #
 # Lines starting with '#' are ignored. 
 
+kozgyules
+Közgyűlés
+lutherrozsa.png
+
 2024_1_alkalmak
 2024 első félévének alkalmai
 lutherrozsa.png
