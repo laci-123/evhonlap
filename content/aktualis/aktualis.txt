@@ -11,14 +11,6 @@
 #
 # Lines starting with '#' are ignored. 
 
-csaladi_istentisztelet
-Családi istentisztelet
-csaladi_istentisztelet.png
-
-protkör
-Protestáns Kör
-protkör.jpg
-
 2024_1_alkalmak
 2024 első félévének alkalmai
 lutherrozsa.png
