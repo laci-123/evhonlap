@@ -11,6 +11,10 @@
 #
 # Lines starting with '#' are ignored. 
 
+hitoktatas
+Evangélikus hitoktatás
+lutherrozsa.png
+
 kozgyules
 Közgyűlés
 lutherrozsa.png
