@@ -11,6 +11,14 @@
 #
 # Lines starting with '#' are ignored. 
 
+bojti_est
+Böjti est
+bojti_est.png
+
+csaladi
+Családi istentisztelet
+csaladi_istentisztelet.png
+
 hitoktatas
 Evangélikus hitoktatás
 lutherrozsa.png
