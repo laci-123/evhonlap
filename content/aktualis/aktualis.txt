@@ -11,6 +11,10 @@
 #
 # Lines starting with '#' are ignored. 
 
+ifi_istentisztelet
+Ifjúsági istentisztelet
+ifi_istentisztelet.png
+
 hitoktatas
 Evangélikus hitoktatás
 lutherrozsa.png
