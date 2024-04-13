@@ -125,7 +125,7 @@
                                 }
                                 else if($read_ige_hely){
                                     $ige_hely = $line;
-                                    echo "<div id='napi_ige_ige'>„${ige}”</div><div id='napi_ige_hely'>($ige_hely)</div>\n";
+                                    echo "<div id='napi_ige_ige'>${ige}</div><div id='napi_ige_hely'>($ige_hely)</div>\n";
 
                                     // when we have read both $ige and $ige_hely we are done
                                     $done = true;
