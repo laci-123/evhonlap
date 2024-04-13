@@ -11,9 +11,21 @@
 #
 # Lines starting with '#' are ignored. 
 
-ifi_istentisztelet
-Ifjúsági istentisztelet
-ifi_istentisztelet.png
+csaladi_istentisztelet
+Családi istentisztelet
+csaladi_istentisztelet.png
+
+protestans_kor
+Protestáns Kör
+protestans_kor.jpg
+
+napkozis_tabor
+Napközis tábor
+napkozis_tabor.png
+
+nyari_tabor
+Nyári tábor
+nyari_tabor.png
 
 hitoktatas
 Evangélikus hitoktatás
