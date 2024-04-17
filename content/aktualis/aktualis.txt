@@ -11,10 +11,6 @@
 #
 # Lines starting with '#' are ignored. 
 
-csaladi_istentisztelet
-Családi istentisztelet
-csaladi_istentisztelet.png
-
 protestans_kor
 Protestáns Kör
 protestans_kor.jpg
