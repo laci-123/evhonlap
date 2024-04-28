@@ -8,8 +8,20 @@ $get_content = function(){
     $output .= "<h3>Áprilisi alkalmak</h3>\n";
     $output .= file_get_contents_safe("content/aktualis.html");
     $output .= "<hr>\n";
-    
 
+    // ======== Főhír =============
+    // if(include "hir.php"){
+        $output .= "<div id='fooldal_archiv'>\n";
+        /* $output .= hir("szarszo_2024"); */
+        $output .= "<h3>Családi hétvége Balatonszárszón</h3>";
+        $output .= "<img src='img/cikk/szarszo.jpg' width='50%'>";
+        $output .= "<p>Idén az április 19-21. hétvégén tartottuk a mára hagyományossá váló balatonszárszói hétvégét, a „Szárszót”. A várva-várt eseményen kb. hatvanan vettünk részt, óvodástól nyugdíjasig minden korosztály képviseltette magát... ";
+        $output .= "</p>";
+        $output .= "<a href='?hely=hir&cim=szarszo_2024' class='backlink'>Folytatás</a>\n";
+        $output .= "</div>\n";
+        $output .= "<hr>\n";
+    // }
+    
     //======= Aktuális alkalmak =========
     if(include "aktualis.php"){
         $output .= aktualis();
@@ -34,16 +46,6 @@ $get_content = function(){
 
     // ======= Ukrajna ========
     $output .=  file_get_contents_safe("content/ukrajna_fooldal.html");
-    $output .= "<hr>\n";
-
-
-    // ======== Főhír =============
-    if(include "hir.php"){
-        $output .= "<div id='fooldal_archiv'>\n";
-        $output .= hir("norveg_puspok");
-        $output .= "<a href='?hely=archiv' class='backlink'>Régebbi események...</a>\n";
-        $output .= "</div>\n";
-    }
  
 
     // ========== Slideshow script =======

@@ -11,6 +11,10 @@
 #
 # Lines starting with '#' are ignored. 
 
+szarszo_2024
+Családi hétvége Balatonszárszón
+cikk/szarszo.jpg
+
 norveg_puspok
 Ingeborg Midttømme püspök látogatása
 cikk/norveg.jpg
