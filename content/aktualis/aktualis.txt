@@ -11,10 +11,6 @@
 #
 # Lines starting with '#' are ignored. 
 
-protestans_kor
-Protestáns Kör
-protestans_kor.jpg
-
 napkozis_tabor
 Napközis tábor
 napkozis_tabor.png
@@ -22,10 +18,6 @@ napkozis_tabor.png
 nyari_tabor
 Nyári tábor
 nyari_tabor.png
-
-hitoktatas
-Evangélikus hitoktatás
-lutherrozsa.png
 
 2024_1_alkalmak
 2024 első félévének alkalmai
