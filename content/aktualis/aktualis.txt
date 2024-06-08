@@ -11,14 +11,6 @@
 #
 # Lines starting with '#' are ignored. 
 
-keruleti_nap
-Egyházkerületi nap
-keruleti_nap.png
-
-zenes_ahitat
-Zenés áhitat
-zenes_ahitat.jpg
-
 napkozis_tabor
 Napközis tábor
 napkozis_tabor.png
