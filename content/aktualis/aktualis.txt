@@ -11,6 +11,10 @@
 #
 # Lines starting with '#' are ignored. 
 
+protkor
+Protestáns Kör
+lutherrozsa.png
+
 napkozis_tabor
 Napközis tábor
 napkozis_tabor.png
