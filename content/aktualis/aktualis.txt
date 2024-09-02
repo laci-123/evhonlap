@@ -11,18 +11,3 @@
 #
 # Lines starting with '#' are ignored. 
 
-protkor
-Protestáns Kör
-lutherrozsa.png
-
-napkozis_tabor
-Napközis tábor
-napkozis_tabor.png
-
-nyari_tabor
-Nyári tábor
-nyari_tabor.png
-
-2024_1_alkalmak
-2024 első félévének alkalmai
-lutherrozsa.png
