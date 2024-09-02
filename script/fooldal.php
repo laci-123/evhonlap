@@ -5,10 +5,19 @@ $get_content = function(){
     $output .= "<hr>\n";
 
     // ========= Aktuális eseméynek táblázat =======
-    $output .= "<h3>Júniusi alkalmak</h3>\n";
+    $output .= "<h3>Szeptemberi alkalmak</h3>\n";
     $output .= file_get_contents_safe("content/aktualis.html");
     $output .= "<hr>\n";
 
+
+    //======= Aktuális alkalmak =========
+    if(include "aktualis.php"){
+        $output .= aktualis();
+        $output .= "<hr>\n";
+    }
+
+
+    
     // ======== Főhír =============
     // if(include "hir.php"){
         $output .= "<div id='fooldal_archiv'>\n";
@@ -22,12 +31,6 @@ $get_content = function(){
         $output .= "<hr>\n";
     // }
     
-    //======= Aktuális alkalmak =========
-    if(include "aktualis.php"){
-        $output .= aktualis();
-        $output .= "<hr>\n";
-    }
-
 
     // ======= Képek =========
     if(include "slideshow.php"){
