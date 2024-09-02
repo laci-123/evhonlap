@@ -12,5 +12,11 @@ jobs:
       uses: SamKirkland/FTP-Deploy-Action@v4.3.5
       with:
         server: web.lutheran.hu
+        server-dir: public_html/
         username: budakeszi
         password: ${{ secrets.FTP_PASSWORD }}
+        exclude: |
+          **/*.git*
+          **/*.git*/**
+          *.sh
+          README.md
