@@ -11,6 +11,10 @@
 #
 # Lines starting with '#' are ignored. 
 
+ars_sacra_2024
+Ars Sacra 2024 megnyitó
+cikk/ars_sacra_logo.png
+
 szarszo_2024
 Családi hétvége Balatonszárszón
 cikk/szarszo.jpg
@@ -36,7 +40,7 @@ Kerti nap
 ?
 
 ars_sacra
-Ars Sacra fesztivál
+Ars Sacra fesztivál 2022
 galeria/ars_sacra_megnyito_2022/image7.jpeg
 
 orgonahangverseny
