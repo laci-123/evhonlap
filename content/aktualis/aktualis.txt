@@ -15,10 +15,6 @@ arviz
 Segítségnyújtás a árvízi védekezéshez
 arviz.jpg
 
-protestans_kor
-Protestáns Kör
-protestans_kor.png
-
 ars_sacra
 Ars Sacra fesztivál
 ars_sacra_logo.png
