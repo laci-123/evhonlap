@@ -54,11 +54,11 @@ function aktualis(){
 $get_content = function(){
     $output = "<h2>Aktuális</h2>\n";
 
-    $output .= file_get_contents_safe("content/aktualis.html");
+    $output .= aktualis();
 
     $output .= "<hr>\n";
 
-    $output .= aktualis();
+    $output .= file_get_contents_safe("content/aktualis.html");
 
     return $output;
 };

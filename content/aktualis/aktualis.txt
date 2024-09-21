@@ -11,6 +11,10 @@
 #
 # Lines starting with '#' are ignored. 
 
+arviz
+Segítségnyújtás a árvízi védekezéshez
+arviz.jpg
+
 protestans_kor
 Protestáns Kör
 protestans_kor.png
