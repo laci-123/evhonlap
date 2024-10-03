@@ -11,6 +11,10 @@
 #
 # Lines starting with '#' are ignored. 
 
+lengyel_magyar_koncert
+Lengyel Keresztény Kultutális Napok
+lengyel_magyar_koncert.jpg
+
 arviz
 Segítségnyújtás a árvízi védekezéshez
 arviz.jpg
