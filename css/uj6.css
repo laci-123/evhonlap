@@ -1,4 +1,5 @@
 body{
+    /*#855647*/
     font-size: 4.5vw;
     font-family: "Times New Roman", serif;
     padding: 3vw;
@@ -233,7 +234,7 @@ header nav ul {
     box-shadow: 1vw 0vw 2vw #909090;
     font-size: 4vh;
     font-family: Helvetica, sans-serif;
-    border-right: 1vw solid #38929b;
+    border-right: 1vw solid #855647;
     z-index: 100;
 }
 
@@ -289,7 +290,7 @@ header nav input:checked ~ ul {
 
 #sidebar{
     margin-top: 4em;
-    border: 1vw solid #38929b;
+    border: 1vw solid #855647;
     padding: 1em;
 }
 
@@ -331,7 +332,7 @@ footer{
     font-size: 10pt;
     font-family: Helvetica, sans-serif;
     color: #ffffff;
-    background-color: #38929b;
+    background-color: #855647;
     margin-top: 20vw;
     padding-top: 0.75em;
     padding-bottom: 0.5em;
@@ -341,7 +342,7 @@ footer{
 #galeria_menu{
     font-size: 3vw;
     color: #ffffff;
-    background-color: #38929b;
+    background-color: #855647;
     font-family: Helvetica, sans-serif;
     margin-bottom: 1em;
 }
@@ -460,7 +461,7 @@ footer{
 .backlink{
     text-decoration: none;
     color: #ffffff;
-    background-color: #38929b;
+    background-color: #855647;
     padding: 0.5em;
     font-family: Helvetica, sans-serif;
 }
@@ -589,7 +590,7 @@ footer{
     }
 
     header{
-	border-bottom: 2em solid #38929b;
+	border-bottom: 2em solid #855647;
 	margin-bottom: 3em;
     }
 
@@ -675,7 +676,7 @@ footer{
     }
 
     header nav ul li a:hover{
-	color: #38929b;
+	color: #855647;
 	text-decoration: underline;
     }
 
@@ -716,7 +717,7 @@ footer{
     }
 
     #sidebar{
-	border: 1px solid #38929b;
+	border: 1px solid #855647;
 	width: 30%;
 	margin-top: 5vh;
 	align-self: flex-start;
@@ -760,7 +761,7 @@ footer{
 	width: 75%;
 	margin-top: 5em;
 	font-weight: bold;
-	background-image: linear-gradient(to right, #38929b, #ffffff);
+	background-image: linear-gradient(to right, #855647, #ffffff);
     }
 
     #galeria_menu{

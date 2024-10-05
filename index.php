@@ -30,12 +30,12 @@
                 }
             ?>
 	</title>
-	<link rel="icon" href="img/allando/templom.png">
+	<link rel="icon" href="img/allando/templom_barna.png">
 	<link rel="stylesheet" type="text/css" href="css/uj6.css">
     </head>
     <body>
 	<header>
-	    <a href="?hely=fooldal" title="Főoldal"><img src="img/allando/templom.png" id="templom_logo" alt="Budakeszi Evangélikus Egyházközség logója">
+	    <a href="?hely=fooldal" title="Főoldal"><img src="img/allando/templom_barna.png" id="templom_logo" alt="Budakeszi Evangélikus Egyházközség logója">
 		<h1>Budakeszi <br>Evangélikus <br>Egyházközség</h1>
             </a>
 	    <nav>
