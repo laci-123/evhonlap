@@ -16,8 +16,8 @@ do
     datum=$(date -d "$start_date $i days" +%Y-%m-%d)
     echo "$datum:"
     curl -s "$URL$datum" > "$tmp_file"
-    cat "$tmp_file" | pup 'h5:contains("Napi igék") + p text{}' | tr '\n' ' ' | sed 's/(.*)/\n/'
-    cat "$tmp_file" | pup 'h5:contains("Napi igék") + p > a'    | tr '\n' ' '
+    cat "$tmp_file" | pup 'h5:contains("Napi igék") + div p:first-child text{}' | tr '\n' ' ' | sed 's/(.*)/\n/'
+    cat "$tmp_file" | pup 'h5:contains("Napi igék") + div p:first-child > a'    | tr '\n' ' '
 
     printf "\n\n\n"
 
