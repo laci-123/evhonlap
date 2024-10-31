@@ -14,7 +14,3 @@
 adventi_est
 Ádventi est
 adventi_est.jpg
-
-protestans_kor
-Protestáns Kör
-protestans_kor.png
