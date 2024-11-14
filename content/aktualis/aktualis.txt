@@ -11,6 +11,10 @@
 #
 # Lines starting with '#' are ignored. 
 
+noikar
+A telki nőikar adventi koncertje
+noikar.png
+
 adventi_est
 Ádventi est
 adventi_est.jpg
