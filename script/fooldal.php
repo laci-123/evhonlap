@@ -13,9 +13,7 @@ $get_content = function(){
     //======= Aktuális alkalmak =========
     if(include "aktualis.php"){
         $output .= aktualis();
-        $output .= "<hr>\n";
     }
-
 
     
     // ======== Főhír =============

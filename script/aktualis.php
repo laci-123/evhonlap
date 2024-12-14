@@ -42,7 +42,8 @@ function aktualis(){
                 $output .= "    <img src='img/cikk/$thumbnail' alt=''>\n";
                 $output .= "    <span>$title</span>\n";
                 $output .= "</a>\n";
-
+                $output .= "<hr>\n";
+                
                 $now_reading = "filename";
                 break;
         }
@@ -55,8 +56,6 @@ $get_content = function(){
     $output = "<h2>Aktuális</h2>\n";
 
     $output .= aktualis();
-
-    $output .= "<hr>\n";
 
     $output .= file_get_contents_safe("content/aktualis.html");
 
