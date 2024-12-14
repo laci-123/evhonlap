@@ -19,17 +19,10 @@ $get_content = function(){
 
     
     // ======== Főhír =============
-    // if(include "hir.php"){
-        $output .= "<div id='fooldal_archiv'>\n";
-        /* $output .= hir("szarszo_2024"); */
-        $output .= "<h3>Családi hétvége Balatonszárszón</h3>";
-        $output .= "<img src='img/cikk/szarszo.jpg' width='50%'>";
-        $output .= "<p>Idén az április 19-21. hétvégén tartottuk a mára hagyományossá váló balatonszárszói hétvégét, a „Szárszót”. A várva-várt eseményen kb. hatvanan vettünk részt, óvodástól nyugdíjasig minden korosztály képviseltette magát... ";
-        $output .= "</p>";
-        $output .= "<a href='?hely=hir&cim=szarszo_2024' class='backlink'>Folytatás</a>\n";
-        $output .= "</div>\n";
+    if(include "hir.php"){
+        $output .= hir("adventi_est_2024");
         $output .= "<hr>\n";
-    // }
+    }
     
 
     // ======= Képek =========

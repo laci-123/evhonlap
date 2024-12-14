@@ -11,6 +11,10 @@
 #
 # Lines starting with '#' are ignored. 
 
+adventi_est_2024
+Ádventi est
+cikk/athos.jpg
+
 ars_sacra_2024
 Ars Sacra 2024 megnyitó
 cikk/ars_sacra_logo.png
