@@ -14,27 +14,27 @@ $get_content = function(){
     if(include "aktualis.php"){
         $output .= aktualis();
     }
-
-    
-    // ======== Főhír =============
-    if(include "hir.php"){
-        $output .= hir("adventi_est_2024");
-        $output .= "<hr>\n";
-    }
     
 
     // ======= Képek =========
     if(include "slideshow.php"){
         $output .= "<div id='fooldal_kepek'>\n";
         $galery = "img/galeria/";
-        $folder = "konfirmacio_2023/";
-        $album = 48;
-        $title = "Konfirmació 2023";
+        $folder = "gyulekezeti_kirandulas_tata/";
+        $album = 55;
+        $title = "Gyülekezeti kirándulás Tatán";
         $files = scandir_safe_compact($galery.$folder);
         $output .= "<h3>$title</h3>";
         $output .= slideshow($galery, $folder, $files, "", 0);
         $output .= "<a href='?hely=galeria&album=$album' id='fooldal_kepek_link' title='$title'></a>\n";
         $output .= "</div>\n<hr>\n";
+    }
+
+    
+    // ======== Főhír =============
+    if(include "hir.php"){
+        $output .= hir("adventi_est_2024");
+        $output .= "<hr>\n";
     }
     
 
