@@ -9,6 +9,7 @@ function aktualis(){
     $title = "";
     $thumbnail = "";
     $now_reading = "filename";
+    $number_of_entries = 0;
 
     foreach($lines as $line){
         if(preg_match("/^ *#.*/", $line)){
@@ -42,11 +43,15 @@ function aktualis(){
                 $output .= "    <img src='img/cikk/$thumbnail' alt=''>\n";
                 $output .= "    <span>$title</span>\n";
                 $output .= "</a>\n";
-                $output .= "<hr>\n";
+                $number_of_entries += 1;
                 
                 $now_reading = "filename";
                 break;
         }
+    }
+
+    if($number_of_entries > 0) {
+        $output .= "<hr>\n";
     }
 
     return $output;
