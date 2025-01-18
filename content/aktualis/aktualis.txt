@@ -11,10 +11,6 @@
 #
 # Lines starting with '#' are ignored. 
 
-csaladi
-Családi istentisztelet
-csaladi.png
-
 imahet
 Ökumenikus imahét
 lutherrozsa.png
