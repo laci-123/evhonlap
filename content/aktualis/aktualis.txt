@@ -11,6 +11,3 @@
 #
 # Lines starting with '#' are ignored. 
 
-imahet
-Ökumenikus imahét
-lutherrozsa.png
