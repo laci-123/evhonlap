@@ -11,6 +11,10 @@
 #
 # Lines starting with '#' are ignored. 
 
+bojti_est
+Böjti est
+bojti_est.png
+
 munkaterv
 2025 első félévi munkaterv
 lutherrozsa.png
