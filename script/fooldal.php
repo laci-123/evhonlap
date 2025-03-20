@@ -40,6 +40,11 @@ $get_content = function(){
 
     // ======= Ukrajna ========
     $output .=  file_get_contents_safe("content/ukrajna_fooldal.html");
+    $output .= "<hr>\n";
+
+
+    // ======= Páylázat miatt kötelező kormányzati logók =======
+    $output .= "<img src='img/cikk/allami_logok.png' width='100%'>\n";
  
 
     // ========== Slideshow script =======
