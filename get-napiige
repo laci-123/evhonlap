@@ -1,7 +1,5 @@
 #!/bin/sh
 
-# dependencies: pup (https://github.com/ericchiang/pup)
-
 set -e
 
 URL='https://www.evangelikus.hu/hitunk/lelki-taplalek?napiigenap='
@@ -16,8 +14,14 @@ do
     datum=$(date -d "$start_date $i days" +%Y-%m-%d)
     echo "$datum:"
     curl -s "$URL$datum" > "$tmp_file"
-    cat "$tmp_file" | pup 'h5:contains("Napi igék") + div p:first-child text{}' | tr '\n' ' ' | sed 's/(.*)/\n/'
-    cat "$tmp_file" | pup 'h5:contains("Napi igék") + div p:first-child > a'    | tr '\n' ' '
+    cat "$tmp_file" \
+        | pup 'h5:contains("Napi igék") + div div:first-child text{}' \
+        | head -n 1 \
+        | sed 's/ *( *$//'
+    cat "$tmp_file" \
+        | pup 'h5:contains("Napi igék") + div div:first-child div.uk-inline:first-child a:contains("Szentírás.hu")' \
+        | tr '\n' ' ' \
+        | sed 's:<a *href="\(.*\)/\([^"]*\)".*:<a href="\1/\2" target="_blank">\2</a>:'
 
     printf "\n\n\n"
 
