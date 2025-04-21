@@ -11,6 +11,10 @@
 #
 # Lines starting with '#' are ignored. 
 
+mee
+Gyülekezetünk a MEE honlapján
+mee.png
+
 munkaterv
 2025 első félévi munkaterv
 lutherrozsa.png
