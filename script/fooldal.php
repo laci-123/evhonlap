@@ -31,11 +31,11 @@ $get_content = function(){
     }
 
     
-    // ======== Főhír =============
-    if(include "hir.php"){
-        $output .= hir("adventi_est_2024");
-        $output .= "<hr>\n";
-    }
+    // ======== Főhír ============= (kiszedve, amíg nem lesz újabb)
+    // if(include "hir.php"){
+    //     $output .= hir("adventi_est_2024");
+    //     $output .= "<hr>\n";
+    // }
     
 
     // ======= Ukrajna ========
