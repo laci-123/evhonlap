@@ -11,6 +11,10 @@
 #
 # Lines starting with '#' are ignored. 
 
+tuz
+Segítség tűzkárosult családoknak
+lutherrozsa.png
+
 mee
 Gyülekezetünk a MEE honlapján
 mee.png
