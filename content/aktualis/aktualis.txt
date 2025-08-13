@@ -11,6 +11,10 @@
 #
 # Lines starting with '#' are ignored. 
 
+sokadalom
+Protestáns Sokadalom
+protestans_sokadalom.png
+
 tuz
 Segítség tűzkárosult családoknak
 lutherrozsa.png
