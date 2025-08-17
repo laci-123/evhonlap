@@ -11,18 +11,10 @@
 #
 # Lines starting with '#' are ignored. 
 
-ars_sacra
-Ars Sacra Fesztivál
-ars_sacra_logo.png
-
 sokadalom
 Protestáns Sokadalom
 protestans_sokadalom.png
 
-tuz
-Segítség tűzkárosult családoknak
-lutherrozsa.png
-
-mee
-Gyülekezetünk a MEE honlapján
-mee.png
+ars_sacra
+Ars Sacra Fesztivál
+ars_sacra_logo.png
