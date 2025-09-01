@@ -11,10 +11,6 @@
 #
 # Lines starting with '#' are ignored. 
 
-sokadalom
-Protestáns Sokadalom
-protestans_sokadalom.png
-
 ars_sacra
 Ars Sacra Fesztivál
 ars_sacra_logo.png
