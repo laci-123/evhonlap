@@ -11,6 +11,11 @@
 #
 # Lines starting with '#' are ignored. 
 
+benczur_emese
+Ars Sacra Fesztivál 2025 megnyitó
+cikk/ars_sacra_logo.png
+
+
 adventi_est_2024
 Ádventi est
 cikk/athos.jpg

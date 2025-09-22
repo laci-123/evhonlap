@@ -4,11 +4,21 @@ $get_content = function(){
     $output =  file_get_contents_safe("content/fooldal.html");
     $output .= "<hr>\n";
 
-    //======= Aktuális alkalmak =========
-    if(include "aktualis.php"){
-        $output .= aktualis();
-    }
+    // //======= Aktuális alkalmak =========
+    // if(include "aktualis.php"){
+    //     $output .= aktualis();
+    // }
     
+    //======== Főhír =============
+    // if(include "hir.php"){
+    //     $output .= hir("adventi_est_2024");
+    //     $output .= "<hr>\n";
+    // }
+    $output .= "<a href='?hely=hir&cim=benczur_emese' class='link_box archiv_box'>\n";
+    $output .= "    <img src='img/cikk/ars_sacra_logo.png' alt=''>\n";
+    $output .= "    <span>Ars Sacra Fesztivál 2025.09.13 megnyitó</span>\n";
+    $output .= "</a>\n";
+    $output .= "<hr>\n";
 
 
     // ========= Aktuális eseméynek táblázat =======
@@ -30,14 +40,7 @@ $get_content = function(){
         $output .= "<a href='?hely=galeria&album=$album' id='fooldal_kepek_link' title='$title'></a>\n";
         $output .= "</div>\n<hr>\n";
     }
-
-    
-    // ======== Főhír ============= (kiszedve, amíg nem lesz újabb)
-    // if(include "hir.php"){
-    //     $output .= hir("adventi_est_2024");
-    //     $output .= "<hr>\n";
-    // }
-    
+        
 
     // ======= Ukrajna ========
     $output .=  file_get_contents_safe("content/ukrajna_fooldal.html");
