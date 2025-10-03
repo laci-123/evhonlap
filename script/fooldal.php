@@ -4,6 +4,13 @@ $get_content = function(){
     $output =  file_get_contents_safe("content/fooldal.html");
     $output .= "<hr>\n";
 
+
+    // ========= Aktuális eseméynek táblázat =======
+    $output .= "<h3>Októberi alkalmak</h3>\n";
+    $output .= file_get_contents_safe("content/aktualis.html");
+    $output .= "<hr>\n";
+
+
     // ======= Képek =========
     if(include "slideshow.php"){
         $output .= "<div id='fooldal_kepek'>\n";
@@ -18,12 +25,6 @@ $get_content = function(){
         $output .= "</div>\n<hr>\n";
     }
         
-
-    // ========= Aktuális eseméynek táblázat =======
-    $output .= "<h3>Szeptemberi alkalmak</h3>\n";
-    $output .= file_get_contents_safe("content/aktualis.html");
-    $output .= "<hr>\n";
-
 
     // //======= Aktuális alkalmak =========
     // if(include "aktualis.php"){
