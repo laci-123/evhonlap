@@ -4,9 +4,14 @@ $get_content = function(){
     $output =  file_get_contents_safe("content/fooldal.html");
     $output .= "<hr>\n";
 
+    //======= Aktuális alkalmak =========
+    if(include "aktualis.php"){
+        $output .= aktualis();
+    }
+
 
     // ========= Aktuális eseméynek táblázat =======
-    $output .= "<h3>Októberi alkalmak</h3>\n";
+    $output .= "<h3>Novemberi alkalmak</h3>\n";
     $output .= file_get_contents_safe("content/aktualis.html");
     $output .= "<hr>\n";
 
@@ -24,13 +29,8 @@ $get_content = function(){
         $output .= "<a href='?hely=galeria&album=$album' id='fooldal_kepek_link' title='$title'></a>\n";
         $output .= "</div>\n<hr>\n";
     }
-        
 
-    // //======= Aktuális alkalmak =========
-    // if(include "aktualis.php"){
-    //     $output .= aktualis();
-    // }
-    
+            
     //======== Főhír =============
     // if(include "hir.php"){
     //     $output .= hir("adventi_est_2024");

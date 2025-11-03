@@ -10,3 +10,11 @@
 # The links will be displayed in the same order as they are in this file. 
 #
 # Lines starting with '#' are ignored. 
+
+kerti_nap
+Kerti nap
+2025_oszikertinap.png
+
+csaladi_istentisztelet
+Családi istentisztelet
+lutherrozsa.png
