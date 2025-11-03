@@ -17,4 +17,4 @@ Kerti nap
 
 csaladi_istentisztelet
 Családi istentisztelet
-lutherrozsa.png
+lutherrozsa.svg
