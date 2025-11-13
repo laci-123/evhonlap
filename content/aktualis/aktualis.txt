@@ -15,6 +15,6 @@ kerti_nap
 Kerti nap
 2025_oszikertinap.png
 
-csaladi_istentisztelet
-Családi istentisztelet
+ifi_ora
+IFI óra
 lutherrozsa.svg
