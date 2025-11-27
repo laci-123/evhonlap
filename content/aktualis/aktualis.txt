@@ -11,13 +11,7 @@
 #
 # Lines starting with '#' are ignored. 
 
-kerti_nap
-Kerti nap
-2025_oszikertinap.png
 adventi_est
 Ádventi_est
 adventi_est.png
 
-ifi_ora
-IFI óra
-lutherrozsa.svg
