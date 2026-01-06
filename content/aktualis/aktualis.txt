@@ -11,7 +11,4 @@
 #
 # Lines starting with '#' are ignored. 
 
-adventi_est
-Ádventi_est
-adventi_est.png
 
