@@ -11,7 +11,7 @@ $get_content = function(){
 
 
     // ========= Aktuális eseméynek táblázat =======
-    $output .= "<h3>Novemberi és decemberi alkalmak</h3>\n";
+    $output .= "<h3>Januári alkalmak</h3>\n";
     $output .= file_get_contents_safe("content/aktualis.html");
     $output .= "<hr>\n";
 
