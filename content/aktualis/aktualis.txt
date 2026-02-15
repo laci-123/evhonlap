@@ -11,6 +11,10 @@
 #
 # Lines starting with '#' are ignored. 
 
+tuz
+Segítség a tűzkárosultaknak
+tuz.jpg
+
 vilagimanap
 Ökumenikus Világimanap
 vilagimanap.jpg
