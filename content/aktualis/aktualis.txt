@@ -12,5 +12,5 @@
 # Lines starting with '#' are ignored. 
 
 vilagimanap
-Ökumenikus Világimanp
+Ökumenikus Világimanap
 vilagimanap.jpg
