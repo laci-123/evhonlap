@@ -15,6 +15,6 @@ tuz
 Segítség a tűzkárosultaknak
 tuz.jpg
 
-vilagimanap
-Ökumenikus Világimanap
-vilagimanap.jpg
+bojti_est
+Böjti est
+bojti_est_pici.png
