@@ -4,6 +4,24 @@ $get_content = function(){
     $output =  file_get_contents_safe("content/fooldal.html");
     $output .= "<hr>\n";
 
+    //======== Főhír =============
+    $output .= "<a href='?hely=hir&cim=napkozis_tabor_2026' class='link_box archiv_box'>\n";
+    $output .= "    <img src='img/cikk/napkozis_tabor_2026.png' alt=''>\n";
+    $output .= "    <span>Hittantábor 2026</span>\n";
+    $output .= "</a>\n";
+
+    //======= Aktuális alkalmak =========
+    if(include "aktualis.php"){
+        $output .= aktualis();
+    }
+
+
+    // ========= Aktuális eseméynek táblázat =======
+    $output .= "<h3>Nyári alkalmak</h3>\n";
+    $output .= file_get_contents_safe("content/aktualis.html");
+    $output .= "<hr>\n";
+
+
     // ======= Képek =========
     if(include "slideshow.php"){
         $output .= "<div id='fooldal_kepek'>\n";
@@ -17,25 +35,7 @@ $get_content = function(){
         $output .= "<a href='?hely=galeria&album=$album' id='fooldal_kepek_link' title='$title'></a>\n";
         $output .= "</div>\n<hr>\n";
     }
-
-    //======= Aktuális alkalmak =========
-    if(include "aktualis.php"){
-        $output .= aktualis();
-    }
-
-
-    // ========= Aktuális eseméynek táblázat =======
-    $output .= "<h3>Nyári alkalmak</h3>\n";
-    $output .= file_get_contents_safe("content/aktualis.html");
-    $output .= "<hr>\n";
             
-    //======== Főhír =============
-    // $output .= "<a href='?hely=hir&cim=benczur_emese' class='link_box archiv_box'>\n";
-    // $output .= "    <img src='img/cikk/ars_sacra_logo.png' alt=''>\n";
-    // $output .= "    <span>Ars Sacra Fesztivál 2025.09.13 megnyitó</span>\n";
-    // $output .= "</a>\n";
-    // $output .= "<hr>\n";
-
 
     // ======= Ukrajna ========
     $output .=  file_get_contents_safe("content/ukrajna_fooldal.html");

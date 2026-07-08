@@ -11,6 +11,12 @@
 #
 # Lines starting with '#' are ignored. 
 
+
+napkozis_tabor_2026
+Hittantábor 2026
+cikk/napkozis_tabor_2026.png
+
+
 benczur_emese
 Ars Sacra Fesztivál 2025 megnyitó
 cikk/ars_sacra_logo.png
