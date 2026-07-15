@@ -25,7 +25,9 @@ do
         | sed 's:<a *href="\([^"]*\)".*:<a href="\1" target="_blank">:'
     cat "$tmp_file" \
         | pup 'h5:contains("Napi igék") + div div:first-child .uk-card div:first-child text{}' \
-        | head -n 1
+        | head -n 1 \
+        | tr '\n' '@' \
+        | sed 's/@//'
     printf '</a>'
 
     printf "\n\n\n"
