@@ -4,16 +4,18 @@ $get_content = function(){
     $output =  file_get_contents_safe("content/fooldal.html");
     $output .= "<hr>\n";
 
-    //======== Főhír =============
-    $output .= "<a href='?hely=hir&cim=napkozis_tabor_2026' class='link_box archiv_box'>\n";
-    $output .= "    <img src='img/cikk/napkozis_tabor_2026.png' alt=''>\n";
-    $output .= "    <span>Hittantábor 2026</span>\n";
-    $output .= "</a>\n";
 
     //======= Aktuális alkalmak =========
     if(include "aktualis.php"){
         $output .= aktualis();
     }
+
+    //======== Főhír =============
+    $output .= "<a href='?hely=hir&cim=napkozis_tabor_2026' class='link_box archiv_box'>\n";
+    $output .= "    <img src='img/cikk/napkozis_tabor_2026.png' alt=''>\n";
+    $output .= "    <span>Hittantábor 2026</span>\n";
+    $output .= "</a>\n";
+    $output .= "<hr>\n";
 
 
     // ========= Aktuális eseméynek táblázat =======

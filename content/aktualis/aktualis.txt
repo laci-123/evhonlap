@@ -11,6 +11,10 @@
 #
 # Lines starting with '#' are ignored. 
 
+orgona_koncert
+Orgonabemutató
+orgona_koncert.jpg
+
 orgona
 Gyűjtés új orgonára
 orgona_pici.png
