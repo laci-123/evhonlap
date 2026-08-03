@@ -11,6 +11,9 @@
 #
 # Lines starting with '#' are ignored. 
 
+szelrozsa
+Beszámoló a Szélrózsa találkozóról
+cikk/szelrozsa.jpg
 
 napkozis_tabor_2026
 Hittantábor 2026
