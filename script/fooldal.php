@@ -6,6 +6,12 @@ $get_content = function(){
 
 
     //======== Főhír =============
+    $output .= "<a href='?hely=hir&cim=orgona_bemutato' class='link_box archiv_box'>\n";
+    $output .= "    <img src='img/cikk/orgona_bemutato.jpg' alt=''>\n";
+    $output .= "    <span>Hálaadás és orgonabemutató</span>\n";
+    $output .= "</a>\n";
+    $output .= "<br>\n";
+
     $output .= "<a href='?hely=hir&cim=szelrozsa' class='link_box archiv_box'>\n";
     $output .= "    <img src='img/cikk/szelrozsa.jpg' alt=''>\n";
     $output .= "    <span>Beszámoló a Szélrózsa találkozóról</span>\n";

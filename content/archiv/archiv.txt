@@ -11,6 +11,10 @@
 #
 # Lines starting with '#' are ignored. 
 
+orgona_bemutato
+Hálaadás és orgonabemutató
+cikk/orgona_bemutato.jpg
+
 szelrozsa
 Beszámoló a Szélrózsa találkozóról
 cikk/szelrozsa.jpg
