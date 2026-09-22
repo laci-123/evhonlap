@@ -6,10 +6,16 @@ $get_content = function(){
 
 
     //======= Aktuális alkalmak =========
-    if(include "aktualis.php"){
-        $output .= aktualis();
-    }
+    // if(include "aktualis.php"){
+    //     $output .= aktualis();
+    // }
 
+    //======== Főhír =============
+    $output .= "<a href='?hely=hir&cim=ot_eves_a_templom' class='link_box archiv_box'>\n";
+    $output .= "    <img src='img/cikk/ot_eves_templom.png' alt=''>\n";
+    $output .= "    <span>Öt éves a budakeszi templom</span>\n";
+    $output .= "</a>\n";
+    $output .= "<br>\n";
 
     // ========= Aktuális eseméynek táblázat =======
     $output .= "<h3>Nyári alkalmak</h3>\n";
@@ -30,20 +36,6 @@ $get_content = function(){
         $output .= "<a href='?hely=galeria&album=$album' id='fooldal_kepek_link' title='$title'></a>\n";
         $output .= "</div>\n<hr>\n";
     }
-    
-    //======== Főhír =============
-    $output .= "<a href='?hely=hir&cim=orgona_bemutato' class='link_box archiv_box'>\n";
-    $output .= "    <img src='img/cikk/orgona_bemutato.jpg' alt=''>\n";
-    $output .= "    <span>Hálaadás és orgonabemutató</span>\n";
-    $output .= "</a>\n";
-    $output .= "<br>\n";
-
-    $output .= "<a href='?hely=hir&cim=szelrozsa' class='link_box archiv_box'>\n";
-    $output .= "    <img src='img/cikk/szelrozsa.jpg' alt=''>\n";
-    $output .= "    <span>Beszámoló a Szélrózsa találkozóról</span>\n";
-    $output .= "</a>\n";
-    $output .= "<hr>\n";
-
             
 
     // ======= Ukrajna ========

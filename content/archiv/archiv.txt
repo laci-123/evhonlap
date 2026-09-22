@@ -11,6 +11,10 @@
 #
 # Lines starting with '#' are ignored. 
 
+ot_eves_a_templom
+Öt éves a budakeszi templom
+cikk/ot_eves_templom.png
+
 orgona_bemutato
 Hálaadás és orgonabemutató
 cikk/orgona_bemutato.jpg
