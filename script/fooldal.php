@@ -27,9 +27,9 @@ $get_content = function(){
     if(include "slideshow.php"){
         $output .= "<div id='fooldal_kepek'>\n";
         $galery = "img/galeria/";
-        $folder = "napkozis_tabor_2026/";
-        $album = 57;
-        $title = "Napközis tábor 2026";
+        $folder = "orgonabemutato/";
+        $album = 58;
+        $title = "Az új orgona bemutatója (2026)";
         $files = scandir_safe_compact($galery.$folder);
         $output .= "<h3>$title</h3>";
         $output .= slideshow($galery, $folder, $files, "", 0);
