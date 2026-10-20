@@ -17,7 +17,7 @@ do
     cat "$tmp_file" \
         | pup 'h5:contains("Napi igék") + div div:first-child text{}' \
         | head -n 1 \
-        | sed 's/ ”.*$/”/'
+        | sed 's/”.*$/”/'
     cat "$tmp_file" \
         | pup 'h5:contains("Napi igék") + div div:first-child a:contains("Szentírás.hu")' \
         | head -n 1 \
