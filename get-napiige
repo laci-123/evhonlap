@@ -7,7 +7,10 @@ URL='https://www.evangelikus.hu/hitunk/lelki-taplalek?napiigenap='
 start_date="$1"
 number_of_days="$2"
 
-for i in `seq 0 $number_of_days`
+from_day=0
+to_day=$(($number_of_days - 1))
+
+for i in $(seq $from_day $to_day)
 do
     tmp_file=$(mktemp)
 
